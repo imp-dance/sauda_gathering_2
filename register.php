@@ -210,7 +210,6 @@
     <p>
         <input onchange="this.setCustomValidity(validity.valueMissing ? 'sugtiss' : '');" id="field_terms" type="checkbox" required name="terms"> Når du registrerer deg aksepterer du vilkårene som kan leses <a href="#">her</a>
     </p>
-</form>
 
 <script type="text/javascript">
   document.getElementById("field_terms").setCustomValidity("sugtiss");
