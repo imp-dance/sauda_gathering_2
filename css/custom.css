@@ -15,6 +15,10 @@ nav .navbar-brand {
 	font-family: 'Raleway', 'courier', 'serif';
 }
 
+.menu_top {
+	margin: 10px 0;
+}
+
 .jumbotron h1 {
 	color: #333;
 	font-size: 80px;
@@ -38,7 +42,6 @@ nav .navbar-brand {
 	background-color: #00B200;
 	color: #fff;
 	border: 0px;
-	margin: 10px;
 }
 
 .col-md-4 h2 {
