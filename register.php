@@ -213,13 +213,13 @@
   document.getElementById("field_terms").setCustomValidity("Vennligst godta vilkårene for å fortsette");
 </script>
             Brukernavn:<br /> 
-            <input type="text" name="username" value=""/> 
+            <input type="text" name="username" value="" required/> 
             <br /><br /> 
             E-Mail:<br /> 
-            <input type="text" name="email" value="" /> 
+            <input type="email" name="email" value="" required/> 
             <br /><br /> 
             Passord:<br /> 
-            <input type="password" name="password" value="" /> 
+            <input type="password" name="password" value="" required/> 
             <br /><br /> 
             <input class="btn btn-success btn-lg" type="submit" value="Register" /> 
         </form>
