@@ -1,5 +1,5 @@
 <?php
-    include('common.php')
+    include('../common.php')
         
     // Create connection
     $conn = mysqli_connect($servername, $username, $password);
