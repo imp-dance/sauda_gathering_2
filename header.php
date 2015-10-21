@@ -32,7 +32,7 @@
              <?php if(empty($_SESSION['user'])) 
     { 
         ?>
-        <form class="navbar-form navbar-right" action="/external_login.php" method="POST">
+        <form class="navbar-form navbar-right" action="/sauda_gathering_2/sauda_gathering_2/external_login.php" method="POST">
             <div class="form-group">
               <input type="text" placeholder="Brukernavn" class="form-control" name="username">
             </div>
@@ -45,7 +45,7 @@
     } else {
         ?>
         <div class="navbar-right">
-            <a href="/logout.php"><button class="btn btn-success">Logg ut</button></a>
+            <a href="/sauda_gathering_2/sauda_gathering_2/logout.php"><button class="btn btn-success">Logg ut</button></a>
             </div>
         <?php
     }

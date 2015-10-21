@@ -18,17 +18,18 @@
      
     // We can display the user's username to them by reading it from the session array.  Remember that because 
     // a username is user submitted content we must use htmlentities on it before displaying it to the user. 
-?> 
-Hello <?php echo htmlentities($_SESSION['user']['username'], ENT_QUOTES, 'UTF-8'); ?>, secret content!<br /> 
-<a href="memberlist.php">Memberlist</a><br /> 
-<a href="edit_account.php">Edit Account</a><br /> 
-<a href="logout.php">Logout</a>
+?>
 
 <?php include("header.php");
 include("head.php"); ?>
 <div class="super_container">
     <div class="jumbotron">
       <div class="container">
+
+Hello <?php echo htmlentities($_SESSION['user']['username'], ENT_QUOTES, 'UTF-8'); ?>, secret content!<br /> 
+<a href="memberlist.php">Memberlist</a><br /> 
+<a href="edit_account.php">Edit Account</a><br /> 
+<a href="logout.php">Logout</a>
         <h1>Velkommen til <br> Sauda Gathering</h1>
         <p><a class="btn btn-success btn-lg" href="register.php" role="button">Meld deg på her &raquo;</a></p>
       </div>

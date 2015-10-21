@@ -210,7 +210,7 @@
     </p>
 
 <script type="text/javascript">
-  document.getElementById("field_terms").setCustomValidity("sugtiss");
+  document.getElementById("field_terms").setCustomValidity("Vennligst godta vilkårene for å fortsette");
 </script>
             Brukernavn:<br /> 
             <input type="text" name="username" value=""/> 
