@@ -186,9 +186,9 @@
     } 
 ?>
   <?php
-    $servername =  "schart.net.mysql";
-    $username = "schart_net";
-    $password = "Mortenhehe1234";
+    $servername =  "localhost";
+    $username = "root";
+    $password = "root";
         
     // Create connection
     $conn = mysqli_connect($servername, $username, $password);
