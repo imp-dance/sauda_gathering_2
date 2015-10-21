@@ -111,3 +111,8 @@ footer {
     width: 500px;
     height: 200px;
 }
+
+.navbar-form {
+	margin: 0;
+	padding: 0;
+}

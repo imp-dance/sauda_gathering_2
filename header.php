@@ -9,25 +9,24 @@
             <span class="icon-bar"></span>
           </button>
           <div class="btn-group">
-		  <button type="button" class="top-btn btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-			Meny <span class="caret"></span>
-		  </button>
-		  <ul class="dropdown-menu">
-			<li><a href="index.php">Hjem</a></li>
-			<li><a href="about.php">Om oss</a></li>
-			<li><a href="register.php">Registrer deg</a></li>
-			<li><a href="#">Min profil</a></li>
-			<li><a href="faq.php">FAQ</a></li>
-			<li><a href="#">Vilkår</a></li>
-			<li><a href="#">Informasjon</a></li>
-			<li><a href="#">Arkiv</a></li>
-			<li><a href="#">Plasseringsoversikt</a></li>
-			<li><a href="#">Påmelding til treffet</a></li>
-			<li><a href="#">Påmelding til compoer</a></li>
-		  </ul>
-		</div>
+		        <button type="button" class="top-btn btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      			Meny <span class="caret"></span>
+      		  </button>
+    		  <ul class="dropdown-menu">
+    			<li><a href="index.php">Hjem</a></li>
+    			<li><a href="about.php">Om oss</a></li>
+    			<li><a href="register.php">Registrer deg</a></li>
+    			<li><a href="#">Min profil</a></li>
+    			<li><a href="faq.php">FAQ</a></li>
+    			<li><a href="#">Vilkår</a></li>
+    			<li><a href="#">Informasjon</a></li>
+    			<li><a href="#">Arkiv</a></li>
+    			<li><a href="#">Plasseringsoversikt</a></li>
+    			<li><a href="#">Påmelding til treffet</a></li>
+    			<li><a href="#">Påmelding til compoer</a></li>
+    		  </ul>
+    		</div>
         </div>
-        <div id="navbar" class="navbar-collapse collapse">
           
              <?php if(empty($_SESSION['user'])) 
     { 
@@ -51,5 +50,4 @@
     }
         ?>
         </div><!--/.navbar-collapse -->
-      </div>
     </nav>
