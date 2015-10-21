@@ -1,0 +1,110 @@
+body {
+    background-color: #333;
+}
+
+nav .navbar-brand {
+	font-family: 'Raleway', 'courier', 'serif';
+	font-weight: 800;
+	text-transform: uppercase;
+}
+
+.jumbotron .container {
+	margin: auto;
+	padding: auto;
+	text-align: center;
+	font-family: 'Raleway', 'courier', 'serif';
+}
+
+.jumbotron h1 {
+	color: #333;
+	font-size: 80px;
+	font-weight: 600;
+	text-transform: uppercase;
+}
+
+.jumbotron {
+	padding-top: 100px;
+	margin-bottom: 0px;
+}
+
+.btn-lg {
+	margin-top: 20px;
+	text-transform: uppercase;
+	font-family: 'Raleway', 'courier', 'serif';
+	font-weight: 300;
+}
+
+.top-btn {
+	background-color: #00B200;
+	color: #fff;
+	border: 0px;
+	margin: 10px;
+}
+
+.col-md-4 h2 {
+	font-family: 'Raleway', 'courier', 'serif';
+	font-weight: 1000;
+}
+
+.btn-lg:hover {
+	opacity: 0.9;
+}
+
+.panel-title {
+	text-align: center;
+}
+
+.panel-primary>.panel-heading {
+	background-color: #00B200;
+	border-color: #00B200;
+}
+
+.panel-primary {
+	border-color: #00B200;
+}
+
+<<<<<<<<<<<#footer {
+	background-color: #333;
+	height: 100px;
+}
+
+footer p {
+	color: #fff;
+	margin-top: 15px;
+}
+
+footer {
+    clear: both;
+}
+.btn-success {
+    background-color: #00B200;
+    border: 1px solid #333;
+}
+
+.super_container {
+	background-color: #fff;
+}
+
+.row {
+	margin-top: 20px;
+}
+
+@media screen and (max-width: 321px) {
+    .jumbotron h1 {
+	font-size: 50px;
+    }
+}
+
+@media screen and (max-width: 603px) {
+    .jumbotron h1 {
+	font-size: 42px;
+    }
+}
+
+#tiss {
+    background-color: white;
+    font-size: 25px;
+    color: red;
+    width: 500px;
+    height: 200px;
+}
