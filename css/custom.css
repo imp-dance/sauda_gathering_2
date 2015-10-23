@@ -15,7 +15,6 @@ nav .navbar-brand {
 	font-family: 'Raleway', 'courier', 'serif';
 	background-color: rgba(0, 0, 0, 0.4);
 	background: rgba(0, 0, 0, 0.4);
-	color: rgba(0, 0, 0, 0.4);
 }
 .jumbotron{
 	background:url('../images/bg2.png') repeat-x;
@@ -185,3 +184,32 @@ input[type="text"], input[type="email"], input[type="password"]{
 .navbar{
 	padding:10px 0;
 }
+.memberlist{
+	width:100%;
+}
+.member{
+	width:100%;
+	text-align:left;
+	color:white;
+	border-bottom:2px solid #fff;
+	width:100%;
+	font-size:18px;
+}
+.member td:first-child{
+	max-width:7px;
+	text-align:center;
+	background:#cd3333;
+}
+.membername a{
+	color:#fff;
+	display:block;
+	background-color: rgba(255, 255, 255, 0.2);
+	background: rgba(255, 255, 255, 0.2);
+	padding:3px 10px;
+	cursor:pointer;
+	padding-top:15px;
+}
+.member td{
+	padding-top:15px;
+}
+.membername{padding-top:0 !important;}
