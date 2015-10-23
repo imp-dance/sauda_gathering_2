@@ -17,7 +17,7 @@ nav .navbar-brand {
 	background: rgba(0, 0, 0, 0.4);
 }
 .jumbotron{
-	background:url('../images/bg2.png') repeat-x;
+	background:url('../images/bg2.png') repeat-x fixed 0 0;
 	text-shadow:0px 1px 0px #000;
 	color:white !important;
 }
@@ -35,8 +35,7 @@ nav .navbar-brand {
 .jumbotron label{
 	color:white;
 }
-<<<<<<< HEAD
-=======
+
 
 .container2 {
 	margin: 0 auto;
@@ -64,8 +63,6 @@ nav .navbar-brand {
 	font-weight: 600;
 	text-transform: uppercase;
 }
-
->>>>>>> e920bb0a8f7deb66d0a2e413f3c3a1ec8a02003c
 .menu_top {
 	padding: 10px 0;
 }
