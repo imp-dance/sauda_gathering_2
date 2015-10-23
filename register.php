@@ -142,7 +142,6 @@
         // password cannot be recovered from the hash.  For more information: 
         // http://en.wikipedia.org/wiki/Cryptographic_hash_function 
         $password = hash('sha256', $_POST['password'] . $salt); 
-         
         // Next we hash the hash value 65536 more times.  The purpose of this is to 
         // protect against brute force attacks.  Now an attacker must compute the hash 65537 
         // times for each guess they make against a password, whereas if the password 
@@ -205,21 +204,25 @@
       <div class="container">
       <h1>Registrering</h1> 
        <form action="register.php" method="post" style="margin-top: 10px";>
-    <p>
-        <input onchange="this.setCustomValidity(validity.valueMissing ? 'sugtiss' : '');" id="field_terms" type="checkbox" required name="terms"> Når du registrerer deg aksepterer du vilkårene som kan leses <a href="#">her</a>
-    </p>
 
-<script type="text/javascript">
-  document.getElementById("field_terms").setCustomValidity("Vennligst godta vilkårene for å fortsette");
-</script>
-            Brukernavn:<br /> 
-            <input type="text" name="username" value="" required/> 
-            <br /><br /> 
+    <p>
+        <input type="checkbox" required />
+        Når du registrerer deg aksepterer du vilkårene som kan leses <a href="#">her</a>
+    </p>
+            Brukernavn:<br />  
+                <input type="text" id="username" name="username" required placeholder="Brukernavn"
+    oninvalid="this.setCustomValidity('Vennligst skriv inn et gyldig brukernavn')"
+    oninput="setCustomValidity('')"  />
+            <br /><br />
             E-Mail:<br /> 
-            <input type="email" name="email" value="" required/> 
+            <input type="email" name="email" value="" autocomplete="off" required placeholder="Email"
+    oninvalid="this.setCustomValidity('Vennligst skriv inn en gyldig email')"
+    oninput="setCustomValidity('')" /> 
             <br /><br /> 
             Passord:<br /> 
-            <input type="password" name="password" value="" required/> 
+            <input type="password" name="password" value="" autocomplete="off" required placeholder="Passord"
+    oninvalid="this.setCustomValidity('Vennligst skriv inn ett gyldig passord')"
+    oninput="setCustomValidity('')" /> 
             <br /><br /> 
             <input class="btn btn-success btn-lg" type="submit" value="Register" /> 
         </form>
