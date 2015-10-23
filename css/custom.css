@@ -233,3 +233,20 @@ input[type="text"], input[type="email"], input[type="password"]{
 .utable{
 	width:100%;
 }
+@media screen and (max-width: 1200px){
+	.col-md-4{width:100% !important;float:none;}
+	.fb-page{width:100%;}
+}
+.jquery-ui-tumblr-rss-entry{
+	margin:5px -15px;
+	padding:5px 15px;
+	border-bottom:1px solid #00B200;
+	box-shadow: 0 4px 2px -2px gray;
+}
+.jquery-ui-tumblr-rss-entry cite, .jquery-ui-tumblr-rss-entry time, .postLink{
+	display:none;
+}
+.regularTitle{
+	font-weight:bold;
+	font-size:16px;
+}
