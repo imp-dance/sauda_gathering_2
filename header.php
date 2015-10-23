@@ -15,8 +15,11 @@
     		  <ul class="dropdown-menu">
     			<li><a href="index.php">Hjem</a></li>
     			<li><a href="about.php">Om oss</a></li>
+          <?php if(empty($_SESSION['user'])){ ?>
     			<li><a href="register.php">Registrer deg</a></li>
-    			<li><a href="#">Min profil</a></li>
+          <?php }else{ ?>
+    			<li><a href="profile.php">Min profil</a></li>
+          <?php } ?>
     			<li><a href="faq.php">FAQ</a></li>
     			<li><a href="terms.php">Vilkår</a></li>
     			<li><a href="#">Informasjon</a></li>
@@ -45,6 +48,7 @@
     } else {
         ?>
         <div class="navbar-right">
+            <a href="/sauda_gathering_2/sauda_gathering_2/edit_account.php"><button class="btn btn-success moveman">Konto</button></a>
             <a href="/sauda_gathering_2/sauda_gathering_2/logout.php"><button class="btn btn-success">Logg ut</button></a>
             </div>
         <?php

@@ -149,17 +149,34 @@
     } 
      
 ?> 
-<h1>Edit Account</h1> 
-<form action="edit_account.php" method="post"> 
-    Username:<br /> 
-    <b><?php echo htmlentities($_SESSION['user']['username'], ENT_QUOTES, 'UTF-8'); ?></b> 
-    <br /><br /> 
-    E-Mail Address:<br /> 
-    <input type="text" name="email" value="<?php echo htmlentities($_SESSION['user']['email'], ENT_QUOTES, 'UTF-8'); ?>" /> 
-    <br /><br /> 
-    Password:<br /> 
-    <input type="password" name="password" value="" /><br /> 
-    <i>(leave blank if you do not want to change your password)</i> 
-    <br /><br /> 
-    <input type="submit" value="Update Account" /> 
-</form>
+<?php include("head.php") ?>
+<body>
+    <?php include("header.php") ?>
+        <div class="jumbotron">
+         <div class="container alignleft">
+            <h1 style="font-size: 60px";>Konto</h1>
+            <form action="edit_account.php" method="post"> 
+                <table class="regtable">
+                    <tr>
+                        <td>Brukernavn:</td>
+                        <td><b><?php echo htmlentities($_SESSION['user']['username'], ENT_QUOTES, 'UTF-8'); ?></b></td>
+                    </tr>
+                    <tr>
+                        <td>Email addresse:</td>
+                        <td><input type="text" name="email" value="<?php echo htmlentities($_SESSION['user']['email'], ENT_QUOTES, 'UTF-8'); ?>" /></td> 
+                    </tr>
+                    <tr> 
+                        <td>Passord <i>(La stå om du ikke vill skifte passord)</i> :</td>
+                        <td><input type="password" name="password" value="" /></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><input type="submit" value="Update Account" /> </td>
+                    </tr>
+                </table> 
+            </form>
+         </div> <!-- container -->
+        </div> <!-- jumbotron -->
+    <?php include("footer.php") ?>
+    <?php include("script.php") ?>
+</body>
+</html>

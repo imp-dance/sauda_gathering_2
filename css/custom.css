@@ -212,4 +212,23 @@ input[type="text"], input[type="email"], input[type="password"]{
 .member td{
 	padding-top:15px;
 }
+.alignleft{
+	text-align:left !important;
+}
+.alignleft h1{
+	text-align:center !important;
+}
 .membername{padding-top:0 !important;}
+.regtable{color:white;}
+.regtable td{padding-top:15px;}
+.regtable input{color:black;}
+.uimgt{
+	width:80px;
+}
+.unamet{
+	text-align:left;
+	padding:0 10px;
+}
+.utable{
+	width:100%;
+}
