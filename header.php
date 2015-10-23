@@ -48,8 +48,8 @@
     } else {
         ?>
         <div class="navbar-right">
-            <a href="/sauda_gathering_2/sauda_gathering_2/edit_account.php"><button class="btn btn-success moveman">Konto</button></a>
-            <a href="/sauda_gathering_2/sauda_gathering_2/logout.php"><button class="btn btn-success">Logg ut</button></a>
+            <a href="edit_account.php"><button class="btn btn-success moveman">Konto</button></a>
+            <a href="logout.php"><button class="btn btn-success">Logg ut</button></a>
             </div>
         <?php
     }
