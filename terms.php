@@ -67,5 +67,5 @@ include("header.php"); ?>
         </div>
     </div>
 </div>
-<?php include("script.php") ?>
-<?php include("footer.php") ?>
+<?php include("footer.php");
+include("script.php"); ?>

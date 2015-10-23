@@ -86,5 +86,5 @@ Det vil i tillegg bli solgt dagsbilletter og "ukespass". Dette er kun for adgang
       </div>
 	 </div> <!-- /container -->
   </div> <!-- /super_container -->
-    <?php include("script.php") ?>
-    <?php include("footer.php") ?>
+    <?php include("footer.php");
+    include("script.php"); ?>
