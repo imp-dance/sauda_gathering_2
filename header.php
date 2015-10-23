@@ -18,7 +18,7 @@
     			<li><a href="register.php">Registrer deg</a></li>
     			<li><a href="#">Min profil</a></li>
     			<li><a href="faq.php">FAQ</a></li>
-    			<li><a href="#">Vilkår</a></li>
+    			<li><a href="terms.php">Vilkår</a></li>
     			<li><a href="#">Informasjon</a></li>
     			<li><a href="#">Arkiv</a></li>
     			<li><a href="#">Plasseringsoversikt</a></li>
