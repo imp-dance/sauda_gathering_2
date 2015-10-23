@@ -203,28 +203,50 @@
     <div class="jumbotron">
       <div class="container">
       <h1>Registrering</h1> 
-       <form action="register.php" method="post" style="margin-top: 10px";>
-
-    <p>
-        <input type="checkbox" required />
-        Når du registrerer deg aksepterer du vilkårene som kan leses <a href="#">her</a>
-    </p>
-            Brukernavn:<br />  
-                <input type="text" id="username" name="username" required placeholder="Brukernavn"
-    oninvalid="this.setCustomValidity('Vennligst skriv inn et gyldig brukernavn')"
-    oninput="setCustomValidity('')"  />
-            <br /><br />
-            E-Mail:<br /> 
-            <input type="email" name="email" value="" autocomplete="off" required placeholder="Email"
-    oninvalid="this.setCustomValidity('Vennligst skriv inn en gyldig email')"
-    oninput="setCustomValidity('')" /> 
-            <br /><br /> 
-            Passord:<br /> 
-            <input type="password" name="password" value="" autocomplete="off" required placeholder="Passord"
-    oninvalid="this.setCustomValidity('Vennligst skriv inn ett gyldig passord')"
-    oninput="setCustomValidity('')" /> 
-            <br /><br /> 
-            <input class="btn btn-success btn-lg" type="submit" value="Register" /> 
+        <form action="register.php" method="post" style="margin: 10px auto">
+            <table class="regtable">
+                <tr>
+                    <td colspan="2">
+                        <input type="checkbox" name="ckbox" required />
+                        <label for="ckbox">Når du registrerer deg aksepterer du <a href="vilkår.php">vilkårene</a></label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="username">Brukernavn</label>:
+                    </td>
+                    <td>
+                        <input type="text" id="username" name="username" required placeholder="Brukernavn"
+                oninvalid="this.setCustomValidity('Vennligst skriv inn et gyldig brukernavn')"
+                oninput="setCustomValidity('')"  />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="email">E-Mail</label>:
+                    </td>
+                    <td>
+                        <input type="email" name="email" value="" autocomplete="off" required placeholder="Email"
+                oninvalid="this.setCustomValidity('Vennligst skriv inn en gyldig email')"
+                oninput="setCustomValidity('')" /> 
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="password">Passord</label>:
+                    </td>
+                    <td>
+                        <input type="password" name="password" value="" autocomplete="off" required placeholder="Passord"
+                oninvalid="this.setCustomValidity('Vennligst skriv inn ett gyldig passord')"
+                oninput="setCustomValidity('')" /> 
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input class="btn btn-success btn-lg" type="submit" value="Register" /> 
+                    </td>
+                </tr>
+            </table>
         </form>
       </div>
     </div>
