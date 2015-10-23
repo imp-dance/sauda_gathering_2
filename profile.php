@@ -2,6 +2,8 @@
 $currentid = htmlentities($_REQUEST['id']);
 if (empty($currentid)){
 	$currentid = $_SESSION['user']['id'];
+	die('<meta http-equiv="refresh" content="0;url=profile.php?id='.$currentid.'">
+');
 }
 $gitinfoq = " 
                 SELECT 
@@ -45,7 +47,7 @@ $grav_url = "http://www.gravatar.com/avatar/" . md5( strtolower( trim( $email ) 
          <div class="container">
          	<table class="utable">
          		<tr>
-         			<td class="uimgt"><a href="https://en.gravatar.com/"><img src="<?php echo($grav_url); ?>" target="_BLANK" alt="" /></a></td>
+         			<td class="uimgt"><a href="https://en.gravatar.com/" target="_blank"><img src="<?php echo($grav_url); ?>" alt="" /></a></td>
          			<td class="unamet"><h3><?php echo($cuname); ?></h3></td>
          		</tr>
          		<tr>
