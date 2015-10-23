@@ -3,7 +3,7 @@ include("header.php"); ?>
 <div id="jumbotron">
     <div class"supercontainer">
         <div class="jumbotron">
-            <div class="container2">
+            <div class="container">
                 <h1> Sauda Gathering - Vilkår </h1>
                 <ol>
                 <li>Treffet blir arrangert frå lørdag x til onsdag x oktober x.</li>

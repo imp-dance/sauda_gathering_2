@@ -22,8 +22,15 @@ nav .navbar-brand {
 	text-shadow:0px 1px 0px #000;
 	color:white !important;
 }
-.jumbotron p{
+.jumbotron ol li p{
+	font-size:14px;
+}
+.jumbotron p, .jumbotron label, .jumbotron ol, .jumbotron li{
 	color:white;
+	text-align:left;
+}
+.jumbotron li{
+	line-height:1.5em;
 }
 .jumbotron label{
 	color:white;
