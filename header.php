@@ -23,6 +23,7 @@
     			<li><a href="#">Arkiv</a></li>
     			<li><a href="#">Plasseringsoversikt</a></li>
     			<li><a href="#">Påmelding til treffet</a></li>
+          <li><a href="members.php">Påmeldte</a></li>
     			<li><a href="#">Påmelding til compoer</a></li>
     		  </ul>
     		</div>
