@@ -173,3 +173,9 @@ input[type="text"], input[type="email"], input[type="password"]{
 	padding:5px;
 	width:100%;
 }
+.inlinecenter{
+	text-align:center !important;
+}
+.navbar{
+	padding:10px 0;
+}

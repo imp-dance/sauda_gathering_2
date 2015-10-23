@@ -11,7 +11,7 @@ include("header.php"); ?>
     <div class="jumbotron">
       <div class="container">
         <h1>Velkommen til <br> Sauda Gathering!!</h1>
-        <p><a class="btn btn-success btn-lg" href="register.php" role="button">Meld deg på her &raquo;</a></p>
+        <p class="inlinecenter"><a class="btn btn-success btn-lg" href="register.php" role="button">Meld deg på her &raquo;</a></p>
       </div>
     </div>
     <div class="container">
