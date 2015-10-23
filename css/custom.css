@@ -17,7 +17,7 @@ nav .navbar-brand {
 	background: rgba(0, 0, 0, 0.4);
 }
 .jumbotron{
-	background:url('../images/bg2.png') repeat-x;
+	background:url('../images/bg3.png') repeat-x;
 	text-shadow:0px 1px 0px #000;
 	color:white !important;
 }
@@ -234,10 +234,13 @@ input[type="text"], input[type="email"], input[type="password"]{
 	.col-md-4{width:100% !important;float:none;}
 	.fb-page{width:100%;}
 }
+.jquery-ui-tumblr-rss-entry:first-child{
+	margin-top:0;
+}
 .jquery-ui-tumblr-rss-entry{
 	margin:5px -15px;
 	padding:5px 15px;
-	border-bottom:1px solid #00B200;
+	border-bottom:1px solid #aaa;
 	box-shadow: 0 4px 2px -2px gray;
 }
 .jquery-ui-tumblr-rss-entry cite, .jquery-ui-tumblr-rss-entry time, .postLink{
@@ -247,7 +250,53 @@ input[type="text"], input[type="email"], input[type="password"]{
 	font-weight:bold;
 	font-size:16px;
 }
+@media (max-width: 775px){
+	.navbar-header{
+		float:left !important;
+	}
+	.navbar-right{
+		text-align:right;
+	}
+	.navbar-right span{
+		display:none;
+	}
+	.navbar-toggle.collapsed{
+		display:none;
+	}
+	.btn-group>.btn:first-child{
+		margin-left:18px !important;
+	}
+}
 @media (min-width: 768px){
 .navbar-right {
 margin-right:0 !important;
 	}} 
+	.navbar-right span{
+		color:#aaa;
+	}
+	.navbar-right span strong a{
+		color:#aaa;
+	}
+	.navbar-right span strong{
+		text-decoration:underline;
+	}
+
+	.faqt{
+		width:100%;
+	}
+	.faqt tr{
+
+	}
+	.faqt td{
+		font-size:22px;
+		padding:20px 10px;
+		border-top:1px solid #aaa;
+		max-width:70%;
+	}
+	.faqt tr td:first-child{
+		border-left:1px solid #aaa;
+		width:255px;
+	}
+	.faqt tr:nth-child(odd){
+		background:#eee;
+	}

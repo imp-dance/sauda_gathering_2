@@ -19,7 +19,17 @@ include("header.php"); ?>
      <div class="jumbotron">
       <div class="container">
         <h1>Velkommen til <br> Sauda Gathering!!</h1>
+        <?php
+          if ($_SESSION['user']){
+        ?>
+        <p class="inlinecenter"><a class="btn btn-success btn-lg" href="#" role="button">Påmelding til compoer &raquo;</a></p>
+        <?php
+          }else{
+        ?>
         <p class="inlinecenter"><a class="btn btn-success btn-lg" href="register.php" role="button">Meld deg på her &raquo;</a></p>
+        <?php
+          }
+        ?>
       </div>
      </div>
       <div class="container">
@@ -28,7 +38,7 @@ include("header.php"); ?>
 
     		 <div class="panel panel-primary">
     			<div class="panel-heading">
-    				<h3 class="panel-title">Siste nyheter</h3>
+    				<h3 class="panel-title">Informasjon og Nyheter</h3>
     			</div>
     		 <div class="panel-body">
          <div class="panel-content">
@@ -37,7 +47,9 @@ include("header.php"); ?>
 		    </div>
        </div>
       </div>
-      <div class="fb-page" style="float:right" data-href="https://www.facebook.com/saudagathering" data-width="500px" data-height="800" data-small-header="false" data-adapt-container-width="false" data-hide-cover="false" data-show-facepile="false" data-show-posts="true"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/saudagathering"><a href="https://www.facebook.com/saudagathering">Sauda Gathering</a></blockquote></div></div>
+      <div class="fbwrap" style="width:500px;height:800px;float:right;">
+       <div class="fb-page" style="float:right" data-href="https://www.facebook.com/saudagathering" data-width="500px" data-height="800" data-small-header="false" data-adapt-container-width="false" data-hide-cover="false" data-show-facepile="false" data-show-posts="true"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/saudagathering"><a href="https://www.facebook.com/saudagathering">Sauda Gathering</a></blockquote></div></div>
+      </div>
       </div>
 	 </div> <!-- /container -->
   </div> <!-- /super_container -->
@@ -47,6 +59,26 @@ include("header.php"); ?>
       $(function(){
       $("#myUserPosts").tumblrRss({username: "SG-Crew", limit: 5});
     });
+      $(window).resize(function(){
+        if ($(window).width() < 1200) {
+           $(".fb-page, .fbwrap").attr("data-width", "1000px").css({
+              "margin" : "0 auto",
+              "float" : "none"
+            });
+        }else {
+          $(".fb-page, .fbwrap").attr("data-width", "800px").css({
+                "margin" : "0 auto",
+                "float" : "right"
+              });
+      }
+      if ($(window).width() < 525) {
+        $(".fb-page, .fbwrap").attr("data-width", "400px").css({
+              "margin" : "0 auto",
+              "float" : "none"
+            });
+      }
+      });
+      
     </script>
   <?php
   include("footer.php");

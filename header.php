@@ -48,6 +48,7 @@
     } else {
         ?>
         <div class="navbar-right">
+            <span>Du er logget inn som <strong><a href="profile.php"><?php echo($_SESSION['user']['username']); ?></a></strong> &raquo;</span>
             <a href="edit_account.php"><button class="btn btn-success moveman">Konto</button></a>
             <a href="logout.php"><button class="btn btn-success">Logg ut</button></a>
             </div>
