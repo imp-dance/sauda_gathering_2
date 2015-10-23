@@ -10,13 +10,8 @@ include("header.php"); ?>
     <div class="super_container">
     <div class="jumbotron">
       <div class="container">
-<<<<<<< HEAD
-        <h1>Velkommen til <br> Sauda Gathering</h1>
-        <p><a class="btn btn-success btn-lg" href="register.php" role="button">Meld deg på her &raquo;</a></p>
-=======
         <h1>Velkommen til <br> Sauda Gathering!!</h1>
         <p class="inlinecenter"><a class="btn btn-success btn-lg" href="register.php" role="button">Meld deg på her &raquo;</a></p>
->>>>>>> 6818c940e6c30d79f751049a964123ddd7307e57
       </div>
     </div>
     <div class="container">
