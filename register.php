@@ -176,7 +176,7 @@
         } 
          
         // This redirects the user back to the login page after they register 
-        header("Location: login.php"); 
+        header("Location: index.php"); 
          
         // Calling die or exit after performing a redirect using the header function 
         // is critical.  The rest of your PHP script will continue to execute and 
@@ -243,7 +243,7 @@ include("header.php"); ?>
                 </tr>
                 <tr>
                     <td colspan="2">
-                        <input class="btn btn-success btn-lg" type="submit" value="Register" /> 
+                        <input class="btn btn-success btn-lg" type="submit" value="Registrer deg" /> 
                     </td>
                 </tr>
             </table>
