@@ -21,6 +21,12 @@ nav .navbar-brand {
 	font-family: 'Raleway', 'courier', 'serif';
 }
 
+.navbar-right!important{
+	margin: 0 15px;
+	padding: 0 15px;
+}
+
+
 .jumbotron .container2 p {
 	box-sizing: border-box;
 	font-family: Raleway, courier, serif;
