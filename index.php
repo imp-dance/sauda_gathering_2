@@ -63,7 +63,8 @@ include("header.php"); ?>
 		  <div class="panel-body">
           <div class="panel-content">
             <p>I dag fikk Sauda Gathering besøk av Ryfylke. De ønsket å ta noen bilder og skrev en sak i avisen, blant annet om planleggingen av treffet og om hvorfor vi velger å arrangere.</p>
-            <p>Saken innehold også et intervju med Johannes Frøystad og Glenn-Andre Risvold Kalvik. <br><br> Ønsker du å lese hele artikkelen finner du den i papirutgaven av ryfylke eller på ryfylkes nettsider <a href="#">her</a>.</p>
+            <p>Saken innehold også et intervju med Johannes Frøystad og Glenn-Andre Risvold Kalvik.</p>
+            <p>Ønsker du å lese hele artikkelen finner du den i papirutgaven av ryfylke eller på ryfylkes nettsider <a href="#">her</a>.</p>
 		  </div>
 		  </div>
         </div>
