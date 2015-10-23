@@ -28,6 +28,31 @@ nav .navbar-brand {
 .jumbotron label{
 	color:white;
 }
+<<<<<<< HEAD
+=======
+
+.container2 {
+	margin: 0 auto;
+	width: 70%;
+	font-family: 'Raleway', 'courier', 'serif';
+}
+
+.jumbotron .container2 p {
+	box-sizing: border-box;
+	font-family: Raleway, courier, serif;
+	font-size: 14px;
+	line-height: 20px;
+}
+
+.jumbotron .container2 h1 {
+	color: #333;
+	text-align: center;
+	font-size: 35px;
+	font-weight: 600;
+	text-transform: uppercase;
+}
+
+>>>>>>> e920bb0a8f7deb66d0a2e413f3c3a1ec8a02003c
 .menu_top {
 	padding: 10px 0;
 }

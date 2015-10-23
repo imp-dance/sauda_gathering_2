@@ -1,5 +1,5 @@
-<?php include("head.php")?>
-    <?php include("header.php")?>
+<?php include("head.php");
+include("header.php"); ?>
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <?php  if(empty($_SESSION['user'])) 
     { 
@@ -81,5 +81,5 @@ Det vil i tillegg bli solgt dagsbilletter og "ukespass". Dette er kun for adgang
       </div>
 	 </div> <!-- /container -->
   </div> <!-- /super_container -->
-    <?php include("script.php")?>
-    <?php include("footer.php")?>
+    <?php include("script.php") ?>
+    <?php include("footer.php") ?>
