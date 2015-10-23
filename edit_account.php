@@ -176,7 +176,7 @@
             </form>
          </div> <!-- container -->
         </div> <!-- jumbotron -->
-    <?php include("footer.php") ?>
     <?php include("script.php") ?>
+    <?php include("footer.php") ?>
 </body>
 </html>

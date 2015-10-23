@@ -251,5 +251,7 @@ include("header.php"); ?>
       </div>
     </div>
 	 </div> <!-- /container -->
-<?php include("footer.php");
-include("script.php"); ?>
+<?php 
+include("script.php");
+include("footer.php");
+ ?>
