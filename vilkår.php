@@ -4,7 +4,7 @@ include("header.php"); ?>
 <div id="jumbotron">
     <div class"supercontainer">
         <div class="jumbotron">
-            <div class="container2">
+            <div class="container">
                 <ol>
                 <li>Treffet blir arrangert frå lørdag 4. til onsdag 8. oktober 2014.</li>
                 <li>Påmeldinga er bindande.</li>
