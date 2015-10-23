@@ -15,6 +15,7 @@ include("header.php"); ?>
       </div>
      </div>
      <!--Her begynne columns med nyhetssaker -->
+     <div id="myUserPosts"></div>
       <div class="container">
       <div class="row">
         <div class="col-md-4">
@@ -72,5 +73,14 @@ include("header.php"); ?>
       </div>
 	 </div> <!-- /container -->
   </div> <!-- /super_container -->
-    <?php include("footer.php");
-    include("script.php"); ?>
+  <?php include("script.php"); ?>
+    <script src="js/jquery.ui.tumblr.rss.js"></script>
+    <script>
+      $(function(){
+      $("#myUserPosts").tumblrRss({username: "SG-Crew", limit: 5});
+    });
+    </script>
+  <?php
+  include("footer.php");
+  ?>
+    
