@@ -45,8 +45,13 @@ $grav_url = "http://www.gravatar.com/avatar/" . md5( strtolower( trim( $email ) 
          <div class="container">
          	<table class="utable">
          		<tr>
-         			<td class="uimgt"><img src="<?php echo($grav_url); ?>" alt="" /></td>
+         			<td class="uimgt"><a href="https://en.gravatar.com/"><img src="<?php echo($grav_url); ?>" target="_BLANK" alt="" /></a></td>
          			<td class="unamet"><h3><?php echo($cuname); ?></h3></td>
+         		</tr>
+         		<tr>
+         			<td colspan="2">
+         				<!-- Start HTML Code --><iframe WIDTH="200" HEIGHT="400" title="Shoutbox" src="http://shoutbox.widget.me/window.html?uid=sgq4mxwo" frameborder="0" scrolling="auto"></iframe><script src="http://shoutbox.widget.me/v1.js" type="text/javascript"></script><br><a href="http://shoutbox.widget.me" title="Shoutbox Widget">Shout</a><a href="http://shoutbox-tutorials.blogspot.com" title="Shoutbox Tutorials">bo</a><a href="http://www.youtube.com/watch?v=4IBqLxtAbs0" title="Shoutbox Video">x</a><br><!-- End HTML Code -->
+         			</td>
          		</tr>
          	</table>
          </div> <!-- container -->
