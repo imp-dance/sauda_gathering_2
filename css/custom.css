@@ -345,3 +345,7 @@ margin-right:0 !important;
 .redi:active, .redi:focus{
 	background-color:darkred;
 }
+
+.faqheading:before{
+content: ;
+}
