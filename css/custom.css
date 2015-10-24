@@ -240,7 +240,7 @@ input[type="text"], input[type="email"], input[type="password"]{
 	.fb-page{width:100%;}
 }
 .jquery-ui-tumblr-rss-entry:first-child{
-	margin-top:0;
+	margin-top: 0;
 }
 .jquery-ui-tumblr-rss-entry{
 	margin:5px -15px;
@@ -248,9 +248,14 @@ input[type="text"], input[type="email"], input[type="password"]{
 	border-bottom:1px solid #aaa;
 	box-shadow: 0 4px 2px -2px gray;
 }
-.jquery-ui-tumblr-rss-entry cite, .jquery-ui-tumblr-rss-entry time, .postLink{
+.jquery-ui-tumblr-rss-entry cite, .postLink{
 	display:none;
 }
+
+.jquery-ui-tumblr-rss-entry time {
+	float: right;
+}
+
 .regularTitle{
 	font-weight:bold;
 	font-size:16px;
