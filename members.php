@@ -3,7 +3,7 @@
     if(empty($_SESSION['user'])) 
     { 
         // If they are not, we redirect them to the login page. 
-        header("Location: login.php"); 
+        echo('<meta http-equiv="refresh" content="0; url=login.php">');
          
         // Remember that this die statement is absolutely critical.  Without it, 
         // people can view your members-only content without logging in. 
@@ -45,6 +45,7 @@
         <div class="jumbotron">
          <div class="container">
             <h1 style="font-size: 60px";>Påmeldte</h1> 
+            <input type="text" id="search" style="display:block;width:100%;font-size:18px;padding:10px;outline:none;color:black;"/>
             <table class="memberlist">
             	<?php foreach($rows as $row): ?> 
         <tr class="member"> 
@@ -56,7 +57,20 @@
             </table>
          </div> <!-- container -->
         </div> <!-- jumbotron -->
-    <?php include("footer.php"); ?>
     <?php include("script.php"); ?>
+    <script>
+    $("#search").keyup(function(){
+        _this = this;
+        // Show only matching TR, hide rest of them
+        $.each($(".memberlist tbody").find("tr"), function() {
+            console.log($(this).text());
+            if($(this).text().toLowerCase().indexOf($(_this).val().toLowerCase()) == -1)
+               $(this).hide();
+            else
+                 $(this).show();                
+        });
+    }); 
+    </script>
+    <?php include("footer.php"); ?>
 </body>
 </html>
