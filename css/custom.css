@@ -326,8 +326,9 @@ margin-right:0 !important;
 	}
 
 	.faqt tr td:last-child:before{
-	content:">>"; //elns
-	color:#666;
+	content:"Svar >>"; 
+	color:#999;
+	font-size:14px;
 	display:inline-block;
 	padding:0 5px 0 0;
 }
