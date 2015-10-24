@@ -46,7 +46,7 @@ include("header.php"); ?>
     			</div>
     		 <div class="panel-body">
          <div class="panel-content">
-           <div id="myUserPosts"></div>
+           <div id="myUserPosts" style="max-height: 580px; overflow-x: hidden; overflow-y: scroll;"></div>
          </div>
 		    </div>
        </div>

@@ -6,7 +6,7 @@ include("header.php"); ?>
             <div class="container">
                 <h1 style="margin-top: 150px; margin-bottom: 200px;"> Sauda Gathering - Vilkår </h1>
                 <ol>
-                <li>Treffet blir arrangert frå lørdag x til onsdag x oktober x.</li>
+                <li>Treffet blir arrangert frå lørdag 1. til onsdag 5. oktober 2016.</li>
                 <li>Påmeldinga er bindande.</li>
                 <li>Om du betaler, men ikkje bruker plassen din har du ikkje rett til å få pengane att.</li>
                 <li>Du må minst ha starta på ungdomsskulen får å kunne delta.</li>
