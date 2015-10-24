@@ -22,7 +22,7 @@ include("header.php"); ?>
         <p class="inlinecenter">
         <div class="countdown styled"></div></p>
         <?php
-          if ($_SESSION['user']){
+          if (isset($_SESSION['user'])){
         ?>
         <p class="inlinecenter"><a class="btn btn-success btn-lg" href="#" role="button">Påmelding til compoer &raquo;</a></p>
         <?php
