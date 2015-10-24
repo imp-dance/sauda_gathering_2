@@ -37,21 +37,48 @@ Pass på å få alt riktig skrevet!</td>
                         <td name="minprof" id="minprof" colspan="2" style="text-align: center;"><h2 style="font-size: 40px;">MIN PROFIL</h2></td>
                     </tr>
                     <tr valign="top">
+                        <td><strong>Hvordan bytter jeg passord?</strong></td>
+                        <td>For å bytte passord må du være pålogget.
+Trykk på "Konto" oppe i høyre hjørne og skriv inn ditt nye passord i feltet på siden.</p></td>
+                    </tr>
+                    <tr valign="top">
                         <td><strong>Hvordan bytter jeg nick?</strong></td>
                         <td>For å bytte nick må du være pålogget.
 Trykk på "Endre profil" i innstillinger menyen og bytt nick helt nederst på siden.</td>
                     </tr>
          			<tr valign="top">
-         				<td><strong>Hvordan laster jeg opp et profilbilde?</strong></td>
-         				<td>For å laste opp et profilbilde går du inn på "Endre profil" og laster opp et bilde.
+         				<td><strong>Hva er et profilbilde?</strong></td>
+         				<td>Dette er bildet som dukker opp på din egen profil-side, i faktaboksen. 
+Det skal vise et bilde av deg selv, slik at andre kan bruke bildet i sammenheng med nicket ditt og bedre huske hvem du er.</p></td>
+         			</tr>
+                    <tr valign="top">
+                        <td><strong>Hvordan laster jeg opp et profilbilde?</strong></td>
+                        <td>For å laste opp et profilbilde går du inn på "Endre profil" og laster opp et bilde.
 
 NB! Bildet kan maks være på 100KB og MÅ være jpg. Anbefalt størrelse er 100x100 piksler. Bilder over denne størrelsen blir krympet.</p></td>
-         			</tr>
-                    <tr valign="top" class="faqheading">
-                        <td name="generelt" id="generelt" colspan="2" style="text-align: center;"><h2 style="font-size: 40px;">GENERELT</h2></td>
+                    </tr>
+                    <tr valign="top">
+                        <td><strong>Hvordan laster jeg opp et profilbilde?</strong></td>
+                        <td>For å laste opp et profilbilde går du inn på "Endre profil" og laster opp et bilde.
+
+NB! Bildet kan maks være på 100KB og MÅ være jpg. Anbefalt størrelse er 100x100 piksler. Bilder over denne størrelsen blir krympet.</p></td>
+                    </tr>
+                    <tr valign="top">
+                        <td><strong>Hvordan laster jeg opp en avatar?</strong></td>
+                        <td>For å laste opp et icon/avatar går du inn på "Endre profil" og laster opp et bilde.
+
+NB! Bildet kan maks være på 50KB og MÅ være jpg. Størrelsen MÅ være 50x50 piksler.</p></td>
                     </tr>
                     <tr valign="top" class="faqheading">
                         <td name="compo" id="compo" colspan="2" style="text-align: center;"><h2 style="font-size: 40px;">COMPO</h2></td>
+                    </tr>
+                    <tr valign="top">
+                        <td><strong>Hvem kan delta i compoer?</strong></td>
+                        <td>Kun ordinære deltakere på Sauda Gathering kan delta i compoer, dvs. de som har betalt for en egen plass på treffet. Personer med dagspass (50,- NOK) har derfor ikke mulighet for å delta i compoer.</p></td>
+                    </tr>
+                    <tr valign="top">
+                        <td><strong>Hvordan melder jeg meg på compoer?</strong></td>
+                        <td>For å melde deg på en compo trykker du på "Meny" i venstre hjørne og velger kategorien "Påmelding til compoer". På denne siden kan du se hvilke compoer som blir arrangert dette året og lage/melde deg på et lag ved ulike turneringer.</p></td>
                     </tr>
                     <tr valign="top" class="faqheading">
                         <td name="galleri" id="galleri" colspan="2" style="text-align: center;"><h2 style="font-size: 40px;">GALLERI</h2></td>

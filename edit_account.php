@@ -140,12 +140,12 @@
         $_SESSION['user']['email'] = $_POST['email']; 
          
         // This redirects the user back to the members-only page after they register 
-        header("Location: private.php"); 
+        header("Location: edit_account.php"); 
          
         // Calling die or exit after performing a redirect using the header function 
         // is critical.  The rest of your PHP script will continue to execute and 
         // will be sent to the user if you do not die or exit. 
-        die("Redirecting to private.php"); 
+        die("Redirecting to edit_account.php"); 
     } 
      
 ?> 
@@ -166,11 +166,11 @@
                         <td><input type="text" name="email" value="<?php echo htmlentities($_SESSION['user']['email'], ENT_QUOTES, 'UTF-8'); ?>" /></td> 
                     </tr>
                     <tr> 
-                        <td>Passord <i>(La stå om du ikke vill skifte passord)</i> :</td>
+                        <td>Passord: <i style="padding: 0 10px;">(La dette feltet stå blankt <br> <!-- Sorry, it was absolutely neccessary --> dersom du ikke ønsker å endre passord)</i></td>
                         <td><input type="password" name="password" value="" /></td>
                     </tr>
                     <tr>
-                        <td colspan="2"><input type="submit" value="Update Account" /> </td>
+                        <td colspan="2"><input type="submit" value="Oppdater bruker" /> </td>
                     </tr>
                 </table> 
             </form>
