@@ -9,9 +9,10 @@
         </div> <!-- jumbotron -->
         <div class="container">
          	<div class="row">
+                <a href="#pameld">Påmelding</a> / <a href="#minprof">Min Profil</a> / <a href="#generelt">Generelt</a> / <a href="#compo">Compo</a> / <a href="#galleri">Galleri</a> / <a href="#forum">Forum</a>
          		<table class="faqt">
                     <tr valign="top" class="faqheading">
-                        <td colspan="2" style="text-align: center;"><h2 style="font-size: 40px;">PÅMELDING</h2></td>
+                        <td colspan="2" style="text-align: center;" name="pameld" id="pameld"><h2 style="font-size: 40px;">PÅMELDING</h2></td>
                     </tr>
          			<tr valign="top">
          				<td><strong>Kan jeg bytte plass etter at jeg har betalt?</strong></td>
@@ -33,7 +34,7 @@ Pass på å få alt riktig skrevet!</td>
          				<td>Noen kan oppleve problemer med at meldingene fra registreringsprosessen blir oppfattet som søppelpost/junkmail. Dette gjelder f.eks. de som bruker Hotmail. E-posten vil da havne i junkmail mappa.</td>
          			</tr>
                     <tr valign="top" class="faqheading">
-                        <td colspan="2" style="text-align: center;"><h2 style="font-size: 40px;">MIN PROFIL</h2></td>
+                        <td name="minprof" id="minprof" colspan="2" style="text-align: center;"><h2 style="font-size: 40px;">MIN PROFIL</h2></td>
                     </tr>
                     <tr valign="top">
                         <td><strong>Hvordan bytter jeg nick?</strong></td>
@@ -46,6 +47,18 @@ Trykk på "Endre profil" i innstillinger menyen og bytt nick helt nederst på si
 
 NB! Bildet kan maks være på 100KB og MÅ være jpg. Anbefalt størrelse er 100x100 piksler. Bilder over denne størrelsen blir krympet.</p></td>
          			</tr>
+                    <tr valign="top" class="faqheading">
+                        <td name="generelt" id="generelt" colspan="2" style="text-align: center;"><h2 style="font-size: 40px;">GENERELT</h2></td>
+                    </tr>
+                    <tr valign="top" class="faqheading">
+                        <td name="compo" id="compo" colspan="2" style="text-align: center;"><h2 style="font-size: 40px;">COMPO</h2></td>
+                    </tr>
+                    <tr valign="top" class="faqheading">
+                        <td name="galleri" id="galleri" colspan="2" style="text-align: center;"><h2 style="font-size: 40px;">GALLERI</h2></td>
+                    </tr>
+                    <tr valign="top" class="faqheading">
+                        <td name="forum" id="forum" colspan="2" style="text-align: center;"><h2 style="font-size: 40px;">FORUM</h2></td>
+                    </tr>
          		</table>
          	</div>
          </div>
