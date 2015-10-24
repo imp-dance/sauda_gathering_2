@@ -336,3 +336,6 @@ margin-right:0 !important;
 	background-color:darkred;
 	border-color:#333;
 }
+.redi:active, .redi:focus{
+	background-color:darkred;
+}
