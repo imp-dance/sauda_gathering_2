@@ -26,9 +26,6 @@ include("header.php"); ?>
         ?>
         <p class="inlinecenter">
           <a class="btn btn-success btn-lg" href="#" role="button" style="margin-top: 0px;">Påmelding til compoer &raquo;</a>
-          <p class ="inlinecenter">
-          <a class="btn btn-success btn-lg" href="irc.php" role="button" style="margin-top: 0px;">IRC &raquo;</a>
-          <p class="inline-center">
         </p>
         <?php
           }else{
