@@ -208,7 +208,7 @@ include("header.php"); ?>
                 <tr>
                     <td colspan="2">
                         <input type="checkbox" name="ckbox" required />
-                        <label for="ckbox">Når du registrerer deg aksepterer du <a href="terms.php">vilkårene</a></label>
+                        <label for="ckbox">Når du registrerer deg aksepterer du <a href="terms.php" target="_blank">vilkårene</a></label>
                     </td>
                 </tr>
                 <tr>
@@ -243,7 +243,7 @@ include("header.php"); ?>
                 </tr>
                 <tr>
                     <td colspan="2">
-                        <input class="btn btn-success btn-lg" type="submit" value="Registrer deg" /> 
+                        <input class="btn btn-success btn-lg" type="submit" value="Registrer deg"/> 
                     </td>
                 </tr>
             </table>
