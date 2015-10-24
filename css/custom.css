@@ -325,13 +325,18 @@ margin-right:0 !important;
 		color:#eee;
 	}
 
-	.faqt tr td:last-child:before{
+.faqt tr td:last-child:before{
 	content:"Svar >>"; 
 	color:#999;
 	font-size:14px;
 	display:inline-block;
 	padding:0 5px 0 0;
 }
+.faqt tr.faqheading td:last-child:before{
+		content:"";
+		padding:0;
+		display:none;
+	}
 .redi{background-color:#cd3333;}
 .redi:hover{
 	background-color:darkred;
