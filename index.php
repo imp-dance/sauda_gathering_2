@@ -18,7 +18,7 @@ include("header.php"); ?>
     <div class="super_container">
      <div class="jumbotron">
       <div class="container">
-        <h1>Velkommen til <br> Sauda Gathering!!</h1>
+        <h1>Velkommen til <br> Sauda Gathering</h1>
         <?php
           if ($_SESSION['user']){
         ?>
