@@ -18,7 +18,7 @@ include("header.php"); ?>
     <div class="super_container">
      <div class="jumbotron" style="height: 550px; border-bottom: 50px solid #222;">
       <div class="container" style="padding-bottom: 0;">
-        <h1>Velkommen til <br> Sauda Gathering!!!!11ein</h1>
+        <h1>Velkommen til <br> Sauda Gathering</h1>
         <p class="inlinecenter">
         <div class="countdown styled"></div></p>
         <?php
