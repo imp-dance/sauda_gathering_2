@@ -303,3 +303,19 @@ margin-right:0 !important;
 	.widesearch{
 		display:block;width:100%;font-size:18px;padding:10px;outline:none;color:black;
 	}
+	.countdown div{
+		display:inline-block;
+		margin:0 10px;
+		font-weight:300;
+		font-size:18px;
+		background-color: rgba(0, 0, 0, 0.4);
+		background: rgba(0, 0, 0, 0.4);
+		padding:5px 20px;
+	}
+	.countdown div span{
+		display:block;
+		color:#aaa;
+	}
+	.countdown div strong{
+		color:#eee;
+	}

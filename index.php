@@ -22,6 +22,8 @@ include("header.php"); ?>
         <?php
           if ($_SESSION['user']){
         ?>
+        <p class="inlinecenter">
+        <div class="countdown styled"></div></p>
         <p class="inlinecenter"><a class="btn btn-success btn-lg" href="#" role="button">Påmelding til compoer &raquo;</a></p>
         <?php
           }else{
@@ -47,8 +49,8 @@ include("header.php"); ?>
 		    </div>
        </div>
       </div>
-      <div class="fbwrap" style="width:500px;height:800px;float:right;">
-       <div class="fb-page" style="float:right" data-href="https://www.facebook.com/saudagathering" data-width="500px" data-height="800" data-small-header="false" data-adapt-container-width="false" data-hide-cover="false" data-show-facepile="false" data-show-posts="true"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/saudagathering"><a href="https://www.facebook.com/saudagathering">Sauda Gathering</a></blockquote></div></div>
+      <div class="fbwrap" style="width:500px;height:650px;float:right;background:url('images/fbload.png') no-repeat top left;">
+       <div class="fb-page" style="float:right" data-href="https://www.facebook.com/saudagathering" data-width="500px" data-height="650" data-small-header="false" data-adapt-container-width="false" data-hide-cover="false" data-show-facepile="false" data-show-posts="true"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/saudagathering"><a href="https://www.facebook.com/saudagathering">Sauda Gathering</a></blockquote></div></div>
       </div>
       </div>
 	 </div> <!-- /container -->
@@ -79,6 +81,16 @@ include("header.php"); ?>
       }
       });
       
+    </script>
+    <script src="js/countdown.js"></script>
+    <script>
+    var endDate = "October 1, 2016 00:00:00";
+    $('.countdown').countdown({
+          date: endDate,
+          render: function(data) {
+            $(this.el).html("<div><strong>" + this.leadingZeros(data.days, 3) + "</strong> <span>dager</span></div><div><strong>" + this.leadingZeros(data.hours, 2) + "</strong> <span>timer</span></div>" /* + this.leadingZeros(data.min, 2) + " <span>min</span></div><div>" + this.leadingZeros(data.sec, 2) + " <span>sec</span></div>"*/ + "");
+          }
+        });
     </script>
   <?php
   include("footer.php");
