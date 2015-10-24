@@ -331,3 +331,8 @@ margin-right:0 !important;
 	display:inline-block;
 	padding:0 5px 0 0;
 }
+.redi{background-color:#cd3333;}
+.redi:hover{
+	background-color:darkred;
+	border-color:#333;
+}
