@@ -16,8 +16,8 @@ include("header.php"); ?>
         <?php
     } ?>
     <div class="super_container">
-     <div class="jumbotron">
-      <div class="container">
+     <div class="jumbotron" style="height: 550px; border-bottom: 50px solid #222;">
+      <div class="container" style="padding-bottom: 0;">
         <h1>Velkommen til <br> Sauda Gathering</h1>
         <p class="inlinecenter">
         <div class="countdown styled"></div></p>
@@ -25,8 +25,10 @@ include("header.php"); ?>
           if (isset($_SESSION['user'])){
         ?>
         <p class="inlinecenter">
-          <a class="btn btn-success btn-lg" href="#" role="button">Påmelding til compoer &raquo;</a>
-          <a class="btn btn-success btn-lg" href="irc.php" role="button">IRChat &raquo;</a>
+          <a class="btn btn-success btn-lg" href="#" role="button" style="margin-top: 0px;">Påmelding til compoer &raquo;</a>
+          <p class ="inlinecenter">
+          <a class="btn btn-success btn-lg" href="irc.php" role="button" style="margin-top: 0px;">IRC &raquo;</a>
+          <p class="inline-center">
         </p>
         <?php
           }else{
