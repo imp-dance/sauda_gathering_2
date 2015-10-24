@@ -349,3 +349,7 @@ margin-right:0 !important;
 .faqheading:before{
 content: ;
 }
+
+.faqt {
+	border-right: 1px solid #aaa;
+}
