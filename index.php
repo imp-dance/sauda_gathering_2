@@ -24,7 +24,10 @@ include("header.php"); ?>
         <?php
           if (isset($_SESSION['user'])){
         ?>
-        <p class="inlinecenter"><a class="btn btn-success btn-lg" href="#" role="button">Påmelding til compoer &raquo;</a></p>
+        <p class="inlinecenter">
+          <a class="btn btn-success btn-lg" href="#" role="button">Påmelding til compoer &raquo;</a>
+          <a class="btn btn-success btn-lg" href="irc.php" role="button">IRChat &raquo;</a>
+        </p>
         <?php
           }else{
         ?>
