@@ -208,7 +208,7 @@ include("header.php"); ?>
                 <tr>
                     <td colspan="2">
                         <input type="checkbox" name="ckbox" required />
-                        <label for="ckbox">Når du registrerer deg aksepterer du <a href="vilkår.php">vilkårene</a></label>
+                        <label for="ckbox">Når du registrerer deg aksepterer du <a href="terms.php">vilkårene</a></label>
                     </td>
                 </tr>
                 <tr>

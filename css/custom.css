@@ -114,7 +114,7 @@ nav .navbar-brand {
 	border-color: #00B200;
 }
 
-<<<<<<<<<<<#footer {
+#footer {
 	background-color: #333;
 	height: 100px;
 }
@@ -299,4 +299,7 @@ margin-right:0 !important;
 	}
 	.faqt tr:nth-child(odd){
 		background:#eee;
+	}
+	.widesearch{
+		display:block;width:100%;font-size:18px;padding:10px;outline:none;color:black;
 	}
