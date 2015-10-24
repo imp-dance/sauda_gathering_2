@@ -19,11 +19,11 @@ include("header.php"); ?>
      <div class="jumbotron">
       <div class="container">
         <h1>Velkommen til <br> Sauda Gathering</h1>
+        <p class="inlinecenter">
+        <div class="countdown styled"></div></p>
         <?php
           if ($_SESSION['user']){
         ?>
-        <p class="inlinecenter">
-        <div class="countdown styled"></div></p>
         <p class="inlinecenter"><a class="btn btn-success btn-lg" href="#" role="button">Påmelding til compoer &raquo;</a></p>
         <?php
           }else{
