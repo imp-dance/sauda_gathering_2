@@ -9,7 +9,7 @@
         </div> <!-- jumbotron -->
         <div class="container">
          	<div class="row">
-                Naviger: <a href="#pameld">Påmelding</a> / <a href="#minprof">Min Profil</a> / <a href="#generelt">Generelt</a> / <a href="#compo">Compo</a> / <a href="#galleri">Galleri</a> / <a href="#forum">Forum</a>
+                Naviger: <a href="#pameld">Påmelding</a> / <a href="#minprof">Min Profil</a> / <a href="#compo">Compo</a> / <a href="#galleri">Galleri</a> / <a href="#forum">Forum</a>
          		<table class="faqt">
                     <tr valign="top" class="faqheading">
                         <td colspan="2" style="text-align: center;" name="pameld" id="pameld"><h2 style="font-size: 40px;">PÅMELDING</h2></td>

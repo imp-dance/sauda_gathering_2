@@ -45,7 +45,7 @@
         <div class="jumbotron">
          <div class="container">
             <h1 style="font-size: 60px";>Påmeldte</h1> 
-            <input type="text" id="search" class="widesearch" />
+            <input type="text" id="search" class="widesearch" placeholder="Trykk her for å søke etter brukere"/>
             <table class="memberlist">
             	<?php foreach($rows as $row): ?> 
         <tr class="member"> 
