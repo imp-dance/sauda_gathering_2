@@ -10,7 +10,7 @@
           </button>
           <div class="btn-group">
 		        <button type="button" class="top-btn btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      			Meny <span class="caret"></span>
+      			<span class="glyphicon glyphicon-menu-hamburger"></span> Meny
       		  </button>
     		  <ul class="dropdown-menu">
     			<li><a href="index.php">Hjem</a></li>
@@ -42,7 +42,7 @@
             <div class="form-group">
               <input type="password" placeholder="Passord" class="form-control" name="password">
             </div>
-            <button type="submit" class="btn btn-success">Logg inn</button>
+            <button type="submit" class="btn btn-success"><span class="glyphicon glyphicon-log-in"></span> Logg inn</button>
           </form>
         <?php
     } else {
@@ -50,8 +50,8 @@
         <div class="navbar-right">
             <span>Du er logget inn som <strong><a href="profile.php"><?php echo($_SESSION['user']['username']); ?></a></strong> &raquo;</span>
             <a href="edit_account.php"><button class="btn btn-success moveman"><span class="glyphicon glyphicon-user"></span> Konto</button></a>
-            <a href="logout.php"><button class="btn btn-success">Logg ut</button></a>
-            <a href="irc.php"><button class="btn btn-success moveman redi">IRC &raquo;</button></a>
+            <a href="logout.php"><button class="btn btn-success"><span class="glyphicon glyphicon-log-out"></span> Logg ut</button></a>
+            <a href="irc.php"><button class="btn btn-success moveman redi"><span class="glyphicon glyphicon-comment"></span> IRC</button></a>
             </div>
         <?php
     }
