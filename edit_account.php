@@ -27,6 +27,41 @@
         // If the user is changing their E-Mail address, we need to make sure that 
         // the new value does not conflict with a value that is already in the system. 
         // If the user is not changing their E-Mail address this check is not needed. 
+        if($_POST['nick'] != $_SESSION['user']['username']){
+             // Define our SQL query 
+            $query = " 
+                SELECT 
+                    1 
+                FROM morten_users 
+                WHERE 
+                    username = :nick 
+            "; 
+             
+            // Define our query parameter values 
+            $query_params = array( 
+                ':nick' => $_POST['nick'] 
+            ); 
+             
+            try 
+            { 
+                // Execute the query 
+                $stmt = $db->prepare($query); 
+                $result = $stmt->execute($query_params); 
+            } 
+            catch(PDOException $ex) 
+            { 
+                // Note: On a production website, you should not output $ex->getMessage(). 
+                // It may provide an attacker with helpful information about your code.  
+                die("Failed to run query: " . $ex->getMessage()); 
+            } 
+             
+            // Retrieve results (if any) 
+            $row = $stmt->fetch(); 
+            if($row) 
+            { 
+                die("Nicket er allerede i bruk!"); 
+            } 
+        }
         if($_POST['email'] != $_SESSION['user']['email']) 
         { 
             // Define our SQL query 
@@ -60,7 +95,7 @@
             $row = $stmt->fetch(); 
             if($row) 
             { 
-                die("This E-Mail address is already in use"); 
+                die("E-mail addressen er allerede i bruk!"); 
             } 
         } 
          
@@ -86,6 +121,7 @@
         $query_params = array( 
             ':email' => $_POST['email'], 
             ':user_id' => $_SESSION['user']['id'], 
+            ':nick' => $_POST['nick'],
         ); 
          
         // If the user is changing their password, then we need parameter values 
@@ -103,6 +139,7 @@
             UPDATE morten_users 
             SET 
                 email = :email 
+                , username = :nick
         "; 
          
         // If the user is changing their password, then we extend the SQL query 
@@ -138,6 +175,7 @@
         // Now that the user's E-Mail address has changed, the data stored in the $_SESSION 
         // array is stale; we need to update it so that it is accurate. 
         $_SESSION['user']['email'] = $_POST['email']; 
+        $_SESSION['user']['username'] = $_POST['nick'];
          
         // This redirects the user back to the members-only page after they register 
         header("Location: edit_account.php"); 
@@ -155,6 +193,33 @@
         <div class="jumbotron">
          <div class="container alignleft">
             <h1 style="font-size: 60px";>Konto</h1>
+            <div class="upacf">
+            <form action="edit_account.php" method="post"> 
+              <table>
+                <thead>
+                    <tr>
+                        <td colspan="2">Brukerinformasjon</td>
+                    </tr>
+                </thead>
+                 <tr>
+                   <td>Nick</td>
+                   <td><input name="nick" type="text" value="<?php echo htmlentities($_SESSION['user']['username'], ENT_QUOTES, 'UTF-8'); ?>" />
+                </tr>
+                 <tr>
+                   <td>Email</td>
+                   <td><input name="email" type="email" value="<?php echo htmlentities($_SESSION['user']['email'], ENT_QUOTES, 'UTF-8'); ?>" />
+                </tr>
+                 <tr>
+                   <td colspan="2"><br />Generer nytt passord</td>
+                </tr>
+                <tfoot>
+                <tr>
+                   <td colspan="2"><input type="submit" value="Lagre" class="btn btn-success moveman newsub" /></td>
+                </tr>
+                </tfoot>
+              </table> 
+            </form>
+            </div><!--
             <form action="edit_account.php" method="post"> 
                 <table class="regtable">
                     <tr>
@@ -166,14 +231,15 @@
                         <td><input type="text" name="email" value="<?php echo htmlentities($_SESSION['user']['email'], ENT_QUOTES, 'UTF-8'); ?>" /></td> 
                     </tr>
                     <tr> 
-                        <td>Passord: <i style="padding: 0 10px;">(La dette feltet stå blankt <br> <!-- Sorry, it was absolutely neccessary --> dersom du ikke ønsker å endre passord)</i></td>
+                        <td>Passord: <i style="padding: 0 10px;">(La dette feltet stå blankt <br>  dersom du ikke ønsker å endre passord)</i></td>
                         <td><input type="password" name="password" value="" /></td>
                     </tr>
                     <tr>
                         <td colspan="2"><input type="submit" value="Oppdater bruker" /> </td>
                     </tr>
                 </table> 
-            </form>
+            </form>  -->
+            <div class="clear"></div>
          </div> <!-- container -->
         </div> <!-- jumbotron -->
     <?php include("script.php") ?>
