@@ -358,4 +358,22 @@ content: ;
 .faqt {
 	border-right: 1px solid #aaa;
 }
-span.glyphicon{color:#fff;}
+
+span.glyphicon{
+	color:#fff;
+}
+
+span .glyphicon .glyphicon-search {
+	position: absolute;
+	left: 5px;
+	top: 5px;
+	color: black;
+}
+
+#search {
+	padding-left: 30px;
+}
+
+.fuckthis {
+	position: relative;
+}

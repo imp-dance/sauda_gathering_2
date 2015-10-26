@@ -33,6 +33,8 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- Linking to the Raleway font -->
 	<link href='https://fonts.googleapis.com/css?family=Raleway:400, 600' rel='stylesheet' type='text/css'>
+    <!-- Linking to the Varela Round font -->
+    <link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
     <!-- Custom styles for this template -->
 	<link href="css/custom.css" rel="stylesheet">
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->

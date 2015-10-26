@@ -18,14 +18,14 @@ include("header.php"); ?>
     <div class="super_container">
      <div class="jumbotron" style="height: 550px; border-bottom: 50px solid #222;">
       <div class="container" style="padding-bottom: 0;">
-        <h1>Velkommen til <br> Sauda Gathering <span class="glyphicon glyphicon-sunglasses" style="color:pink;"></span></h1>
+        <h1>Velkommen til <br> Sauda Gathering</h1>
         <p class="inlinecenter">
         <div class="countdown styled"></div></p>
         <?php
           if (isset($_SESSION['user'])){
         ?>
         <p class="inlinecenter">
-          <a class="btn btn-success btn-lg" href="#" role="button" style="margin-top: 0px;">Påmelding til compoer &raquo;</a>
+          <a class="btn btn-success btn-lg" href="#" role="button" style="margin-top: 0px;"><span class="glyphicon glyphicon-usd"></span> Påmelding til compoer &raquo;</a>
         </p>
         <?php
           }else{
