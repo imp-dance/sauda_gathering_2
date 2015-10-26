@@ -363,15 +363,15 @@ span.glyphicon{
 	color:#fff;
 }
 
-span .glyphicon .glyphicon-search {
+.input_field.glyphicon.glyphicon-search {
 	position: absolute;
-	left: 5px;
-	top: 5px;
+	left: 22px;
+	top: 13px;
 	color: black;
 }
 
 #search {
-	padding-left: 30px;
+	padding-left: 65px;
 }
 
 .fuckthis {
