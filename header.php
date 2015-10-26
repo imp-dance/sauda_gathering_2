@@ -13,16 +13,16 @@
       			<span class="glyphicon glyphicon-menu-hamburger"></span> Meny
       		  </button>
     		  <ul class="dropdown-menu">
+          <?php if(empty($_SESSION['user'])){ ?>
+          <li class="divider-sg"><a href="register.php">Registrer deg</a></li>
+          <?php }else{ ?>
+          <li><a href="profile.php">Min profil</a></li>
+          <li class="divider-sg"><a href="edit_account.php">Rediger profil</a></li>
+          <?php } ?>
     			<li><a href="index.php">Hjem</a></li>
     			<li><a href="about.php">Om oss</a></li>
-          <?php if(empty($_SESSION['user'])){ ?>
-    			<li><a href="register.php">Registrer deg</a></li>
-          <?php }else{ ?>
-    			<li><a href="profile.php">Min profil</a></li>
-          <?php } ?>
-    			<li><a href="faq.php">FAQ</a></li>
-    			<li><a href="terms.php">Vilkår</a></li>
-    			<li><a href="#">Arkiv</a></li>
+          <li><a href="faq.php">FAQ</a></li>
+          <li class="divider-sg"><a href="terms.php">Vilkår</a></li>
     			<li><a href="#">Plasseringsoversikt</a></li>
     			<li><a href="#">Påmelding til treffet</a></li>
           <li><a href="members.php">Påmeldte til treffet</a></li>

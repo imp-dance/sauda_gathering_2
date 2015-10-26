@@ -220,6 +220,21 @@
               </table> 
             </form>
             </div>
+            <div class="upacf">
+                <table>
+                    <thead>
+                        <tr>
+                            <td colspan="2">Skift bilde</td>
+                        </tr>
+                    </thead>
+                    <tr>
+
+                    </tr>
+                    <tfoot>
+
+                    </tfoot>
+                </table>
+            </div>
             <div class="clear"></div>
          </div> <!-- container -->
         </div> <!-- jumbotron -->
