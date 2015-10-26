@@ -101,10 +101,10 @@
          
         // If the user entered a new password, we need to hash it and generate a fresh salt 
         // for good measure. 
-        if(!empty($_POST['password'])) 
+        if(!empty($_POST['passwordtiss'])) 
         { 
             $salt = dechex(mt_rand(0, 2147483647)) . dechex(mt_rand(0, 2147483647)); 
-            $password = hash('sha256', $_POST['password'] . $salt); 
+            $password = hash('sha256', $_POST['passwordtiss'] . $salt); 
             for($round = 0; $round < 65536; $round++) 
             { 
                 $password = hash('sha256', $password . $salt); 
@@ -219,26 +219,7 @@
                 </tfoot>
               </table> 
             </form>
-            </div><!--
-            <form action="edit_account.php" method="post"> 
-                <table class="regtable">
-                    <tr>
-                        <td>Brukernavn:</td>
-                        <td><b><?php echo htmlentities($_SESSION['user']['username'], ENT_QUOTES, 'UTF-8'); ?></b></td>
-                    </tr>
-                    <tr>
-                        <td>Email addresse:</td>
-                        <td><input type="text" name="email" value="<?php echo htmlentities($_SESSION['user']['email'], ENT_QUOTES, 'UTF-8'); ?>" /></td> 
-                    </tr>
-                    <tr> 
-                        <td>Passord: <i style="padding: 0 10px;">(La dette feltet stå blankt <br>  dersom du ikke ønsker å endre passord)</i></td>
-                        <td><input type="password" name="password" value="" /></td>
-                    </tr>
-                    <tr>
-                        <td colspan="2"><input type="submit" value="Oppdater bruker" /> </td>
-                    </tr>
-                </table> 
-            </form>  -->
+            </div>
             <div class="clear"></div>
          </div> <!-- container -->
         </div> <!-- jumbotron -->

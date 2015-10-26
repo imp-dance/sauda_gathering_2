@@ -366,15 +366,19 @@ span.glyphicon{
 	color:#fff;
 }
 
-span .glyphicon .glyphicon-search {
+.input_field.glyphicon.glyphicon-search {
 	position: absolute;
-	left: 5px;
-	top: 5px;
+	left: 22px;
+	top: 13px;
 	color: black;
 }
 
 #search {
+<<<<<<< HEAD
 	padding-left: 50px;
+=======
+	padding-left: 65px;
+>>>>>>> 7f9b48399235637656cf6e66c35ebd3e3c7f29d1
 }
 
 .fuckthis {
