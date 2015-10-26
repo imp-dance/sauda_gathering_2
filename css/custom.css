@@ -46,12 +46,6 @@ h1{
 	font-family: 'Raleway', 'courier', 'serif';
 }
 
-.navbar-right!important{
-	margin: 0 15px;
-	padding: 0 15px;
-}
-
-
 .jumbotron .container2 p {
 	box-sizing: border-box;
 	font-family: Raleway, courier, serif;
@@ -314,7 +308,13 @@ margin-right:0 !important;
 		background:#eee;
 	}
 	.widesearch{
-		display:block;width:100%;font-size:18px;padding:10px;outline:none;color:black;
+		display: inline;
+		width: 100%;
+		float: left;
+		font-size: 15px;
+		padding: 10px;
+		outline: none;
+		color: black;
 	}
 	.countdown div{
 		display:inline-block;
@@ -369,7 +369,7 @@ span.glyphicon{
 .input_field.glyphicon.glyphicon-search {
 	position: absolute;
 	left: 22px;
-	top: 13px;
+	top: 10px;
 	color: black;
 }
 
@@ -437,4 +437,9 @@ span.glyphicon{color:#fff;}
 .clear{clear:both;}
 .divider-sg{
 	border-bottom:1px solid #eee;
+}
+
+.link-header {
+	font-weight: bold!important;
+	color: red;
 }
