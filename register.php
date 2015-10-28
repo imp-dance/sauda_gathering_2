@@ -270,10 +270,10 @@ include("header.php"); ?>
                 </tr>
                 <tr>
                     <td>
-                        <label for="mobilnr">Mobilnummer</label>:
+                        <label for="nr">Mobilnummer</label>:
                     </td>
                     <td>
-                        <input type="text" name="mobilnr" value="" autocomplete="off" required placeholder="Mobilnummer"
+                        <input type="text" name="nr" value="" autocomplete="off" required placeholder="Mobilnummer"
                 oninvalid="this.setCustomValidity('Vennligst skriv inn ett gyldig mobilnummer')"
                 oninput="setCustomValidity('')" /> 
                     </td>
