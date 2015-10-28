@@ -119,12 +119,14 @@
                 username, 
                 password, 
                 salt, 
-                email 
+                email,
+                nr 
             ) VALUES ( 
                 :username, 
                 :password, 
                 :salt, 
-                :email 
+                :email,
+                :nr
             ) 
         "; 
          
@@ -161,7 +163,8 @@
             ':username' => $_POST['username'], 
             ':password' => $password, 
             ':salt' => $salt, 
-            ':email' => $_POST['email'] 
+            ':email' => $_POST['email'], 
+            ':nr' => $_POST['nr']
         ); 
          
         try 
@@ -262,6 +265,16 @@ include("header.php"); ?>
                     <td>
                         <input type="password" name="password_confirm" value="" autocomplete="off" required placeholder="Vennligst gjenta passordet"
                 oninvalid="this.setCustomValidity('Vennligst skriv inn ett gyldig passord')"
+                oninput="setCustomValidity('')" /> 
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="mobilnr">Mobilnummer</label>:
+                    </td>
+                    <td>
+                        <input type="text" name="mobilnr" value="" autocomplete="off" required placeholder="Mobilnummer"
+                oninvalid="this.setCustomValidity('Vennligst skriv inn ett gyldig mobilnummer')"
                 oninput="setCustomValidity('')" /> 
                     </td>
                 </tr>

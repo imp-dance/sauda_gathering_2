@@ -218,7 +218,7 @@
                 </tr>
                  <tr>
                    <td>Mobilnr</td>
-                   <td><input name="nr" type="number" value="<?php if (!empty($_SESSION['user']['nr'])){echo htmlentities($_SESSION['user']['nr'], ENT_QUOTES, 'UTF-8'); } ?>" />
+                   <td><input style="padding-left: 5px;" name="nr" type="number" value="<?php if (!empty($_SESSION['user']['nr'])){echo htmlentities($_SESSION['user']['nr'], ENT_QUOTES, 'UTF-8'); } ?>" />
                 </tr>
                  <tr>
                    <td>Kontonr</td>
