@@ -214,31 +214,52 @@
                 </tr>
                 <tfoot>
                 <tr>
-                   <td colspan="2"><input type="submit" value="Lagre" class="btn btn-success moveman newsub" /></td>
+                   <td colspan="2"><button type="submit" class="btn btn-success moveman newsub"><span class="glyphicon glyphicon-floppy-disk"></span> Lagre</button></td>
                 </tr>
                 </tfoot>
               </table> 
             </form>
             </div>
             <div class="upacf">
+                <form class="dropzone" action="actions/change_img.php" method="post" id="dropz">
                 <table>
-                    <thead>
-                        <tr>
-                            <td colspan="2">Skift bilde</td>
-                        </tr>
-                    </thead>
                     <tr>
-
+                        <td><input type="file" name="file" /></td>
                     </tr>
-                    <tfoot>
 
+                    <tfoot>
+                        <tr>
+                            <td></td>
+                        </tr>
                     </tfoot>
                 </table>
+            </form>
             </div>
             <div class="clear"></div>
          </div> <!-- container -->
         </div> <!-- jumbotron -->
     <?php include("script.php") ?>
+    <script src="js/dropzone.js"></script>
+    <script>
+    $(document).ready(function(){
+        $('input[type="file"]').hide();
+        $(".dz-default span").text("Slipp bildet her");
+
+        Dropzone.options.dropz = {
+          paramName: "file", // The name that will be used to transfer the file
+          maxFilesize: 2, // MB
+          dictDefaultMessage: "Trykk her, eller slipp bildet for å laste opp",
+          dictInvalidFileType: "Feil filtype",
+          acceptedFiles:"image/*",
+          accept: function(file, done) {
+            if (file.name == "justinbieber.jpg") {
+              done("Naha, you don't.");
+            }
+            else { done(); }
+          }
+        };
+    });
+    </script>
     <?php include("footer.php") ?>
 </body>
 </html>

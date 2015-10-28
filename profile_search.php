@@ -27,12 +27,10 @@ try
 $row = $stmt->fetch();
 		$id=$row['id'];
 
-if ($row->num_rows == 1){
+if (!empty($row['id'])){
 	// Retrieve results (if any)
 		die('<meta http-equiv="refresh" content="0; url=profile.php?id='.$id.'">');
+}else{
+        die('<meta http-equiv="refresh" content="0; url=members.php?sdata='.$searchdata.'">');
 }
-
-else {
-
-	die('<meta http-equiv="refresh" content="0; url="members.php?searchdata='.$searchdata.'">');
-}
+?>

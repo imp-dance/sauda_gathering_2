@@ -374,11 +374,8 @@ span.glyphicon{
 }
 
 #search {
-<<<<<<< HEAD
 	padding-left: 50px;
-=======
 	padding-left: 65px;
->>>>>>> 7f9b48399235637656cf6e66c35ebd3e3c7f29d1
 }
 
 .fuckthis {
@@ -390,6 +387,7 @@ span.glyphicon{color:#fff;}
   float:left;
   padding:10px;
   border-radius:5px;
+  max-width:370px;
 }
 .upacf input[type="text"], .upacf input[type="email"], .upacf input[type="password"]{
   width:300px;
@@ -442,4 +440,21 @@ span.glyphicon{color:#fff;}
 .link-header {
 	font-weight: bold!important;
 	color: red;
+}
+.dz-default{
+    background: #00B200;
+    padding: 20px;
+    border: 5px dotted darkgreen;
+    cursor:pointer;
+    width:100%;
+}
+.dz-error-message{
+	color:red;
+}
+.dz-image{
+    float: left;
+    margin: 6px;
+}
+.dz-default span{
+	font-weight:bold;
 }
