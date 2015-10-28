@@ -88,7 +88,7 @@
             // the user's details. 
             $_SESSION['user'] = $row; 
              
-            // Redirect the user to the private members-only page. 
+            // Redirect the users back to the index file
             header("Location: index.php"); 
             die("Redirecting to: index.php"); 
         } 

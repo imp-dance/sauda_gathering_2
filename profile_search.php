@@ -22,10 +22,17 @@ try
 	// Note: On a production website, you should not output $ex->getMessage(). 
     // It may provide an attacker with helpful information about your code.  
         die("Failed to run query: " . $ex->getMessage()); 
-    } 
-             
-    // Retrieve results (if any) 
-        $row = $stmt->fetch();
-	$id=$row['id'];
-die('<meta http-equiv="refresh" content="0; url=profile.php?id='.$id.'">');
-?>
+    }
+
+$row = $stmt->fetch();
+		$id=$row['id'];
+
+if ($row->num_rows == 1){
+	// Retrieve results (if any)
+		die('<meta http-equiv="refresh" content="0; url=profile.php?id='.$id.'">');
+}
+
+else {
+
+	die('<meta http-equiv="refresh" content="0; url="members.php?searchdata='.$searchdata.'">');
+}
