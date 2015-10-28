@@ -209,57 +209,55 @@
                    <td>Email</td>
                    <td><input name="email" type="email" value="<?php echo htmlentities($_SESSION['user']['email'], ENT_QUOTES, 'UTF-8'); ?>" />
                 </tr>
-                 <tr>
-                   <td colspan="2"><br />Generer nytt passord</td>
-                </tr>
-                <tfoot>
                 <tr>
-                   <td colspan="2"><button type="submit" class="btn btn-success moveman newsub"><span class="glyphicon glyphicon-floppy-disk"></span> Lagre</button></td>
+                   <td colspan="2">
+                    <br />
+                    <button type="submit" class="btn btn-success moveman newsub"><span class="glyphicon glyphicon-floppy-disk"></span> Lagre</button>
+
+                    <a href="new_pass.php"><button type="button" class="btn btn-success redi moveman newsub"><span class="glyphicon glyphicon-question-sign"></span> Nytt Passord</button></a>
+
+                </td>
                 </tr>
-                </tfoot>
               </table> 
             </form>
             </div>
             <div class="upacf">
-                <form class="dropzone" action="actions/change_img.php" method="post" id="dropz">
-                <table>
+             <form enctype="multipart/form-data" action="actions/change_img.php" method="POST">
+              <table>
+                <thead>
                     <tr>
-                        <td><input type="file" name="file" /></td>
+                        <td colspan="2">Oppdater Profilbilde</td>
                     </tr>
-
-                    <tfoot>
-                        <tr>
-                            <td></td>
-                        </tr>
-                    </tfoot>
-                </table>
-            </form>
+                </thead><?php
+                if ($_GET['up'] == "true"){
+                ?>
+                <tr>
+                    <td><br /><strong><span class="glyphicon glyphicon-thumbs-up"></span> Bildet ble oppdatert</strong></td>
+                </tr>
+                <?php
+                }
+                ?>
+                 <tr>
+                    <td><br /><input name="uploaded" type="file" /><br />
+                    <button class="btn btn-success moveman newsub" type="submit"><span class="glyphicon glyphicon-upload"></span> Last Opp</button>
+                </td>
+            </tr>
+        </table>
+             </form> 
             </div>
             <div class="clear"></div>
          </div> <!-- container -->
         </div> <!-- jumbotron -->
     <?php include("script.php") ?>
-    <script src="js/dropzone.js"></script>
+    <!--<script src="js/dropzone.js"></script>
     <script>
     $(document).ready(function(){
         $('input[type="file"]').hide();
         $(".dz-default span").text("Slipp bildet her");
 
-        Dropzone.options.dropz = {
-          paramName: "file", // The name that will be used to transfer the file
-          maxFilesize: 2, // MB
-          dictDefaultMessage: "Trykk her, eller slipp bildet for å laste opp",
-          dictInvalidFileType: "Feil filtype",
-          acceptedFiles:"image/*",
-          accept: function(file, done) {
-            if (file.name == "justinbieber.jpg") {
-              done("Naha, you don't.");
-            }
-            else { done(); }
-          }
-        };
+        
     });
-    </script>
+    </script>-->
     <?php include("footer.php") ?>
 </body>
 </html>

@@ -9,7 +9,8 @@ $gitinfoq = "
                 SELECT 
 		            id, 
 		            username, 
-		            email 
+		            email,
+                    img
 		        FROM morten_users 
                 WHERE 
                     id = :currentid 
@@ -36,6 +37,10 @@ $gitinfoq = "
     $row = $stmt->fetch(); 
     $cemail = $row['email'];
     $cuname = $row['username'];
+    $imgurl = $row['img'];
+    if (empty($imgurl)){
+        $imgurl = "images/defaultprofil.png";
+    }
 $email = $cemail;
 $default = "http://www.gravatar.com/avatar/00000000000000000000000000000000";
 $size = 80;
@@ -47,7 +52,7 @@ $grav_url = "http://www.gravatar.com/avatar/" . md5( strtolower( trim( $email ) 
          <div class="container">
          	<table class="utable">
          		<tr>
-         			<td class="uimgt"><a href="https://en.gravatar.com/" target="_blank"><img src="<?php echo($grav_url); ?>" alt="" /></a></td>
+         			<td class="uimgt"><a href="#"><img src="<?php echo($imgurl); ?>" alt="" /></a></td>
          			<td class="unamet"><h3><?php echo($cuname); ?></h3></td>
          		</tr>
          		<tr>

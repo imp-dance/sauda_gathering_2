@@ -9,7 +9,13 @@
         </div> <!-- jumbotron -->
         <div class="container">
          	<div class="row">
-                Naviger: <a href="#pameld">Påmelding</a> / <a href="#minprof">Min Profil</a> / <a href="#compo">Compo</a> / <a href="#galleri">Galleri</a> / <a href="#forum">Forum</a>
+                <ol class="breadcrumb">
+                  <li><a href="#pameld">Påmelding</a></li>
+                  <li><a href="#minprof">Min Profil</a></li>
+                  <li><a href="#compo">Compo</a></li>
+                  <li><a href="#galleri">Galleri</a></li>
+                  <li><a href="#forum">Forum</a></li>
+                </ol>
          		<table class="faqt">
                     <tr valign="top" class="faqheading">
                         <td colspan="2" style="text-align: center;" name="pameld" id="pameld"><h2 style="font-size: 40px;">PÅMELDING</h2></td>
@@ -90,7 +96,12 @@ NB! Bildet kan maks være på 50KB og MÅ være jpg. Størrelsen MÅ være 50x50
          	</div>
          </div>
     </div>
-    <?php include("footer.php") ?>
     <?php include("script.php") ?>
+    <script>
+    $(window).on("hashchange", function () {
+        window.scrollTo(window.scrollX, window.scrollY - 60);
+    });
+    </script>
+    <?php include("footer.php") ?>
 </body>
 </html>

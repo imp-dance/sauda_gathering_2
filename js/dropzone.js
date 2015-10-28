@@ -1746,6 +1746,21 @@
       return Dropzone.discover();
     }
   };
+  Dropzone.options.dropz = {
+          paramName: "file", // The name that will be used to transfer the file
+          maxFilesize: 2, // MB
+          dictDefaultMessage: "<span class='glyphicon glyphicon-picture'></span> Trykk her, eller slipp bildet for å laste opp",
+          dictInvalidFileType: "Feil filtype",
+          acceptedFiles:"image/*",
+          dragstart: $(".dz-default").css("background", "darkgreen"),
+          dragend: $(".dz-default").css("background", "#00B200"),
+          accept: function(file, done) {
+            if (file.name == "justinbieber.jpg") {
+              done("Naha, you don't.");
+            }
+            else { done(); }
+          }
+        };
 
   contentLoaded(window, Dropzone._autoDiscoverFunction);
 
