@@ -47,7 +47,7 @@
             <h1 style="font-size: 60px";>Påmeldte</h1>
             <div class="fuckthis">
             <span class="input_field glyphicon glyphicon-search"></span>
-            <input type="text" id="search" class="widesearch" placeholder="Trykk her for å søke etter brukere"/>
+            <input type="text" id="search" class="widesearch" value="<?php echo($_GET['sdata']); ?>" placeholder="Trykk her for å søke etter brukere"/>
         </div>
             <table class="memberlist">
             	<?php foreach($rows as $row): ?> 
@@ -73,6 +73,10 @@
                  $(this).show();                
         });
     }); 
+    $(document).ready(function(){
+        $("#search").keyup();
+        $("#search").focus();
+    })
     </script>
     <?php include("footer.php"); ?>
 </body>

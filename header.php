@@ -28,7 +28,7 @@
           <li><a href="members.php">Brukere</a></li>
     			<li><a href="#">Compoer</a></li>
     		  </ul>
-          <form action="profile_search.php" method="POST">
+          <form action="profile_search.php" method="POST" autocomplete="off" class="topmenform">
             <input type="text" name="username" placeholder="Søk etter brukere her">
           </form>
 

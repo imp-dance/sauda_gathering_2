@@ -455,6 +455,27 @@ span.glyphicon{color:#fff;}
     float: left;
     margin: 6px;
 }
+.dz-success-mark, .dz-error-mark{
+	display:none;
+}
 .dz-default span{
 	font-weight:bold;
+}
+.topmenform{
+	display:inline-block;
+	margin:0;
+}
+.topmenform input{
+	margin:0 5px;
+	font-size:13px;
+	background:rgba(8, 8, 8, 0.1);
+	color:#fff;
+	border:none;
+	outline:none;
+	border-bottom:1px solid #00B200;
+}
+.membername a:focus{
+	background:rgba(255, 255, 255, 0.5);
+	outline:none;
+	text-decoration:none;
 }
