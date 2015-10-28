@@ -229,12 +229,14 @@
                         <td colspan="2">Oppdater Profilbilde</td>
                     </tr>
                 </thead><?php
+                if (isset($_GET['up'])) {
                 if ($_GET['up'] == "true"){
                 ?>
                 <tr>
                     <td><br /><strong><span class="glyphicon glyphicon-thumbs-up"></span> Bildet ble oppdatert</strong></td>
                 </tr>
                 <?php
+                }
                 }
                 ?>
                  <tr>
