@@ -20,7 +20,9 @@
                 username, 
                 password, 
                 salt, 
-                email 
+                email,
+                nr,
+                kontonr 
             FROM morten_users 
             WHERE 
                 username = :username 
