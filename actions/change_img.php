@@ -10,6 +10,7 @@
 	 $ok=1; 
 	 
 	 //This is our size condition 
+	 $uploaded_size = filesize($_FILES['uploaded']['tmp_name']);
 	 if ($uploaded_size > 350000) 
 	 { 
 	 echo "Your file is too large.<br>"; 
@@ -32,6 +33,47 @@
 	 //If everything is ok we try to upload it 
 	 else 
 	 { 
+	 	// delete old image if exists
+
+	 	$queryz = " 
+                SELECT 
+                    img 
+                FROM morten_users 
+                WHERE 
+                    username = :nick 
+            "; 
+             
+            // Define our query parameter values 
+            $query_paramsz = array( 
+                ':nick' => $_SESSION['user']['username']
+            ); 
+             
+            try 
+            { 
+                // Execute the query 
+                $stmt = $db->prepare($queryz); 
+                $result = $stmt->execute($query_paramsz); 
+            } 
+            catch(PDOException $ex) 
+            { 
+                // Note: On a production website, you should not output $ex->getMessage(). 
+                // It may provide an attacker with helpful information about your code.  
+                die("Failed to run query: " . $ex->getMessage()); 
+            } 
+             
+            // Retrieve results (if any) 
+            $rowz = $stmt->fetch(); 
+
+            if (empty($rowz['img'])){
+            	// all is ok dont worry we got this no problem HOHO pang
+            }else{
+            	$urlfromthere = $rowz['img'];
+            	$urlfromhere = str_replace("actions/", "", $urlfromthere);
+            	unlink($urlfromhere);
+            }
+
+	 	// unlink("thumbs/imagename");
+
 	 if(move_uploaded_file($_FILES['uploaded']['tmp_name'], $target)) 
 	 { 
 	 	$query = " 
@@ -65,5 +107,4 @@
 	 echo "Sorry, there was a problem uploading your file."; 
 	 } 
 	 } 
-
 ?>
