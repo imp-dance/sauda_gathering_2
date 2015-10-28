@@ -123,7 +123,7 @@
             ':user_id' => $_SESSION['user']['id'], 
             ':nick' => $_POST['nick'],
             ':nr' => $_POST['nr'],
-            ':kontonr' => $_POST['kontonr']
+            ':kontonr' => $_POST['kontonr'],
         ); 
          
         // If the user is changing their password, then we need parameter values 
@@ -210,19 +210,19 @@
                 </thead>
                  <tr>
                    <td>Nick</td>
-                   <td><input name="nick" type="text" value="<?php echo htmlentities($_SESSION['user']['username'], ENT_QUOTES, 'UTF-8'); ?>" />
+                   <td><input name="nick" type="text" value="<?php if (!empty($_SESSION['user']['username'])){ echo htmlentities($_SESSION['user']['username'], ENT_QUOTES, 'UTF-8'); } ?>" />
                 </tr>
                  <tr>
                    <td>Email</td>
-                   <td><input name="email" type="email" value="<?php echo htmlentities($_SESSION['user']['email'], ENT_QUOTES, 'UTF-8'); ?>" />
+                   <td><input name="email" type="email" value="<?php if (!empty($_SESSION['user']['email'])){ echo htmlentities($_SESSION['user']['email'], ENT_QUOTES, 'UTF-8'); } ?>" />
                 </tr>
                  <tr>
                    <td>Mobilnr</td>
-                   <td><input name="nr" type="number" value="<?php echo htmlentities($_SESSION['user']['nr'], ENT_QUOTES, 'UTF-8'); ?>" />
+                   <td><input name="nr" type="number" value="<?php if (!empty($_SESSION['user']['nr'])){echo htmlentities($_SESSION['user']['nr'], ENT_QUOTES, 'UTF-8'); } ?>" />
                 </tr>
                  <tr>
                    <td>Kontonr</td>
-                   <td><input name="kontonr" type="text" value="<?php echo htmlentities($_SESSION['user']['kontonr'], ENT_QUOTES, 'UTF-8'); ?>" />
+                   <td><input name="kontonr" type="text" value="<?php if (!empty($_SESSION['user']['kontonr'])){echo htmlentities($_SESSION['user']['kontonr'], ENT_QUOTES, 'UTF-8'); } ?>" />
                 </tr>
                 <tr>
                    <td colspan="2">
