@@ -77,7 +77,7 @@
         // the database already and we should not allow the user to continue. 
         if($row) 
         { 
-            die("This username is already in use"); 
+            die('<meta http-equiv="refresh" content="0; url=register.php?error=username_taken">'); 
         } 
          
         // Now we perform the same type of check for the email address, in order 
@@ -108,7 +108,7 @@
          
         if($row) 
         { 
-            die("This email address is already registered"); 
+            die('<meta http-equiv="refresh" content="0; url=register.php?error=email_taken">'); 
         } 
          
         // An INSERT query is used to add new rows to a database table. 
@@ -218,9 +218,25 @@ include("header.php"); ?>
                         ?>
 
                         <?php
+                        if($_REQUEST['error'] == "email_taken") {
+                        ?>
+                          <p style="color: red;"> Denne email-adressen er allerede i bruk </p>  
+                        <?php
+                            }
+                        ?>
+
+                        <?php
+                        if($_REQUEST['error'] == "username_taken") {
+                        ?>
+                          <p style="color: red;"> Dette brukernavnet er allerede i bruk </p>  
+                        <?php
+                            }
+                        ?>
+
+                        <?php
                         if($_REQUEST['error'] == "pass_unequal") {
                         ?>
-                          <p> Passordene er ikke like </p>  
+                          <p style="color: red;"> Passordene er ikke like </p>  
                         <?php
                             }}
                         ?>
