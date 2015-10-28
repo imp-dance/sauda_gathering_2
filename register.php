@@ -1,15 +1,9 @@
 <?php
-
-if($_REQUEST['password_confirm'] != $_REQUEST['password']){
-    die('<meta http-equiv="refresh" content="0; url=register.php?error=pass_unequal">');
-}
-
-?>
-
-<?php 
     // First we execute our common code to connection to the database and start the session 
     require("../common.php"); 
-     
+     if($_REQUEST['password_confirm'] != $_REQUEST['password']){
+    die('<meta http-equiv="refresh" content="0; url=register.php?error=pass_unequal">');
+}
     // This if statement checks to determine whether the registration form has been submitted 
     // If it has, then the registration code is run, otherwise the form is displayed 
     if(!empty($_POST)) 
