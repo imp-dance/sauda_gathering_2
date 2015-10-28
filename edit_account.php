@@ -229,7 +229,7 @@
                     <br />
                     <button type="submit" class="btn btn-success moveman newsub"><span class="glyphicon glyphicon-floppy-disk"></span> Lagre</button>
 
-                    <a href="new_pass.php"><button type="button" class="btn btn-success redi moveman newsub"><span class="glyphicon glyphicon-question-sign"></span> Nytt Passord</button></a>
+                    <a href="forgot_password.php"><button type="button" class="btn btn-success redi moveman newsub"><span class="glyphicon glyphicon-question-sign"></span> Nytt Passord</button></a>
 
                 </td>
                 </tr>
