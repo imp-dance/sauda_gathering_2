@@ -199,6 +199,7 @@
         <div class="jumbotron">
          <div class="container alignleft">
             <h1 style="font-size: 60px";>Konto</h1>
+            <div class="upacf-cont">
             <div class="upacf">
             <form action="edit_account.php" method="post"> 
               <table>
@@ -262,6 +263,7 @@
              </form> 
             </div>
             <div class="clear"></div>
+        </div>
          </div> <!-- container -->
         </div> <!-- jumbotron -->
     <?php include("script.php") ?>
