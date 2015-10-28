@@ -122,6 +122,8 @@
             ':email' => $_POST['email'], 
             ':user_id' => $_SESSION['user']['id'], 
             ':nick' => $_POST['nick'],
+            ':nr' => $_POST['nr'],
+            ':kontonr' => $_POST['kontonr']
         ); 
          
         // If the user is changing their password, then we need parameter values 
@@ -140,6 +142,8 @@
             SET 
                 email = :email 
                 , username = :nick
+                , nr = :nr
+                , kontonr = :kontonr
         "; 
          
         // If the user is changing their password, then we extend the SQL query 
@@ -176,6 +180,8 @@
         // array is stale; we need to update it so that it is accurate. 
         $_SESSION['user']['email'] = $_POST['email']; 
         $_SESSION['user']['username'] = $_POST['nick'];
+        $_SESSION['user']['nr'] = $_POST['nr'];
+        $_SESSION['user']['kontonr'] = $_POST['kontonr'];
          
         // This redirects the user back to the members-only page after they register 
         header("Location: edit_account.php"); 
@@ -209,6 +215,14 @@
                    <td>Email</td>
                    <td><input name="email" type="email" value="<?php echo htmlentities($_SESSION['user']['email'], ENT_QUOTES, 'UTF-8'); ?>" />
                 </tr>
+                 <tr>
+                   <td>Mobilnr</td>
+                   <td><input name="nr" type="number" value="<?php echo htmlentities($_SESSION['user']['nr'], ENT_QUOTES, 'UTF-8'); ?>" />
+                </tr>
+                 <tr>
+                   <td>Kontonr</td>
+                   <td><input name="kontonr" type="text" value="<?php echo htmlentities($_SESSION['user']['kontonr'], ENT_QUOTES, 'UTF-8'); ?>" />
+                </tr>
                 <tr>
                    <td colspan="2">
                     <br />
@@ -240,7 +254,7 @@
                 }
                 ?>
                  <tr>
-                    <td><br /><input name="uploaded" type="file" /><br />
+                    <td><br /><input name="uploaded" accept="image/*" type="file" /><br />
                     <button class="btn btn-success moveman newsub" type="submit"><span class="glyphicon glyphicon-upload"></span> Last Opp</button>
                 </td>
             </tr>
