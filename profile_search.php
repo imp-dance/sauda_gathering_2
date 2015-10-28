@@ -27,5 +27,5 @@ try
     // Retrieve results (if any) 
         $row = $stmt->fetch();
 	$id=$row['id'];
-die('<meta http-equiv="refresh" content="0; url=profile.php?id=".$id."">');
+die('<meta http-equiv="refresh" content="0; url=profile.php?id='.$id.'">');
 ?>
