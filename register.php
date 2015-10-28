@@ -1,3 +1,11 @@
+<?php
+
+if($_REQUEST['password_confirm'] != $_REQUEST['password']){
+    die('<meta http-equiv="refresh" content="0; url=register.php?error=pass_unequal">');
+}
+
+?>
+
 <?php 
     // First we execute our common code to connection to the database and start the session 
     require("../common.php"); 
@@ -184,6 +192,7 @@
         die("Redirecting to login.php"); 
     } 
 ?>
+
   <?php
     
         
@@ -207,6 +216,17 @@ include("header.php"); ?>
             <table class="regtable">
                 <tr>
                     <td colspan="2">
+                        <?php
+                        if(!empty($_REQUEST['error'])){
+                        ?>
+
+                        <?php
+                        if($_REQUEST['error'] == "pass_unequal") {
+                        ?>
+                          <p> Passordene er ikke like </p>  
+                        <?php
+                            }}
+                        ?>
                         <input type="checkbox" name="ckbox" required />
                         <label for="ckbox">Når du registrerer deg aksepterer du <a href="terms.php" target="_blank">vilkårene</a></label>
                     </td>
@@ -237,6 +257,16 @@ include("header.php"); ?>
                     </td>
                     <td>
                         <input type="password" name="password" value="" autocomplete="off" required placeholder="Passord"
+                oninvalid="this.setCustomValidity('Vennligst skriv inn ett gyldig passord')"
+                oninput="setCustomValidity('')" /> 
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="password_confirm">Bekreft ditt passord</label>:
+                    </td>
+                    <td>
+                        <input type="password" name="password_confirm" value="" autocomplete="off" required placeholder="Vennligst gjenta passordet"
                 oninvalid="this.setCustomValidity('Vennligst skriv inn ett gyldig passord')"
                 oninput="setCustomValidity('')" /> 
                     </td>
