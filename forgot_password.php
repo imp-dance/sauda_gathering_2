@@ -8,7 +8,7 @@ if(!empty($_POST))
             $error = "Fyll inn alle felt";
         }else{
 
-            $message = "";
+            $message = "Ditt brukernamn er X, emailen din er X og koden din for passord-reset er X - Mvh Sauda Gathering";
             switch($op){
                 case "netcom":
                  mail($phonenumber."@sms.netcom.no", "", $message, "From: Sauda Gathering <schart@schart.net>\r\n");
@@ -35,7 +35,7 @@ if(!empty($_POST))
 
                 break;
                 default: 
-                die("pikk");
+                  die("pikk");
                 break;
             }
 

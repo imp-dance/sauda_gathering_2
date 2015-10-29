@@ -216,11 +216,13 @@ include("header.php"); ?>
                         <?php
                         if(!empty($_REQUEST['error'])){
                         ?>
-
+                        <div class="alert alert-danger alert-dismissible" style="text-shadow:none !important;" role="alert">
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+  <strong>Obs!</strong> 
                         <?php
                         if($_REQUEST['error'] == "email_taken") {
                         ?>
-                          <p style="color: red;"> Denne email-adressen er allerede i bruk </p>  
+                        Denne email-adressen er allerede i bruk  
                         <?php
                             }
                         ?>
@@ -228,7 +230,7 @@ include("header.php"); ?>
                         <?php
                         if($_REQUEST['error'] == "username_taken") {
                         ?>
-                          <p style="color: red;"> Dette brukernavnet er allerede i bruk </p>  
+                          Dette brukernavnet er allerede i bruk  
                         <?php
                             }
                         ?>
@@ -236,9 +238,13 @@ include("header.php"); ?>
                         <?php
                         if($_REQUEST['error'] == "pass_unequal") {
                         ?>
-                          <p style="color: red;"> Passordene er ikke like </p>  
+                          Passordene er ikke like  
                         <?php
-                            }}
+                            }
+                        ?>
+                        </div>    
+                        <?php
+                        }
                         ?>
                         <input type="checkbox" name="ckbox" required />
                         <label for="ckbox">Når du registrerer deg aksepterer du <a href="terms.php" target="_blank">vilkårene</a></label>
