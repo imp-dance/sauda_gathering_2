@@ -11,7 +11,7 @@
 	 
 	 //This is our size condition 
 	 $uploaded_size = filesize($_FILES['uploaded']['tmp_name']);
-	 if ($uploaded_size > 350000) 
+	 if ($uploaded_size > 1000000) 
 	 { 
 	 echo "Your file is too large.<br>"; 
 	 $ok=0; 
