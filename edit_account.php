@@ -225,6 +225,10 @@
                    <td><input name="kontonr" type="text" value="<?php if (!empty($_SESSION['user']['kontonr'])){echo htmlentities($_SESSION['user']['kontonr'], ENT_QUOTES, 'UTF-8'); } ?>" />
                 </tr>
                 <tr>
+                   <td>Medlems-ID</td>
+                   <td><input name="Medlems-ID" type="text" readonly value="<?php if (!empty($_SESSION['user']['id'])){echo htmlentities($_SESSION['user']['id'], ENT_QUOTES, 'UTF-8'); } ?>" />
+                </tr>
+                <tr>
                    <td colspan="2">
                     <br />
                     <button type="submit" class="btn btn-success moveman newsub"><span class="glyphicon glyphicon-floppy-disk"></span> Lagre</button>

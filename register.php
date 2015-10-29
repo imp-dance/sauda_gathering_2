@@ -276,7 +276,7 @@ include("header.php"); ?>
                 </tr>
                 <tr>
                     <td>
-                        <label for="password_confirm">Bekreft ditt passord</label>:
+                        <label for="password_confirm">Bekreft passordet ditt</label>:
                     </td>
                     <td>
                         <input type="password" name="password_confirm" value="" autocomplete="off" required placeholder="Vennligst gjenta passordet"
@@ -289,6 +289,14 @@ include("header.php"); ?>
                         <label for="nr">Mobilnummer</label>:
                     </td>
                     <td>
+                        <!--
+                        Detta her:
+
+                        oninvalid="this.setCustomValidity('Error message')"
+                        oninput="setCustomValidity('')" />
+
+                        Lar oss setta en custom error message i et input field med attribute "required"
+                        -->
                         <input type="text" name="nr" value="" autocomplete="off" required placeholder="Mobilnummer"
                 oninvalid="this.setCustomValidity('Vennligst skriv inn ett gyldig mobilnummer')"
                 oninput="setCustomValidity('')" /> 
