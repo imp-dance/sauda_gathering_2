@@ -26,14 +26,13 @@
          			</tr>
          			<tr valign="top">
          				<td><strong>Kan jeg betale med nettbank?</strong></td>
-         				<td>Ja, det er mulig å betale med nettbank, men husk at medlemsnummer og navn må være med i betalingsinformasjon.
-Medlemsnummeret ditt finner du i "Endre profil" i "innstillinger" menyen.</td>
+         				<td>
+                            Ja, det er mulig å betale med nettbank, men husk at medlems-ID og navn MÅ være med i betalingsinformasjonen.
+                    </td>
          			</tr>
                     <tr valign="top">
-                        <td><strong>Hvordan finner jeg medlemsnummeret mitt?</strong></td>
-                        <td>Det kan du finne ved å gå inn på linken "Endre profil" i menyen "innstillinger" til venstre. 
-Du kan også finner det under "Betalingsinfo" i samme meny.
-Pass på å få alt riktig skrevet!</td>
+                        <td><strong>Hvordan finner jeg medlems-IDen min?</strong></td>
+                        <td>For å finne medlems-ID må du være pålogget. Trykk på knappen som sier "Konto" oppe i høyre hjørne, der finner du den under "Brukerinformasjon".
                     </tr>
          			<tr valign="top">
          				<td><strong>Hvorfor får jeg ikke e-post?</strong></td>
@@ -50,7 +49,7 @@ Trykk på "Konto" oppe i høyre hjørne og skriv inn ditt nye passord i feltet p
                     <tr valign="top">
                         <td><strong>Hvordan bytter jeg nick?</strong></td>
                         <td>For å bytte nick må du være pålogget.
-Trykk på "Endre profil" i innstillinger menyen og bytt nick helt nederst på siden.</td>
+Trykk på "Konto" oppe i høyre hjørne og skriv inn ditt nye nick helt øverst på siden.</td>
                     </tr>
          			<tr valign="top">
          				<td><strong>Hva er et profilbilde?</strong></td>
@@ -61,11 +60,12 @@ Det skal vise et bilde av deg selv, slik at andre kan bruke bildet i sammenheng 
                         <td><strong>Hvordan laster jeg opp et profilbilde?</strong></td>
                         <td>For å laste opp et profilbilde går du inn på "Endre profil" og laster opp et bilde.
 
-NB! Bildet kan maks være på 100KB og MÅ være jpg. Anbefalt størrelse er 100x100 piksler. Bilder over denne størrelsen blir krympet.</p></td>
+NB! Bildet kan maks være på 1MB eller under og må være i filformatet jpg/jpeg, png eller GIF. Anbefalt størrelse er ca. 100x100 piksler. Bilder over denne størrelsen vil bli krympet.</td>
                     </tr>
                     <tr valign="top">
                         <td><strong>Hvordan laster jeg opp et profilbilde?</strong></td>
-                        <td>For å laste opp et profilbilde går du inn på "Endre profil" og laster opp et bilde.
+                        <td>For å bytte profilbilde må du være pålogget.
+Trykk på "Konto" oppe i høyre hjørne og trykk "Velg fil" og deretter "Last opp".
 
 NB! Bildet kan maks være på 100KB og MÅ være jpg. Anbefalt størrelse er 100x100 piksler. Bilder over denne størrelsen blir krympet.</p></td>
                     </tr>
