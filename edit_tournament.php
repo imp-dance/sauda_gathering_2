@@ -140,6 +140,10 @@ if (!empty($_POST)){
                 <td><input type="text" name="name" value="<?php echo($current_name); ?>" /></td>
             </tr>
             <tr>
+                <td>ID:</td>
+                <td><input type="text" value="<?php echo($editid); ?>" disabled /></td>
+            </tr>
+            <tr>
                 <td>Type:</td>
                 <td>
                     <select name="type">
@@ -155,6 +159,10 @@ if (!empty($_POST)){
                 <td>
                     <input type="text" name="game" value="<?php echo($current_game); ?>" />
                 </td>
+            </tr>
+            <tr>
+                <td>Tid nå:</td>
+                <td><input type="text" class="displaytime" disabled /></td>
             </tr>
             <tr>
                 <td>Start tid (yyyy-mm-dd hh:mm:ss):</td>
@@ -182,8 +190,29 @@ if (!empty($_POST)){
 </div> <!-- /super_container -->
 <?php include("script.php");
 ?>
-<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
 <script>
+$("#copybutt").click(function(){
+    $("input[name='enddate'").val($("input[name='startdate'").val());
+});
+function startTime() {
+    var today = new Date();
+    var h = today.getHours();
+    var m = today.getMinutes();
+    var s = today.getSeconds();
+    var d = today.getUTCDate();
+    var mo = today.getUTCMonth() + 1;
+    var y = today.getUTCFullYear();
+    m = checkTime(m);
+    s = checkTime(s);
+    $time = y + "-" + mo + "-" + d + " " + h + ":" + m + ":" + s;
+    $(".displaytime").val($time);
+    var t = setTimeout(startTime, 500);
+}
+function checkTime(i) {
+    if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+    return i;
+}
+$(document).ready(startTime());
 </script>
 <?php
 include("footer.php"); ?>
