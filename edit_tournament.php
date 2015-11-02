@@ -1,5 +1,36 @@
 <?php include("head.php");
 include("header.php");
+$editid = $_GET['id'];
+/*if (!is_numeric($editid)){
+    die("luring");
+}*/
+if (empty($editid)){
+    die('<meta http-equiv="refresh" content="0; url=tournaments.php">');
+}
+$getinfo = "SELECT * FROM sg_turn WHERE id = :id";
+$getinfoparams = array(
+    ':id' => $editid);
+try { 
+    // Execute the query to create the user 
+        $stmtabc = $db->prepare($getinfo); 
+        $resultabc = $stmtabc->execute($getinfoparams); 
+} 
+catch(PDOException $ex) {
+        die("Failed to run query: " . $ex->getMessage()); 
+} 
+$row = $stmtabc->fetch();
+// Declare shit
+$current_name = $row['name'];
+$current_type = $row['type'];
+$current_game = $row['game'];
+$current_start = $row['start'];
+$current_end = $row['end'];
+$current_rules = $row['rules'];
+$current_settings = $row['serversettings'];
+
+
+
+
 if (!empty($_POST)){
     $error;
     $code;
@@ -15,7 +46,7 @@ if (!empty($_POST)){
     $rules = strip_tags($rules);
     $settings = $_POST['serversettings'];
     $settings = strip_tags($settings);
-
+/*
     // Check if gametype is in array
 
     $typearray = array(
@@ -42,53 +73,46 @@ if (!empty($_POST)){
 
     if (validateMysqlDate($start) == false || validateMysqlDate($end) == false){
         $error = 1;
-        $code = "2<p class='errorsss'>Feil dato-format</p>";
+        $code = "2";
     }
 
     if ($error == 1){
         die("Error! Kode ".$code);
     }
-
-    if ($error != 1){
-
-    $query = "INSERT INTO sg_turn (
-        name, 
-        type, 
-        game, 
-        start, 
-        end, 
-        rules, 
-        serversettings) VALUES (
-        :name,
-        :type,
-        :game,
-        :start,
-        :end,
-        :rules,
-        :serversettings)";
-    $query_params = array( 
+*/
+    $ttquery = "UPDATE sg_turn SET
+        name = :name,
+        type = :type,
+        game = :game,
+        start = :start,
+        end = :end,
+        rules = :rules,
+        serversettings = :serversettings
+        WHERE
+        id = :id";
+    $ttquery_params = array( 
         ':name' => $name, 
         ':type' => $type, 
         ':game' => $game, 
         ':start' => $start, 
         ':end' => $end,
         ':rules' => $rules,
-        ':serversettings' => $settings
+        ':serversettings' => $settings,
+        ':id' => $editid
     ); 
 
     // Run query
 
     try { 
         // Execute the query to create the user 
-        $stmt = $db->prepare($query); 
-        $result = $stmt->execute($query_params); 
+        $teststmt = $db->prepare($ttquery); 
+        $testresult = $teststmt->execute($ttquery_params); 
     } 
         catch(PDOException $ex) 
     {
         die("Failed to run query: " . $ex->getMessage()); 
-    } 
-
-    } // error != 1
+    }
+    die('<meta http-equiv="refresh" content="0; url=edit_tournament.php?id='.$editid.'">');
 }
 ​
 ?>
@@ -99,37 +123,27 @@ if (!empty($_POST)){
 .creturn textarea{
     border-color:#ccc;
 }
-.errorsss{
-    position:absolute;
-    display:block;
-    font-size:22px;
-    color:red;
-    top:10px;
-    left:10px;
-}
 </style>
 <div class="super_container">
   <div class="jumbotron">
     <div class="container">
-      <h1>Lag Compo</h1>
+      <h1>Rediger Compo</h1>
     </div>
   </div>
   <div class="container">
-    <form action="create_tournament.php" method="post" style="padding:20px;">
+    <form action="edit_tournament.php?id=<?php echo($editid); ?>" method="post" style="padding:20px;">
         <table class="creturn">
     <?php
-        if ($_POST){
-            echo("<tr><td colspan='2'>Databasen ble oppdatert. <a href='tournaments.php'>Rediger</a>.</td></tr>");
-        }
     ?>
             <tr>
                 <td>Namn:</td>
-                <td><input type="text" name="name" /></td>
+                <td><input type="text" name="name" value="<?php echo($current_name); ?>" /></td>
             </tr>
             <tr>
                 <td>Type:</td>
                 <td>
                     <select name="type">
+                        <option value="<?php echo($current_type); ?>"><?php echo($current_type); ?></option>
                         <option value="single elimination">Single Elimination</option>
                         <option value="double elimination">Double Elimination</option>
                         <option value="boiloff">Boiloff</option>
@@ -139,28 +153,28 @@ if (!empty($_POST)){
             <tr>
                 <td>Spill:</td>
                 <td>
-                    <input type="text" name="game" />
+                    <input type="text" name="game" value="<?php echo($current_game); ?>" />
                 </td>
             </tr>
             <tr>
                 <td>Start tid (yyyy-mm-dd hh:mm:ss):</td>
-                <td><input type="text" name="startdate" class="datepicker" placeholder="2015-09-17 15:00:00" /></td>
+                <td><input type="text" name="startdate" class="datepicker" value="<?php echo($current_start); ?>" placeholder="2015-09-17 15:00:00" /></td>
             </tr>
 
             <tr>
                 <td>Slutt tid (yyyy-mm-dd hh:mm:ss):</td>
-                <td><input type="text" name="enddate" placeholder="2015-09-17 21:00:00" class="datepicker" /></td>
+                <td><input type="text" name="enddate" value="<?php echo($current_end); ?>" placeholder="2015-09-17 21:00:00" class="datepicker" /></td>
             </tr>
             <tr>
                 <td>Regler:</td>
-                <td><textarea name="rules"></textarea></td>
+                <td><textarea name="rules"><?php echo($current_rules); ?></textarea></td>
             </tr>
             <tr>
                 <td>Server Instillinger:</td>
-                <td><textarea name="serversettings"></textarea></td>
+                <td><textarea name="serversettings"><?php echo($current_settings); ?></textarea></td>
             </tr>
             <tr>
-                <td colspan="2"><input type="submit" value="Lag Turnament" /></td>
+                <td colspan="2"><input type="submit" value="Oppdater Turnament" /></td>
             </tr>
         </table>
     </form>
