@@ -500,3 +500,22 @@ span.glyphicon{color:#fff;}
 .uimgt a img{
 	max-width:80px;
 }
+.creturn{margin:0 auto;}
+.creturn td{
+    padding-top:10px;
+}
+.creturn textarea{
+    border-color:#ccc;
+}
+.errorsss{
+    position:absolute;
+    display:block;
+    font-size:22px;
+    color:red;
+    top:10px;
+    left:10px;
+}
+#copybutt{
+    border-top-left-radius:0;
+    border-bottom-left-radius:0;
+}

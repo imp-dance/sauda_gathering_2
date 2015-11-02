@@ -92,26 +92,6 @@ if (!empty($_POST)){
 }
 ​
 ?>
-<style>
-.creturn td{
-    padding-top:10px;
-}
-.creturn textarea{
-    border-color:#ccc;
-}
-.errorsss{
-    position:absolute;
-    display:block;
-    font-size:22px;
-    color:red;
-    top:10px;
-    left:10px;
-}
-#copybutt{
-    border-top-left-radius:0;
-    border-bottom-left-radius:0;
-}
-</style>
 <div class="super_container">
   <div class="jumbotron">
     <div class="container">
@@ -147,14 +127,23 @@ if (!empty($_POST)){
                 </td>
             </tr>
             <tr>
-                <td>Start tid (yyyy-mm-dd hh:mm:ss):</td>
+                <td>Tid nå:</td>
+                <td><input type="text" class="displaytime" disabled /></td>
+            </tr>
+            <tr>
+                <td>Start tid: </td>
                 <td><input type="text" name="startdate" class="datepicker" placeholder="2015-09-17 15:00:00" /></td>
             </tr>
 
             <tr>
-                <td>Slutt tid (yyyy-mm-dd hh:mm:ss):</td>
+                <td>Slutt tid:</td>
                 <td><input type="text" name="enddate" placeholder="2015-09-17 21:00:00" class="datepicker" /></td>
                 <td> <button type="button" class="btn btn-info moveman" id="copybutt"><span class="glyphicon glyphicon-pencil"></span> Kopier</button>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align:right;font-size:12px;color:#aaa;">
+                    Obs: skriv i start/slutt tid i rett format!
+                </td>
             </tr>
             <tr>
                 <td>Regler:</td>
@@ -173,11 +162,29 @@ if (!empty($_POST)){
 </div> <!-- /super_container -->
 <?php include("script.php");
 ?>
-<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
 <script>
 $("#copybutt").click(function(){
     $("input[name='enddate'").val($("input[name='startdate'").val());
 });
+function startTime() {
+    var today = new Date();
+    var h = today.getHours();
+    var m = today.getMinutes();
+    var s = today.getSeconds();
+    var d = today.getUTCDate();
+    var mo = today.getUTCMonth() + 1;
+    var y = today.getUTCFullYear();
+    m = checkTime(m);
+    s = checkTime(s);
+    $time = y + "-" + mo + "-" + d + " " + h + ":" + m + ":" + s;
+    $(".displaytime").val($time);
+    var t = setTimeout(startTime, 500);
+}
+function checkTime(i) {
+    if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+    return i;
+}
+$(document).ready(startTime());
 </script>
 <?php
 include("footer.php"); ?>
