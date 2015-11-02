@@ -1,4 +1,4 @@
-<?php
+<?php 
     include('../common.php')
      /*   
     // Create connection
