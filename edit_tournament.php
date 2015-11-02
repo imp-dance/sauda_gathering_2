@@ -46,7 +46,7 @@ if (!empty($_POST)){
     $rules = strip_tags($rules);
     $settings = $_POST['serversettings'];
     $settings = strip_tags($settings);
-/*
+
     // Check if gametype is in array
 
     $typearray = array(
@@ -79,7 +79,7 @@ if (!empty($_POST)){
     if ($error == 1){
         die("Error! Kode ".$code);
     }
-*/
+
     $ttquery = "UPDATE sg_turn SET
         name = :name,
         type = :type,
@@ -174,7 +174,7 @@ if (!empty($_POST)){
                 <td><textarea name="serversettings"><?php echo($current_settings); ?></textarea></td>
             </tr>
             <tr>
-                <td colspan="2"><input type="submit" value="Oppdater Turnament" /></td>
+                <td colspan="2" style="text-align:right;"><button type="submit" class="btn btn-success moveman"><span class="glyphicon glyphicon-thumbs-up"></span> Oppdater Tournament</button></td>
             </tr>
         </table>
     </form>

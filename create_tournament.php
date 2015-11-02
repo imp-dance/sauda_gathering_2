@@ -107,6 +107,10 @@ if (!empty($_POST)){
     top:10px;
     left:10px;
 }
+#copybutt{
+    border-top-left-radius:0;
+    border-bottom-left-radius:0;
+}
 </style>
 <div class="super_container">
   <div class="jumbotron">
@@ -150,6 +154,7 @@ if (!empty($_POST)){
             <tr>
                 <td>Slutt tid (yyyy-mm-dd hh:mm:ss):</td>
                 <td><input type="text" name="enddate" placeholder="2015-09-17 21:00:00" class="datepicker" /></td>
+                <td> <button type="button" class="btn btn-info moveman" id="copybutt"><span class="glyphicon glyphicon-pencil"></span> Kopier</button>
             </tr>
             <tr>
                 <td>Regler:</td>
@@ -160,7 +165,7 @@ if (!empty($_POST)){
                 <td><textarea name="serversettings"></textarea></td>
             </tr>
             <tr>
-                <td colspan="2"><input type="submit" value="Lag Turnament" /></td>
+                <td colspan="2" style="text-align:right;"><button type="submit" class="btn btn-success moveman"><span class="glyphicon glyphicon-tower"></span> Lag Tournament</buton></td>
             </tr>
         </table>
     </form>
@@ -170,6 +175,9 @@ if (!empty($_POST)){
 ?>
 <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
 <script>
+$("#copybutt").click(function(){
+    $("input[name='enddate'").val($("input[name='startdate'").val());
+});
 </script>
 <?php
 include("footer.php"); ?>
