@@ -138,7 +138,7 @@ if (!empty($_POST)){
             <tr>
                 <td>Slutt tid:</td>
                 <td><input type="text" name="enddate" placeholder="2015-09-17 21:00:00" class="datepicker" /></td>
-                <td> <button type="button" class="btn btn-info moveman" id="copybutt"><span class="glyphicon glyphicon-pencil"></span> Kopier</button>
+                <td> <button type="button" class="btn btn-info moveman" id="copybutt"><span class="glyphicon glyphicon-pencil"></span> Kopier ned</button>
             </tr>
             <tr>
                 <td colspan="2" style="text-align:right;font-size:12px;color:#aaa;">
