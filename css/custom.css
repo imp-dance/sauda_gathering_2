@@ -579,7 +579,7 @@ span.glyphicon{color:#fff;}
     filter: gray;
     -moz-filter: grayscale(100%);
 }
-.tournament-lit li:hover img{
+.tournament-list li:hover img{
 	-webkit-filter: grayscale(0%);
     filter: grayscale(0%);
     filter: none;
