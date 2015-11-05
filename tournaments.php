@@ -21,27 +21,7 @@ $query = "SELECT * FROM sg_turn ORDER BY start DESC";
     // Finally, we can retrieve all of the found rows into an array using fetchAll 
     $rows = $stmt -> fetchAll(); 
 ?>
-<style>
-.tournament-list{
-    list-style:none;
-    margin:10px 0;
-    padding:0 0;
-}
-.tournament-list li, .tournament-list li a{
-    display:block;
-}
-.tournament-list li a{
-    padding:10px;
-    background:#eee;
-    font-size:22px;
-    color:#000;
-    border-bottom:1px solid #aaa;
-}
-.tournament-list li a:hover{
-    background:#d9d9d9;
-    text-decoration:none;
-}
-</style>
+
 <div class="super-container" style="background:#fff;">
 <div class="jumbotron">
 	<div class="container">
@@ -54,10 +34,15 @@ $query = "SELECT * FROM sg_turn ORDER BY start DESC";
     <div class="container">
         <div class="row">
             <ul class="tournament-list">
-                <?php foreach($rows as $row): ?> 
-                    <li>
+                <li> Årets compoer </li>
+                <?php foreach($rows as $row):
+                $nospacegame = $row['game'];
+                $nospacegame = strtolower($nospacegame);
+                $nospacegame = str_replace(" ", "-", $nospacegame);
+                ?>
+                    <li class="game <?php echo($nospacegame);?>">
                         <a href="tournament.php?id=<?php echo($row['id']); ?>">
-                            <?php echo($row['name']); ?>
+                            <?php echo($row['game']); ?>
                         </a>
                     </li>
                 <?php endforeach; ?>
