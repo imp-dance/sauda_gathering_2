@@ -41,28 +41,28 @@ $query = "SELECT * FROM sg_turn ORDER BY start DESC";
                 $game = $row['game'];
                         switch($game) {
                         case "League of Legends":
-                            $theimageurl = "game-league2.png";
+                            $theimageurl = "compo-bilder/game-league2.png";
                             break;
                         case "Counter Strike: Global Offensive":
-                            $theimageurl = "game-cs.png";
+                            $theimageurl = "compo-bilder/game-cs.png";
                             break;
                         case "Rocket League":
-                            $theimageurl = "game-rocket.png";
+                            $theimageurl = "compo-bilder/game-rocket.png";
                             break;
                         case "Trackmania":
-                            $theimageurl = "game-tm.png";
+                            $theimageurl = "compo-bilder/game-tm.png";
                             break;
                         case "Mario Kart":
-                            $theimageurl = "game-mk.png";
+                            $theimageurl = "compo-bilder/game-mk.png";
                             break;
                         case "Hearthstone":
-                            $theimageurl = "game-hs.png";
+                            $theimageurl = "compo-bilder/game-hs.png";
                             break;
                         case "World of Warcraft":
-                            $theimageurl = "game-wow.png";
+                            $theimageurl = "compo-bilder/game-wow.png";
                             break;
                         default:
-                            $theimageurl = "game-default.png";
+                            $theimageurl = "compo-bilder/game-default.png";
                             break;
                     }
                     ?>
