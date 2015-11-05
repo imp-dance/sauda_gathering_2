@@ -33,8 +33,13 @@ $query = "SELECT * FROM sg_turn ORDER BY start DESC";
     <div class="container">
         <div class="row">
             <ul class="tournament-list">
-                <?php foreach($rows as $row): ?> 
-                    <li>
+                <li> Årets compoer </li>
+                <?php foreach($rows as $row):
+                $nospacegame = $row['game'];
+                $nospacegame = strtolower($nospacegame);
+                $nospacegame = str_replace(" ", "-", $nospacegame);
+                ?>
+                    <li class="game <?php echo($nospacegame);?>">
                         <a href="tournament.php?id=<?php echo($row['id']); ?>">
                             <?php echo($row['name']); ?>
                         </a>

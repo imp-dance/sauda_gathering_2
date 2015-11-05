@@ -548,3 +548,7 @@ span.glyphicon{color:#fff;}
     background:#d9d9d9;
     text-decoration:none;
 }
+.tournament-list li a:hover,.tournament-list li a:active,.tournament-list li a:focus,.tournament-list li a:visited {
+    background:#d9d9d9;
+    text-decoration: none;
+}
