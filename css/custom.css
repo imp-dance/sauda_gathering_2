@@ -552,3 +552,14 @@ span.glyphicon{color:#fff;}
     background:#d9d9d9;
     text-decoration: none;
 }
+
+.tournament-list .game a {
+	background:url("../images/game-default.png") top left no-repeat;
+}
+
+.tournament-list li { 
+	-webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    filter: gray;
+    -moz-filter: grayscale(100%);
+}

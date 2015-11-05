@@ -33,21 +33,40 @@ $query = "SELECT * FROM sg_turn ORDER BY start DESC";
     <div class="container">
         <div class="row">
             <ul class="tournament-list">
-                <li> Årets compoer </li>
                 <?php foreach($rows as $row):
+                //Her fjerne me alle kolon og gjør all space te bindestrek
                 $nospacegame = $row['game'];
                 $nospacegame = strtolower($nospacegame);
                 $nospacegame = str_replace(" ", "-", $nospacegame);
-                ?>
-                    <li class="game <?php echo($nospacegame);?>">
-                        <a href="tournament.php?id=<?php echo($row['id']); ?>">
-                            <?php echo($row['name']); ?>
-                        </a>
-                    </li>
-                <?php endforeach; ?>
-            </ul>
-        </div>
-    </div>
-</div> <!-- super container -->
-<?php include("script.php");
-include("footer.php"); ?>
+                $game = $row['game'];
+                        switch($game) {
+                        case "League of Legends":
+                            $theimageurl = "game-league.png";
+                            break;
+                        case "Counter Strike: Global Offensive":
+                            $theimageurl = "game-cs.png";
+                            break;
+                        case "Rocket League":
+                            $theimageurl = "game-rocket.png";
+                            break;
+                        default:
+                            $theimageurl = "game-default.png";
+                            break;
+                    }
+                    ?>
+                        <img src="images/<?php echo($theimageurl);?>" />
+                            <div>
+                                <a href="tournament.php?id=<?php echo($row['id']); ?>">Text!!!! XD :P
+                                </a>
+                                <a href="#" class="redigerlink">rediger
+                                </a>
+                             </div>
+                        </li>
+                    </ul>
+                    <?php endforeach; ?>
+                </div>
+            </div>
+            <?php
+                include("script.php");
+                include("footer.php");
+            ?>
