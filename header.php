@@ -26,7 +26,7 @@
     			<li><a class="link-header" href="#">Plasseringsoversikt</a></li>
     			<li><a href="#">Påmelding til treffet</a></li>
           <li><a href="members.php">Brukere</a></li>
-    			<li><a href="#">Compoer</a></li>
+    			<li><a href="tournaments.php">Compoer</a></li>
     		  </ul>
           <form action="profile_search.php" method="POST" autocomplete="off" class="topmenform">
             <input type="text" name="username" placeholder="Søk etter brukere her">
