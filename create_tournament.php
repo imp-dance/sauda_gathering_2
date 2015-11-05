@@ -26,11 +26,11 @@ if (!empty($_POST)){
     if (!in_array($type, $typearray)){
         // Hmmmmmmmm
         $error = 1;
-        $code = "1";
+        $code = "1 - Invalid type</p>";
     }
 
     // Check if valid date
-
+/*
     function validateMysqlDate( $date ){ 
     if (preg_match("/^(\d{4})-(\d{2})-(\d{2}) ([01][0-9]|2[0-3]):([0-5][0-9]):([0-5][0-9])$/", $date, $matches)) { 
         if (checkdate($matches[2], $matches[3], $matches[1])) { 
@@ -42,11 +42,16 @@ if (!empty($_POST)){
 
     if (validateMysqlDate($start) == false || validateMysqlDate($end) == false){
         $error = 1;
-        $code = "2<p class='errorsss'>Feil dato-format</p>";
+        $code = "2 - Feil dato format</p>";
+    }*/
+
+    if (empty($name) || empty($game) || empty($start) || empty($end)){
+        $error = 1;
+        $code = "3 - Fyll ut alle felt</p>";    
     }
 
     if ($error == 1){
-        die("Error! Kode ".$code);
+        die("<p class='error-code'>Error! Kode ".$code);
     }
 
     if ($error != 1){

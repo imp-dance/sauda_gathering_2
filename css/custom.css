@@ -519,3 +519,13 @@ span.glyphicon{color:#fff;}
     border-top-left-radius:0;
     border-bottom-left-radius:0;
 }
+.error-code{
+    display:block;
+    position:absolute;
+    top:70px;
+    left:5px;
+    padding:10px;
+    color:#fff;
+    font-weight:bold;
+    z-index:1000;
+}

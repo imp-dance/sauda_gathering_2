@@ -57,7 +57,7 @@ if (!empty($_POST)){
     if (!in_array($type, $typearray)){
         // Hmmmmmmmm
         $error = 1;
-        $code = "1";
+        $code = "1 - Invalid type spill</p>";
     }
 
     // Check if valid date
@@ -73,11 +73,16 @@ if (!empty($_POST)){
 
     if (validateMysqlDate($start) == false || validateMysqlDate($end) == false){
         $error = 1;
-        $code = "2";
+        $code = "2 - Feil dato format</p>";
+    }
+    
+    if (empty($name) || empty($game) || empty($start) || empty($end)){
+        $error = 1;
+        $code = "3 - Fyll ut alle felt</p>";    
     }
 
     if ($error == 1){
-        die("Error! Kode ".$code);
+        die("<p class='error-code'>Error! Kode ".$code);
     }
 
     $ttquery = "UPDATE sg_turn SET
