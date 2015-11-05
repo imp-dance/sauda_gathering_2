@@ -54,16 +54,24 @@ $query = "SELECT * FROM sg_turn ORDER BY start DESC";
                             break;
                     }
                     ?>
+                        <li>
                         <img src="images/<?php echo($theimageurl);?>" />
                             <div>
-                                <a href="tournament.php?id=<?php echo($row['id']); ?>">Text!!!! XD :P
+                                <a href="tournament.php?id=<?php echo($row['id']); ?>" class="gotolink">
+                                    <span><?php echo($row['name']); ?></span>
                                 </a>
-                                <a href="#" class="redigerlink">rediger
-                                </a>
+                                <div class="adminlinks">
+                                    <a href="#" class="redigerlink">
+                                        Rediger
+                                    </a>
+                                    <a href="#" class="redigerlink">
+                                        Tiss
+                                    </a>
+                                </div>
                              </div>
                         </li>
-                    </ul>
                     <?php endforeach; ?>
+                    </ul>
                 </div>
             </div>
             <?php

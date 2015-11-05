@@ -534,32 +534,54 @@ span.glyphicon{color:#fff;}
     margin:10px 0;
     padding:0 0;
 }
+.tournament-list li{
+	position:relative;
+}
 .tournament-list li, .tournament-list li a{
     display:block;
 }
-.tournament-list li a{
-    padding:10px;
-    background:#eee;
-    font-size:22px;
-    color:#000;
-    border-bottom:1px solid #aaa;
+.gotolink{
+	position:absolute;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	vertical-align: text-bottom;
 }
-.tournament-list li a:hover{
-    background:#d9d9d9;
-    text-decoration:none;
+.gotolink span{
+	position:absolute;
+	bottom:10px;
+	left:10px;
+	font-size:25px;
+	color:#fff;
+	text-shadow:0px 1px 1px #000;
 }
-.tournament-list li a:hover,.tournament-list li a:active,.tournament-list li a:focus,.tournament-list li a:visited {
-    background:#d9d9d9;
-    text-decoration: none;
+.adminlinks{
+	position:absolute;
+	bottom:10px;right:5px;
 }
+.adminlinks a{
+	background:#cd3333;
+	padding:5px;
+	color:#fff;
+	border-radius:2px;
+	display:inline-block !important;
+}
+
 
 .tournament-list .game a {
 	background:url("../images/game-default.png") top left no-repeat;
 }
 
-.tournament-list li { 
+.tournament-list li img{ 
 	-webkit-filter: grayscale(100%);
     filter: grayscale(100%);
     filter: gray;
     -moz-filter: grayscale(100%);
+}
+.tournament-lit li:hover img{
+	-webkit-filter: grayscale(0%);
+    filter: grayscale(0%);
+    filter: none;
+    -moz-filter: grayscale(0%);
 }
