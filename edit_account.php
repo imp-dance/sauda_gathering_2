@@ -189,9 +189,40 @@
         // is critical.  The rest of your PHP script will continue to execute and 
         // will be sent to the user if you do not die or exit. 
         die("Redirecting to edit_account.php"); 
-    } 
-     
-?> 
+    }       
+            $currentid = $_SESSION['user']['id'];
+            $imagequery = " 
+                SELECT 
+                    *
+                FROM morten_users
+                WHERE id = :currentid
+            "; 
+            // Define our query parameter values 
+            $query_params = array( 
+                ':currentid' => $currentid
+            );  
+            try 
+            { 
+                // Execute the query 
+                $stmt = $db->prepare($imagequery); 
+                $result = $stmt->execute($query_params); 
+            } 
+            catch(PDOException $ex) 
+            { 
+                // Note: On a production website, you should not output $ex->getMessage(). 
+                // It may provide an attacker with helpful information about your code.  
+                die("Failed to run query: " . $ex->getMessage()); 
+            } 
+         
+    // Finally, we can retrieve all of the found rows into an array using fetchAll 
+    $row = $stmt->fetch();
+    $imgurl = $row['img'];
+    $medlemstype = $row['type'];
+
+    if (empty($imgurl)){
+        $imgurl = "images/defaultprofil.png";
+    }
+?>
 <?php include("head.php") ?>
 <body>
     <?php include("header.php") ?>
@@ -224,8 +255,12 @@
                    <td><input name="kontonr" type="text" value="<?php if (!empty($_SESSION['user']['kontonr'])){echo htmlentities($_SESSION['user']['kontonr'], ENT_QUOTES, 'UTF-8'); } ?>" />
                 </tr>
                 <tr>
-                   <td>Medlems-ID</td>
+                   <td>Medlems-ID </td>
                    <td><input name="Medlems-ID" type="text" readonly value="<?php if (!empty($_SESSION['user']['id'])){echo htmlentities($_SESSION['user']['id'], ENT_QUOTES, 'UTF-8'); } ?>" />
+                </tr>
+                <tr>
+                   <td>Bruker-type</td>
+                   <td><input name="Medlems-type" type="text" readonly value="<?php if (!empty($_SESSION['user']['id'])){echo htmlentities($medlemstype);}?>"/>
                 </tr>
                 <tr>
                    <td colspan="2">
@@ -257,6 +292,7 @@
                 }
                 }
                 ?>
+                
                  <tr>
                     <td><br /><input name="uploaded" accept="image/*" type="file" /><br />
                     <button class="btn btn-success moveman newsub" type="submit"><span class="glyphicon glyphicon-upload"></span> Last Opp</button>
@@ -264,6 +300,18 @@
             </tr>
         </table>
              </form> 
+            </div>
+            <div class="upacf">
+              <table>
+                <thead>
+                    <tr>
+                        <td colspan="2">Ditt profilbilde</td>
+                    </thead>
+                        <td class= "ppp">
+                            <img class="cpp" src="<?php echo($imgurl); ?>">
+                        </td>
+                    </tr>
+                </table>
             </div>
             <div class="clear"></div>
         </div>

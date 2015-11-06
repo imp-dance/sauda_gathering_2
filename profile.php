@@ -34,18 +34,21 @@ $gitinfoq = "
             } 
          
     // Finally, we can retrieve all of the found rows into an array using fetchAll 
-    $row = $stmt->fetch(); 
+    $row = $stmt->fetch();
+
     $cemail = $row['email'];
     $cuname = $row['username'];
     $imgurl = $row['img'];
+
     if (empty($imgurl)){
         $imgurl = "images/defaultprofil.png";
     }
-$email = $cemail;
-$default = "http://www.gravatar.com/avatar/00000000000000000000000000000000";
-$size = 80;
-$grav_url = "http://www.gravatar.com/avatar/" . md5( strtolower( trim( $email ) ) ) . "?d=" . urlencode( $default ) . "&s=" . $size;
-?>
+    
+    $email = $cemail;
+    $default = "http://www.gravatar.com/avatar/00000000000000000000000000000000";
+    $size = 80;
+    $grav_url = "http://www.gravatar.com/avatar/" . md5( strtolower( trim( $email ) ) ) . "?d=" . urlencode( $default ) . "&s=" . $size;
+    ?>
 <body>
     <?php include("header.php") ?>
         <div class="jumbotron">

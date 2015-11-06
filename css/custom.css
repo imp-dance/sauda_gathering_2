@@ -561,16 +561,26 @@ span.glyphicon{color:#fff;}
 }
 .adminlinks{
 	position:absolute;
-	bottom:10px;right:5px;
+	bottom:10px;right:105px;
 }
-.adminlinks a{
+.adminlinks a,.brukerlinks a{
 	background:#cd3333;
 	padding:4px;
 	color:#fff;
 	border-radius:2px;
 	display:inline-block !important;
+	font-size: 16px;
 }
 
+.brukerlinks{
+	position:absolute;
+	bottom:10px;right:5px;
+}
+
+.brukerlinks a:hover,.adminlinks a:hover{
+	background: #585755;
+	text-decoration: none;
+}
 
 .tournament-list .game a {
 	background:url("../images/game-default.png") top left no-repeat;
@@ -587,4 +597,11 @@ span.glyphicon{color:#fff;}
     filter: grayscale(0%);
     filter: none;
     -moz-filter: grayscale(0%);
+}
+
+.cpp {
+	margin: 10px auto;
+	display: block;
+	max-width: 300px;
+	max-height: 200px;
 }

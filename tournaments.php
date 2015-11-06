@@ -76,8 +76,16 @@ $query = "SELECT * FROM sg_turn ORDER BY start DESC";
                                     <a href="edit_tournament.php?id=<?php echo($row['id']); ?>" class="redigerlink">
                                         Rediger
                                     </a>
-                                    <a href="#" class="redigerlink">
-                                        Tiss
+                                    <a href="edit_tournament.php?id=<?php echo($row['id']); ?>" class="redigerlink">
+                                        Avslutt
+                                    </a>
+                                    <a href="edit_tournament.php?id=<?php echo($row['id']); ?>" class="redigerlink">
+                                        Start
+                                    </a>
+                                </div>
+                                <div class="brukerlinks">
+                                    <a href="edit_tournament.php?id=<?php echo($row['id']); ?>" class="redigerlink">
+                                        Meld deg på
                                     </a>
                                 </div>
                              </div>
