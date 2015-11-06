@@ -602,6 +602,8 @@ span.glyphicon{color:#fff;}
 .cpp {
 	margin: 10px auto;
 	display: block;
-	max-width: 300px;
+	max-width: 200px;
 	max-height: 200px;
+	min-width: 200px;
+	min-height: 150px;
 }
