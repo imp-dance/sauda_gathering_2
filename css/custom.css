@@ -607,3 +607,25 @@ span.glyphicon{color:#fff;}
 	min-width: 200px;
 	min-height: 150px;
 }
+
+.terms-cont {
+	color: #fff;!important
+	text-align: center;
+	font-family: 'Open Sans', sans-serif;
+	padding: 20px 5px;
+	margin-top: 10px;
+	border: 2px solid black;
+}
+
+.terms-cont h3 {
+	text-align: center;
+}
+
+.terms-cont li {
+	font-size: 16px;
+	line-height: 40px;
+}
+
+.super_container {
+	background-color: #fff;!important
+}

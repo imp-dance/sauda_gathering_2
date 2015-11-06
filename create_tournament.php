@@ -128,7 +128,14 @@ if (!empty($_POST)){
             <tr>
                 <td>Spill:</td>
                 <td>
-                    <input type="text" name="game" />
+                    <select name="game">
+                        <option>League of Legends</option>
+                        <option>Rocket League</option>
+                        <option>World of Warcraft</option>
+                        <option>Counter Strike: Global Offensive</option>
+                        <option>Hearthstone</option>
+                        <option>Trackmania</option>
+                    </select>
                 </td>
             </tr>
             <tr>

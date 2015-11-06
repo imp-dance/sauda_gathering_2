@@ -27,6 +27,9 @@
     			<li><a href="#">Påmelding til treffet</a></li>
           <li><a href="members.php">Brukere</a></li>
     			<li><a href="tournaments.php">Compoer</a></li>
+          <!-- Gjør disse kun tilgjengelig for admin -->
+          <li><a href="create_tournament.php">Lag compoer</a></li>
+           <li><a href="edit_tournament.php">Endre compoer</a></li>
     		  </ul>
           <form action="profile_search.php" method="POST" autocomplete="off" class="topmenform">
             <input type="text" name="username" placeholder="Søk etter brukere her">

@@ -1,10 +1,15 @@
 <?php include("head.php");
 include("header.php"); ?>
 <div id="jumbotron">
-    <div class"supercontainer">
+    <div class"super_container">
         <div class="jumbotron">
             <div class="container">
-                <h1 style="margin-top: 150px; margin-bottom: 200px;"> Sauda Gathering - Vilkår </h1>
+                <h1 style="margin-top: 120px; margin-bottom: 50px;"> Vilkår og regler </h1>
+            </div>
+        </div>
+            <div class="container">
+                <div class="terms-cont">
+                    <h3 style="font-size: 40px; margin-bottom: 20px;"> Vilkår </h3>
                 <ol>
                 <li>Treffet blir arrangert frå lørdag 1. til onsdag 5. oktober 2016.</li>
                 <li>Påmeldinga er bindande.</li>
@@ -21,7 +26,11 @@ include("header.php"); ?>
                 <li>Skal du dele datamaskin med en venn er det kun den som er ansvarlig for maskinen som trenger å melde seg på, den andre melder seg på i døra med tillatelse fra den som er ansvarlig for maskinen. Prisen for person nummer to er 350kr.</li>
                 <li>Det er mulig å melda seg på via Internett heilt fram til 8. oktober.</li>
                 </ol>
-                <h3>Reglar for Sauda Gathering</h3>
+            </div>
+        </div>
+        <div class="container">
+                <div class="terms-cont">
+                    <h3 style="font-size: 40px; margin-bottom: 20px;"> Regler for Sauda Gathering </h3>
                 <ol>
                 <li>Bruk av private høgtalarar er forbudt.</li>
                 <li>Det er ikkje lov å nyta alkohol eller andre rusmiddel inne i hallen.</li>
@@ -47,7 +56,11 @@ include("header.php"); ?>
                 <li>Nedlasting og visning av pornografisk eller anna støytande innhald er ikkje tillat.</li>
                 <li>Brudd på overnevnte reglar fører til utkasting fra arrangementet.</li>
                 </ol>
-                <h3>Reglar for bruk av nettstedet Sauda Gathering</h3>
+            </div>
+        </div>
+        <div class="container">
+            <div class="terms-cont">
+                <h3 style="font-size: 40px;">Reglar for bruk av nettstedet Sauda Gathering</h3>
                 <ol>
                     <li>
                     Gjelder http://www.saudanett.org og http://www2.saudanett.org 
@@ -66,6 +79,5 @@ include("header.php"); ?>
             </div>
         </div>
     </div>
-</div>
 <?php include("footer.php");
 include("script.php"); ?>
