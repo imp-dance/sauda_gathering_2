@@ -218,6 +218,9 @@
     $row = $stmt->fetch();
     $imgurl = $row['img'];
     $medlemstype = $row['type'];
+    if(empty($medlemstype)){
+        $medlemstype = "Standard";
+    }
 
     if (empty($imgurl)){
         $imgurl = "images/defaultprofil.png";
