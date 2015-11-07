@@ -585,7 +585,7 @@ span.glyphicon{color:#fff;}
     filter: none;
     -moz-filter: grayscale(0%);
 }
-
+/*
 .cpp {
 	margin: 10px auto;
 	display: block;
@@ -593,7 +593,7 @@ span.glyphicon{color:#fff;}
 	max-height: 200px;
 	min-width: 200px;
 	min-height: 150px;
-}
+}*/
 
 .terms-cont {
 	color: #fff;!important
@@ -655,7 +655,30 @@ span.glyphicon{color:#fff;}
 }
 
 */
-
+.p-wrap{
+	margin:5px auto;
+	border:1px solid #333;
+}
+.p-wrap.small{
+	width:80px;
+	height:80px;
+	overflow:hidden;
+}
+.p-wrap.small img{
+	min-width:80px;
+	max-width:80px;
+	min-height:80px;
+}
+.p-wrap.large{
+	width:200px;
+	height:200px;
+	overflow:hidden;
+}
+.p-wrap.large img{
+	min-width:200px;
+	max-width:200px;
+	min-height:200px;
+}
 /*
 Note to self: #ab7; e den søteste grønnfargen noensinne. Eg vil ha faqheadings i den fargen uten at det påvirke child elementså
 */

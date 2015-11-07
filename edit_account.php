@@ -332,6 +332,25 @@
         
     });
     </script>-->
+<script>
+function readURL(input) {
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+
+        reader.onload = function (e) {
+            $('.cpp').attr('src', e.target.result);
+            $(".noterabc").fadeOut(200);
+            $('.ppp').prepend("<div class='noterabc' style='width:200px;margin:0 auto;'>Dette er bare en forhåndsvisning. Trykk last opp for å lagre </div>")
+        }
+
+        reader.readAsDataURL(input.files[0]);
+    }
+}
+
+$("input[name='uploaded']").change(function(){
+    readURL(this);
+});
+</script>
     <?php include("footer.php") ?>
 </body>
 </html>
