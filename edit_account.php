@@ -308,7 +308,9 @@
                         <td colspan="2">Ditt profilbilde</td>
                     </thead>
                         <td class= "ppp">
-                            <img class="cpp" src="<?php echo($imgurl); ?>">
+                            <div class="p-wrap large">
+                                <img class="cpp" src="<?php echo($imgurl); ?>">
+                            </div>
                         </td>
                     </tr>
                 </table>
