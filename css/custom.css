@@ -604,13 +604,9 @@ span.glyphicon{color:#fff;}
 	border: 2px solid black;
 }
 
-.terms-cont h3 {
-	text-align: center;
-}
-
-.terms-cont li {
+.terms-content li {
 	font-size: 16px;
-	line-height: 40px;
+	line-height: 25px;
 }
 
 .super_container {
