@@ -39,7 +39,7 @@ include("header.php"); ?>
    <div class="panel panel-primary">
     <div class="panel-heading">
     <!-- Tittel på column -->
-    <h3 class="panel-title uppercase">Hvor gjør vi dette?</h3>
+    <h3 class="panel-title uppercase">Hvorfor gjør vi dette?</h3>
     </div>
     <div class="panel-body">
      <p class="panel-content">Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
@@ -52,7 +52,7 @@ include("header.php"); ?>
    <div class="panel panel-primary">
     <div class="panel-heading">
     <!-- Tittel på column -->
-    <h3 class="panel-title uppercase">Hvor gjør vi dette?</h3>
+    <h3 class="panel-title uppercase">Hvem kan vi takke?</h3>
     </div>
     <div class="panel-body">
      <p class="panel-content">Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.

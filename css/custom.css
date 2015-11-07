@@ -98,19 +98,6 @@ h1{
 	opacity: 0.9;
 }
 
-.panel-title {
-	text-align: center;
-}
-
-.panel-primary>.panel-heading {
-	background-color: #00B200;
-	border-color: #00B200;
-}
-
-.panel-primary {
-	border-color: #00B200;
-}
-
 #footer {
 	background-color: #333;
 	height: 100px;
@@ -629,3 +616,28 @@ span.glyphicon{color:#fff;}
 .super_container {
 	background-color: #fff;!important
 }
+
+.panel-heading.blue {
+	background-color: ##337ab7;!important
+}
+
+.panel.panel-primary.blue {
+	background-color: ##337ab7;!important
+}
+
+.panel-title {
+	text-align: center;
+}
+
+/* Den gamle koden for å få bootstrap panels te å bli grønne
+
+.panel-primary>.panel-heading {
+	background-color: #00B200;
+	border-color: #00B200;
+}
+
+.panel-primary {
+	border-color: #00B200;
+}
+
+*/
