@@ -40,7 +40,6 @@
     // Finally, we can retrieve all of the found rows into an array using fetchAll 
     $rows = $stmt->fetchAll(); 
 ?>
-<body>
     <?php include("header.php"); ?>
         <div class="jumbotron">
          <div class="container">

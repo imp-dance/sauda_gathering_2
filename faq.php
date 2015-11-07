@@ -1,6 +1,5 @@
-<?php include("head.php") ?>
-<body>
-    <?php include("header.php") ?>
+<?php include("head.php");
+include("header.php") ?>
     <div class="super_container">
         <div class="jumbotron">
          <div class="container">

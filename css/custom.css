@@ -295,9 +295,11 @@ margin-right:0 !important;
 		border-left:1px solid #aaa;
 		width:255px;
 	}
+
 	.faqt tr:nth-child(odd){
 		background:#eee;
 	}
+
 	.widesearch{
 		display: inline;
 		width: 100%;
@@ -484,9 +486,7 @@ span.glyphicon{color:#fff;}
 	height:80px;
 	overflow:hidden;
 }
-.uimgt a img{
-	max-width:80px;
-}
+
 .creturn{margin:0 auto;}
 .creturn td{
     padding-top:10px;
@@ -625,6 +625,25 @@ span.glyphicon{color:#fff;}
 	text-align: center;
 }
 
+.uimgt a img {
+	min-width: 80px;
+	max-width: 80px;
+	min-height: 80px;
+	max-height: 80px;
+}
+
+.promote a {
+	background:#cd3333;
+	padding:4px;
+	color:#fff;
+	border-radius:2px;
+	display:inline-block !important;
+	font-size: 16px;
+}
+
+.faqheading {
+	background-color: #ab7;!important
+}
 /* Den gamle koden for å få bootstrap panels te å bli grønne
 
 .panel-primary>.panel-heading {
@@ -636,4 +655,8 @@ span.glyphicon{color:#fff;}
 	border-color: #00B200;
 }
 
+*/
+
+/*
+Note to self: #ab7; e den søteste grønnfargen noensinne. Eg vil ha faqheadings i den fargen uten at det påvirke child elementså
 */
