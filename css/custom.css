@@ -573,19 +573,17 @@ span.glyphicon{color:#fff;}
 	background:url("../images/game-default.png") top left no-repeat;
 }
 
-.tournament-list li img{ 
-	-webkit-filter: grayscale(100%);
+.tournament-list li img {
     filter: grayscale(100%);
-    filter: gray;
-    -moz-filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+
 }
-.tournament-list li:hover img{
-	-webkit-filter: grayscale(0%);
+
+.tournament-list li:hover img {
     filter: grayscale(0%);
-    filter: none;
-    -moz-filter: grayscale(0%);
+    -webkit-filter: grayscale(0%);
 }
-/*
+
 .cpp {
 	margin: 10px auto;
 	display: block;

@@ -1,8 +1,5 @@
 <?php include("head.php");
 include("header.php");
-?>
-
-<?php
 
 $query = "SELECT * FROM sg_turn ORDER BY start DESC";
     try 
@@ -76,17 +73,15 @@ $query = "SELECT * FROM sg_turn ORDER BY start DESC";
                                     <a href="edit_tournament.php?id=<?php echo($row['id']); ?>" class="redigerlink">
                                         Rediger
                                     </a>
-                                    <a href="edit_tournament.php?id=<?php echo($row['id']); ?>" class="redigerlink">
-                                        Avslutt
+                                    <a href="delete_turn.php?id=<?php echo($row['id']); ?>" class="redigerlink">
+                                        Slett turnering
                                     </a>
                                     <a href="edit_tournament.php?id=<?php echo($row['id']); ?>" class="redigerlink">
                                         Start
                                     </a>
                                 </div>
                                 <div class="brukerlinks">
-                                    <a href="edit_tournament.php?id=<?php echo($row['id']); ?>" class="redigerlink">
-                                        Meld deg på
-                                    </a>
+
                                 </div>
                              </div>
                         </li>
