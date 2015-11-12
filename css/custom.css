@@ -490,12 +490,17 @@ span.glyphicon{color:#fff;}
 	overflow:hidden;
 }
 
-.creturn{margin:0 auto;}
+.creturn{/*margin:0 auto;*/width:500px;}
 .creturn td{
     padding-top:10px;
 }
+.creturn select{
+	width:100%;
+}
 .creturn textarea{
     border-color:#ccc;
+    width:100%;
+    max-width:100%;
 }
 .errorsss{
     position:absolute;

@@ -136,17 +136,17 @@ if (!empty($_POST)){
     </div>
   </div>
   <div class="container">
-    <form action="edit_tournament.php?id=<?php echo($editid); ?>" method="post" style="padding:20px;">
+    <form action="edit_tournament.php?id=<?php echo($editid); ?>" method="post" style="padding:20px;border-left:1px solid #ddd;">
         <table class="creturn">
     <?php
     ?>
             <tr>
                 <td>Namn:</td>
-                <td><input type="text" name="name" value="<?php echo($current_name); ?>" /></td>
+                <td><input type="text" class="form-control" name="name" value="<?php echo($current_name); ?>" /></td>
             </tr>
             <tr>
                 <td>ID:</td>
-                <td><input type="text" value="<?php echo($editid); ?>" disabled /></td>
+                <td><input type="text" class="form-control" value="<?php echo($editid); ?>" disabled /></td>
             </tr>
             <tr>
                 <td>Type:</td>
@@ -162,21 +162,21 @@ if (!empty($_POST)){
             <tr>
                 <td>Spill:</td>
                 <td>
-                    <input type="text" name="game" value="<?php echo($current_game); ?>" />
+                    <input type="text" class="form-control" name="game" value="<?php echo($current_game); ?>" />
                 </td>
             </tr>
             <tr>
                 <td>Tid nå:</td>
-                <td><input type="text" class="displaytime" disabled /></td>
+                <td><input type="text" class="form-control" class="displaytime" disabled /></td>
             </tr>
             <tr>
                 <td>Start tid (yyyy-mm-dd hh:mm:ss):</td>
-                <td><input type="text" name="startdate" class="datepicker" value="<?php echo($current_start); ?>" placeholder="2015-09-17 15:00:00" /></td>
+                <td><input type="text" name="startdate" class="datepicker form-control" value="<?php echo($current_start); ?>" placeholder="2015-09-17 15:00:00" /></td>
             </tr>
 
             <tr>
                 <td>Slutt tid (yyyy-mm-dd hh:mm:ss):</td>
-                <td><input type="text" name="enddate" value="<?php echo($current_end); ?>" placeholder="2015-09-17 21:00:00" class="datepicker" /></td>
+                <td><input type="text" name="enddate" value="<?php echo($current_end); ?>" placeholder="2015-09-17 21:00:00" class="datepicker form-control" /></td>
             </tr>
             <tr>
                 <td>Regler:</td>

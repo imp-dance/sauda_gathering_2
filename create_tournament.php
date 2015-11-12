@@ -15,6 +15,11 @@ if (!empty($_POST)){
     $rules = strip_tags($rules);
     $settings = $_POST['serversettings'];
     $settings = strip_tags($settings);
+    if (isset($_POST['annetspill'])){
+        $game = $_POST['tannetspill'];
+        $game = strip_tags($game);
+    }
+
 
     // Check if gametype is in array
 
@@ -104,7 +109,7 @@ if (!empty($_POST)){
     </div>
   </div>
   <div class="container">
-    <form action="create_tournament.php" method="post" style="padding:20px;">
+    <form action="create_tournament.php" method="post" style="padding:20px;border-left:1px solid #ddd;">
         <table class="creturn">
     <?php
         if ($_POST){
@@ -113,7 +118,7 @@ if (!empty($_POST)){
     ?>
             <tr>
                 <td>Namn:</td>
-                <td><input type="text" name="name" /></td>
+                <td><input type="text" class="form-control" name="name" /></td>
             </tr>
             <tr>
                 <td>Type:</td>
@@ -125,7 +130,7 @@ if (!empty($_POST)){
                     </select>
                 </td>
             </tr>
-            <tr>
+            <tr class="defspill">
                 <td>Spill:</td>
                 <td>
                     <select name="game">
@@ -139,17 +144,28 @@ if (!empty($_POST)){
                 </td>
             </tr>
             <tr>
+                <td>Annet spill:</td>
+                <td>
+                    <div class="input-group">
+                      <span class="input-group-addon">
+                        <input type="checkbox" id="annetspill" name="annetspill" aria-label="...">
+                      </span>
+                      <input type="text" class="form-control" disabled id="anspill" name="tannetspill" aria-label="...">
+                    </div><!-- /input-group -->
+                </td>
+            </tr>
+            <tr>
                 <td>Tid nå:</td>
-                <td><input type="text" class="displaytime" disabled /></td>
+                <td><input type="text" class="displaytime form-control" disabled /></td>
             </tr>
             <tr>
                 <td>Start tid: </td>
-                <td><input type="text" name="startdate" class="datepicker" placeholder="2015-09-17 15:00:00" /></td>
+                <td><input type="text" name="startdate" class="datepicker form-control" placeholder="2015-09-17 15:00:00" /></td>
             </tr>
 
             <tr>
                 <td>Slutt tid:</td>
-                <td><input type="text" name="enddate" placeholder="2015-09-17 21:00:00" class="datepicker" /></td>
+                <td><input type="text" name="enddate" placeholder="2015-09-17 21:00:00" style="border-top-right-radius:0;border-bottom-right-radius:0;" class="datepicker form-control" /></td>
                 <td> <button type="button" class="btn btn-info moveman" id="copybutt"><span class="glyphicon glyphicon-pencil"></span> Kopier ned</button>
             </tr>
             <tr>
@@ -158,11 +174,11 @@ if (!empty($_POST)){
                 </td>
             </tr>
             <tr>
-                <td>Regler:</td>
+                <td valign="top">Regler:</td>
                 <td><textarea name="rules"></textarea></td>
             </tr>
             <tr>
-                <td>Server Instillinger:</td>
+                <td valign="top">Server Instillinger:</td>
                 <td><textarea name="serversettings"></textarea></td>
             </tr>
             <tr>
@@ -188,14 +204,24 @@ function startTime() {
     var y = today.getUTCFullYear();
     m = checkTime(m);
     s = checkTime(s);
-    $time = y + "-" + mo + "-" + d + " " + h + ":" + m + ":" + s;
+    $time = y + "-" + mo + "-" + d + " " + h + ":00:00";
     $(".displaytime").val($time);
-    var t = setTimeout(startTime, 500);
+    // var t = setTimeout(startTime, 500);
 }
 function checkTime(i) {
     if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
     return i;
 }
+$('#annetspill').change(function(){
+    if (this.checked == true){
+        $(".defspill").hide();
+        $("#anspill").removeAttr("disabled");
+    }else{
+        $(".defspill").show();
+        $("#anspill").val("");
+        $("#anspill").attr("disabled", "disabled");
+    }
+});
 $(document).ready(startTime());
 </script>
 <?php
