@@ -376,7 +376,9 @@ span.glyphicon{
 }
 span.glyphicon{color:#fff;}
 .upacf{
-  background:rgba(170, 170, 170, 0.5);
+  /*background:rgba(170, 170, 170, 0.5);
+  */
+  border-left:1px solid #ddd;
   float:left;
   padding:10px;
   border-radius:5px;
@@ -384,17 +386,18 @@ span.glyphicon{color:#fff;}
   margin:10px;
 }
 .upacf-cont{
-    width: 800px;
+    /*width: 800px;*/
     margin: 0 auto;
 }
+.upacf table thead tr td{color:#fff !important;font-weight:bolder;}
 .upacf input[type="text"], .upacf input[type="email"], .upacf input[type="password"], .upacf input[type="number"]{
   width:300px;
-  color:#333;
+  /* color:#333; */
   border-radius:3px;
 }
 .upacf tr td{
 	padding-top:10px;
-  color:#fff;
+  /*color:#fff;*/
 }
 .upacf table{
 	margin:-10px -10px 0;

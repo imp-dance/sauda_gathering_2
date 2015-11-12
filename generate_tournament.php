@@ -18,55 +18,13 @@ include('../common.php');
             boiloff($db, $id);
         break;
     }
-    /* GROUP UP */
 
-        // Get all teams where joinid is id
-    
 
-        //Check if no results
-    /*if (empty($rows)){die("empty");}
-    
-        //Set up for grouping
     /*
-    $numrows = count($rows);
-    $groupcount = 1;
-    $groupnames = array();
-    $groupids = array();
-    $groupid = 0;
-    $teamname;
-    $numrowsminus = $numrows - 3;
-        //Loop for 
-    foreach($rows as $row){
-        if ($numrows % 2 == 0) {
 
-            if ($groupcount == 1){
-                $teamname = $row['teamname'];
-                $groupcount++;
-            }else{
-                $groupid = $groupid + 1;
-                $team = array($row['teamname'], $teamname);
-                array_push($groupnames,$team);
-                array_push($groupids, $groupid);
-                $groupcount = 1;
-            }
-        }else{
+    ///SINGLE ELIMINATION///
 
-        }
-    }
-
-    foreach ($groupnames as $row):
-    $turnid = $id;
-    $bracket = 2;
-    $firstteam = $row[0];
-    $secondteam = $row[1];
-    $firstteamscore = 0;
-    $secondteamscore = 0;
-    $finished = 0;
-
-    echo("<br /><br />Turnid:".$turnid."<br />Bracket:".$bracket."<br />Firstteam:".$firstteam."<br />Second team:".$secondteam."<br />");
-    endforeach;
-    */    
-
+    */
     function singleEl($db, $id){
         $getteams = "SELECT * FROM sg_turn_teams WHERE joinid = :joinid ORDER BY rand()";
         $paramss = array(":joinid" => $id);
@@ -77,8 +35,13 @@ include('../common.php');
             die("Failed to run query");
         }
         $rows = $stmt->fetchAll();
-}
+    }
 
+    /*
+
+    ///DOUBLE ELIMINATION///
+
+    */
 
     function doubleEl($db, $id){
     	/*
@@ -92,33 +55,35 @@ include('../common.php');
         }catch(PDOException $ex){
             die("Failed to run query");
         }
-        $rows = $stmt->fetchAll();
-        $numrows = count($rows);
-        $numrowss = $numrows - 1;
-        $groupcount = 1;
-        $groupnames = array();
-        $groupids = array();
-        $groupbracket = array();
-        $groupid = 0;
-        $teamname;
+        $rows = $stmt->fetchAll(); // fetch information from query
+        $numrows = count($rows); // used for even numbers
+        $numrowss = $numrows - 1; // used for odd numbers
+        $groupcount = 1; // counter
+        $groupnames = array(); // names of teams in array [][]
+        $groupids = array(); // which id
+        $groupbracket = array(); // which bracket
+        $groupid = 0; // count 1 every other
+        $teamname; // updated every other to store one team's name
+        $odde = 0; // counter
 
-        $odde = 0;
-        foreach($rows as $row){
-            if ($numrows % 2 == 0) {
+        foreach($rows as $row){ // for every team that is in this tournament
+            if ($numrows % 2 == 0) { // if even
                 /* PARTAL */ 
                 if ($groupcount == 1){
-                    $teamname = $row['teamname'];
+                    $teamname = $row['teamname']; // store first team
                     $groupcount++;
-                }else{
+                }else{ // every other
                     $groupid = $groupid + 1;
-                    $team = array($row['teamname'], $teamname);
-                    array_push($groupnames,$team);
-                    array_push($groupids, $groupid);
-                    $groupcount = 1;
+                    $team = array($row['teamname'], $teamname); //put last teamname & this teamname in array
+                    array_push($groupnames,$team); //push teamnames to array
+                    array_push($groupids, $groupid); //not really nessecary
+                    $groupcount = 1; //reset "every other"
                 }
 
-            }else{
-                /* ODDETAL */
+            }else{ // if odd
+                /* ODDETAL 
+                    Basically do the same until there is one left...
+                */
                 if ($odde < $numrowss){
                     if ($groupcount == 1){
                         $teamname = $row['teamname'];
@@ -131,33 +96,48 @@ include('../common.php');
                         array_push($groupbracket, 1);
                         $groupcount = 1;
                         /* INSERT MATCH/GROUP INTO DB */
-                        $insq = "INSERT INTO sg_turn_groups (turnid, bracket, firstteam, secondteam) VALUES (:turnid, 1, ':firstteam', ':secondteam')";
+                        $insq = "INSERT INTO sg_turn_groups (turnid, bracket, firstteam, secondteam) VALUES (:turnid, :bracket, :firstteam, :secondteam)";
                         $parmsa = array(
                             ":turnid" => $id,
                             ":firstteam" => $team[0],
-                            ":secondteam" => $team[1]
+                            ":secondteam" => $team[1],
+                            ":bracket" => 1
                             );
                         /* run query */
+                        try { 
+                            $stmt = $db->prepare($insq); 
+                            $result = $stmt->execute($parmsa); 
+                        }catch(PDOException $ex){
+                            die("Failed to run query" . $ex->getMessage());
+                        }
                     }
                     $odde++;
                     echo("Bracket 1<br />");
                 }else{
                 /* Now there should be one left */
                     $groupid = $groupid + 1;
-                    $teamsarray = array($row['teamname'], "Winner");
+                    $teamsarray = array($row['teamname'], "Winner"); //this match should be $teamname vs undefined - the winner of a previous match.
                     array_push($groupnames, $teamsarray);
                     array_push($groupbracket, 2); // higher bracket
                     array_push($groupids, $groupid);
                     echo("Bracket 2");
 
                     /* INSERT MATCH/GROUP INTO DB */
-                    $insq = "INSERT INTO sg_turn_groups (turnid, bracket, firstteam, secondteam) VALUES (:turnid, 2, ':firstteam', ':secondteam')";
+                    $insq = "INSERT INTO sg_turn_groups (turnid, bracket, firstteam, secondteam) VALUES (:turnid, :bracket, :firstteam, :secondteam)";
                     $parmsa = array(
                         ":turnid" => $id,
                         ":firstteam" => $row['teamname'],
-                        ":secondteam" => "Winner"
+                        ":secondteam" => "Winner",
+                        ":bracket" => 2
                     );
                     /* run query */
+                    try { 
+                        $stmt = $db->prepare($insq); 
+                        $result = $stmt->execute($parmsa); 
+                    }catch(PDOException $ex){
+                        die("Failed to run query");
+                    }
+
                 }
             }
         }
@@ -173,6 +153,14 @@ include('../common.php');
         echo("<br /><br />Turnid:".$turnid."<br />Bracket:".$bracket."<br />Firstteam:".$firstteam."<br />Second team:".$secondteam."<br />");
         endforeach;
     }
+
+
+    /*
+
+    ///BOILOFF///
+
+    */
+
     function boiloff($db, $id){
     	/*
 			Alle i ein bracket, mot hverandre - taper detter ut

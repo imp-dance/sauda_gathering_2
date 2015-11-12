@@ -227,13 +227,16 @@
     }
 ?>
 <?php include("head.php") ?>
-<body>
     <?php include("header.php") ?>
+<div class="super_container">
         <div class="jumbotron">
          <div class="container alignleft">
             <h1 style="font-size: 60px";>Konto</h1>
-            <div class="upacf-cont">
-            <div class="upacf">
+         </div> <!-- container -->
+        </div> <!-- jumbotron -->
+        <div class="container">
+<div class="upacf-cont">
+            <div class="upacf" >
             <form action="edit_account.php" method="post"> 
               <table>
                 <thead>
@@ -298,7 +301,7 @@
                 
                  <tr>
                     <td><br /><input name="uploaded" accept="image/*" type="file" /><br />
-                    <button class="btn btn-success moveman newsub" type="submit"><span class="glyphicon glyphicon-upload"></span> Last Opp</button>
+                    <button disabled id="updatepicture" class="btn btn-success moveman newsub" type="submit"><span class="glyphicon glyphicon-upload"></span> Last Opp</button>
                 </td>
             </tr>
         </table>
@@ -320,8 +323,8 @@
             </div>
             <div class="clear"></div>
         </div>
-         </div> <!-- container -->
-        </div> <!-- jumbotron -->
+        </div>
+    </div>
     <?php include("script.php") ?>
     <!--<script src="js/dropzone.js"></script>
     <script>
@@ -340,7 +343,8 @@ function readURL(input) {
         reader.onload = function (e) {
             $('.cpp').attr('src', e.target.result);
             $(".noterabc").fadeOut(200);
-            $('.ppp').prepend("<div class='noterabc' style='width:200px;margin:0 auto;'>Dette er bare en forhåndsvisning. Trykk last opp for å lagre </div>")
+            // $('.ppp').prepend("<div class='noterabc' style='width:200px;margin:0 auto;'>Dette er bare en forhåndsvisning. Trykk last opp for å lagre </div>")
+            $("#updatepicture").removeAttr("disabled").text("Lagre");
         }
 
         reader.readAsDataURL(input.files[0]);
@@ -352,5 +356,3 @@ $("input[name='uploaded']").change(function(){
 });
 </script>
     <?php include("footer.php") ?>
-</body>
-</html>
