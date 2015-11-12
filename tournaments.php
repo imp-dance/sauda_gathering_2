@@ -73,7 +73,7 @@ $query = "SELECT * FROM sg_turn ORDER BY start DESC";
                                     <a href="edit_tournament.php?id=<?php echo($row['id']); ?>" class="redigerlink">
                                         Rediger
                                     </a>
-                                    <a href="delete_turn.php?id=<?php echo($row['id']); ?>" class="redigerlink">
+                                    <a href="" data-toggle="modal" data-target="#myModal" class="redigerlink">
                                         Slett turnering
                                     </a>
                                     <a href="edit_tournament.php?id=<?php echo($row['id']); ?>" class="redigerlink">
@@ -84,11 +84,28 @@ $query = "SELECT * FROM sg_turn ORDER BY start DESC";
 
                                 </div>
                              </div>
+                             <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                              <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                  <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                    <h4 class="modal-title" id="myModalLabel">Slett Compo</h4>
+                                  </div>
+                                  <div class="modal-body">
+                                    Er du sikker på ta du vill slette "<?php echo($row['name']); ?>"?
+                                  </div>
+                                  <div class="modal-footer">
+                                    <a href="delete_turn.php?id=<?php echo($row['id']); ?>"><button type="button" class="btn btn-primary">Slett</button></a>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
                         </li>
                     <?php endforeach; ?>
                     </ul>
                 </div>
             </div>
+
             <?php
                 include("script.php");
                 include("footer.php");

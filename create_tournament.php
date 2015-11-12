@@ -113,9 +113,28 @@ if (!empty($_POST)){
         <table class="creturn">
     <?php
         if ($_POST){
-            echo("<tr><td colspan='2'>Databasen ble oppdatert. <a href='tournaments.php'>Rediger</a>.</td></tr>");
-        }
+            ?>
+            <tr>
+                <div class="progress">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%;">
+                    <span class="sr-only">40% Complete</span>
+                  </div>
+                </div>
+            </tr>
+            <tr><td colspan='2'>Databasen ble oppdatert. <a href='tournaments.php'>Inviter teams</a>.</td></tr>
+            <?php
+        }else{
     ?>
+            <tr>
+                <div class="progress">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" style="width: 10%;">
+                    <span class="sr-only">10% Complete</span>
+                  </div>
+                </div>
+            </tr>
+            <?php
+        }
+        ?>
             <tr>
                 <td>Namn:</td>
                 <td><input type="text" class="form-control" name="name" /></td>
