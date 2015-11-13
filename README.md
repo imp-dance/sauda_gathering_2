@@ -11,6 +11,7 @@ prøve igjen
     * Login form
     * Dropdown-meny
     * Søke form
+
 2.Statiske sider
   * Hjem-side
     * Facebook-integrering
@@ -20,6 +21,7 @@ prøve igjen
   * FAQ
     * Breadcrumb for side-links med jQuery for fiksing av hva som er "top"
   * Vilkår
+  
 3.Spesielle sider
   * Profil-system
     * [ikke ferdig] Aktivitets- & compo-integrering
