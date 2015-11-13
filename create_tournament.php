@@ -184,8 +184,8 @@ if (!empty($_POST)){
 
             <tr>
                 <td>Slutt tid:</td>
-                <td><input type="text" name="enddate" placeholder="2015-09-17 21:00:00" style="border-top-right-radius:0;border-bottom-right-radius:0;" class="datepicker form-control" /></td>
-                <td> <button type="button" class="btn btn-info moveman" id="copybutt"><span class="glyphicon glyphicon-pencil"></span> Kopier ned</button>
+                <td><input type="text" name="enddate" placeholder="2017-09-17 21:00:00" style="border-top-right-radius:0;border-bottom-right-radius:0;" class="datepicker form-control" /></td>
+                <td> <button type="button" class="btn btn-info moveman" data-toggle="tooltip" data-placement="top" title="Kopier start tid" id="copybutt"><span class="glyphicon glyphicon-pencil"></span> Kopier ned</button>
             </tr>
             <tr>
                 <td colspan="2" style="text-align:right;font-size:12px;color:#aaa;">
@@ -241,6 +241,9 @@ $('#annetspill').change(function(){
         $("#anspill").attr("disabled", "disabled");
     }
 });
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
 $(document).ready(startTime());
 </script>
 <?php

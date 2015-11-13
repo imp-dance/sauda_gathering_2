@@ -246,27 +246,27 @@
                 </thead>
                  <tr>
                    <td>Nick</td>
-                   <td><input name="nick" type="text" value="<?php if (!empty($_SESSION['user']['username'])){ echo htmlentities($_SESSION['user']['username'], ENT_QUOTES, 'UTF-8'); } ?>" />
+                   <td><input name="nick" class="form-control" type="text" value="<?php if (!empty($_SESSION['user']['username'])){ echo htmlentities($_SESSION['user']['username'], ENT_QUOTES, 'UTF-8'); } ?>" />
                 </tr>
                  <tr>
                    <td>Email</td>
-                   <td><input name="email" type="email" value="<?php if (!empty($_SESSION['user']['email'])){ echo htmlentities($_SESSION['user']['email'], ENT_QUOTES, 'UTF-8'); } ?>" />
+                   <td><input name="email" class="form-control" type="email" value="<?php if (!empty($_SESSION['user']['email'])){ echo htmlentities($_SESSION['user']['email'], ENT_QUOTES, 'UTF-8'); } ?>" />
                 </tr>
                  <tr>
                    <td>Mobilnr</td>
-                   <td><input style="padding-left: 5px;" name="nr" type="number" value="<?php if (!empty($_SESSION['user']['nr'])){echo htmlentities($_SESSION['user']['nr'], ENT_QUOTES, 'UTF-8'); } ?>" />
+                   <td><input style="padding-left: 5px;" class="form-control" name="nr" type="number" value="<?php if (!empty($_SESSION['user']['nr'])){echo htmlentities($_SESSION['user']['nr'], ENT_QUOTES, 'UTF-8'); } ?>" />
                 </tr>
                  <tr>
                    <td>Kontonr</td>
-                   <td><input name="kontonr" type="text" value="<?php if (!empty($_SESSION['user']['kontonr'])){echo htmlentities($_SESSION['user']['kontonr'], ENT_QUOTES, 'UTF-8'); } ?>" />
+                   <td><input name="kontonr" type="text" class="form-control" value="<?php if (!empty($_SESSION['user']['kontonr'])){echo htmlentities($_SESSION['user']['kontonr'], ENT_QUOTES, 'UTF-8'); } ?>" />
                 </tr>
                 <tr>
                    <td>Medlems-ID </td>
-                   <td><input name="Medlems-ID" type="text" readonly value="<?php if (!empty($_SESSION['user']['id'])){echo htmlentities($_SESSION['user']['id'], ENT_QUOTES, 'UTF-8'); } ?>" />
+                   <td><input name="Medlems-ID" type="text" class="form-control" readonly value="<?php if (!empty($_SESSION['user']['id'])){echo htmlentities($_SESSION['user']['id'], ENT_QUOTES, 'UTF-8'); } ?>" />
                 </tr>
                 <tr>
                    <td>Bruker-type</td>
-                   <td><input name="Medlems-type" type="text" readonly value="<?php if (!empty($_SESSION['user']['id'])){echo htmlentities($medlemstype);}?>"/>
+                   <td><input name="Medlems-type" type="text" class="form-control" readonly value="<?php if (!empty($_SESSION['user']['id'])){echo htmlentities($medlemstype);}?>"/>
                 </tr>
                 <tr>
                    <td colspan="2">
