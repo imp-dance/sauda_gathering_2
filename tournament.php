@@ -48,33 +48,60 @@
         <h4>Compoen starter <u><?php echo($month."/".$day." kl ".$time); ?></u></h4>
         <button class="btn btn-default join"><span class="glyphicon glyphicon-chevron-right" style="color:#000;"></span> Bli med på compo <span class="label label-info">2</span></button>
         <button class="btn btn-default"><span class="glyphicon glyphicon-play" style="color:#000;"></span> Start compo</button>
-        <button class="btn btn-default"><span class="glyphicon glyphicon-pencil" style="color:#000;"></span> Rediger compo</button>
+        <a href="edit_tournament.php?id=<?php echo($turn_id); ?>"><button class="btn btn-default"><span class="glyphicon glyphicon-pencil" style="color:#000;"></span> Rediger compo</button></a>
 
 <br /><br />
+<?php
+$getteams = "SELECT * FROM sg_turn_teams WHERE joinid = :turnid";
+$params = array(
+    ":turnid" => $turn_id
+);
+try { 
+    $stmt = $db->prepare($getteams); 
+    $resultabc = $stmt->execute($params); 
+} 
+    catch(PDOException $ex) {
+    die("Failed to run query: " . $ex->getMessage()); 
+}
+$rows = $stmt->fetchAll();
+?>
     <div class="teams" style="display:none;">
+        <div class="team">
+            <a href="#" style="color:#fff;"><button class="btn btn-success">Lag team</buton></a>
+        </div>
+        <?php
+
+        foreach ($rows as $row){
+            $teamname = $row['teamname'];
+            $players = $row['players'];
+            $player = explode(",", $players);
+        ?>
             <div class="team">
-            <h5>Team 1</h5>
+            <h5><?php echo($teamname); ?></h5>
                 <table class="table">
                         <tr>
-                            <td>Player 1</td>
-                            <td>Player 2</td>
-                            <td>Player 3</td>
-                            <td>Player 4</td>
+                            <?php
+                            $first = 1;
+                                foreach($player as $person){
+                            ?>
+                            <td><?php 
+                            if ($first == 1){
+                                echo("<strong>".$person."</strong>");
+                            }else{
+                                echo($person); 
+                            }
+                            ?></td>
+                            <?php
+                                $first = 2;
+                                } //foreach
+                            ?>
                             <td><button class="btn btn-info">Spør om å bli med</button></td>
                         </tr>
                 </table>
             </div>
-            <div class="team">
-            <h5>Team 2</h5>
-                <table class="table">
-                        <tr>
-                            <td>Player 1</td>
-                            <td>Player 2</td>
-                            <td>Player 3</td>
-                            <td><button class="btn btn-info">Spør om å bli med</button></td>
-                        </tr>
-                </table>
-            </div>
+        <?php
+        } // foreach
+        ?>
     </div>
     </div> <!-- container -->
 </div> <!-- super container -->

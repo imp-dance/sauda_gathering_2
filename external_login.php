@@ -19,7 +19,8 @@
                 salt, 
                 email,
                 nr,
-                kontonr 
+                kontonr,
+                type 
             FROM morten_users 
             WHERE 
                 username = :username 

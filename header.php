@@ -54,7 +54,7 @@
     } else {
         ?>
         <div class="navbar-right">
-            <span>Du er logget inn som <strong><a href="profile.php"><?php echo($_SESSION['user']['username']); ?></a></strong> &raquo;</span>
+            <span>Du er logget inn som <strong><a href="profile.php"><?php echo($_SESSION['user']['username']); ?></a></strong> <?php if ($_SESSION['user']['type'] == "crew"){ echo("(crew)"); } ?> &raquo;</span>
             <a href="edit_account.php"><button class="btn btn-success moveman"><span class="glyphicon glyphicon-user"></span> Konto</button></a>
             <a href="logout.php"><button class="btn btn-success"><span class="glyphicon glyphicon-log-out"></span> Logg ut</button></a>
             <a href="irc.php"><button class="btn btn-success moveman redi"><span class="glyphicon glyphicon-comment"></span> IRC</button></a>
