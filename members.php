@@ -41,12 +41,18 @@
     $rows = $stmt->fetchAll(); 
 ?>
     <?php include("header.php"); ?>
+    <style>
+    .tooltip.top .tooltip-arrow{
+        left: 6%;
+        bottom:1px;
+    }
+    </style>
         <div class="jumbotron">
          <div class="container">
             <h1 style="font-size: 60px";>Påmeldte</h1>
             <div class="fuckthis">
             <span class="input_field glyphicon glyphicon-search"></span>
-            <input type="text" id="search" class="widesearch" value="<?php if(!empty($_REQUEST['sdata'])){echo($_REQUEST['sdata']);} ?>" placeholder="Trykk her for å søke etter brukere"/>
+            <input type="text" id="search" data-toggle="tooltip" data-placement="left" title="Trykk tab for neste" class="widesearch" value="<?php if(!empty($_REQUEST['sdata'])){echo($_REQUEST['sdata']);} ?>" placeholder="Trykk her for å søke etter brukere"/>
         </div>
             <table class="memberlist">
             	<?php foreach($rows as $row): ?> 
@@ -61,18 +67,24 @@
         </div> <!-- jumbotron -->
     <?php include("script.php"); ?>
     <script>
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+    });
     $("#search").keyup(function(){
         _this = this;
         // Show only matching TR, hide rest of them
         $.each($(".memberlist tbody").find("tr"), function() {
             console.log($(this).text());
-            if($(this).text().toLowerCase().indexOf($(_this).val().toLowerCase()) == -1)
+            if($(this).text().toLowerCase().indexOf($(_this).val().toLowerCase()) == -1){
                $(this).hide();
-            else
-                 $(this).show();                
+            }else{
+                 $(this).show(); 
+            }
+
         });
     }); 
     $(document).ready(function(){
+        $("#search").tooltop("hide");
         $("#search").keyup();
         $("#search").focus();
     })

@@ -46,16 +46,38 @@ if(!empty($_POST))
 
     } /* end post */
 ?>
+<style>
+.SGbigone{
+    width:100%;
+    margin:10px 0;
+}
+.SGbigone td{
+    padding-bottom:5px;
+}
+.SGbigone select{
+    width:100%;
+}
+</style>
+<div class="super_container">
 <div id="jumbotron">
-    <div class"supercontainer">
         <div class="jumbotron">
             <div class="container">
                 <h1 style="">Glemt brukerinformasjon?</h1>
-                <form action="forgot_password.php" method="post">
-                    <table>
+            </div>
+        </div>
+        <div class="container" style="padding:20px;min-height:350px;">
+
+            <ul class="nav nav-tabs">
+              <li role="presentation" class="active brukem"><a href="#" class="brukemailb">Bruk Email</a></li>
+              <li role="presentation" class="bruknu"><a href="#" class="bruknumb">Bruk nummer</a></li>
+            </ul>
+
+            <div class="bruknum">
+            <form action="forgot_password.php" method="post">
+                    <table class="SGbigone">
                         <tr>
                             <td>Ditt Mobilnummer:</td>
-                            <td><input type="number" /></td>
+                            <td><input type="number" class="form-control" /></td>
                         </tr>
                         <tr>
                             <td>Din operatør:</td>
@@ -73,13 +95,49 @@ if(!empty($_POST))
                             </td>
                         </tr>
                         <tr>
-                            <td><button type="submit" class="btn btn-success moveman">Fortsett</button>
+                            <td><button type="submit" class="btn btn-info moveman">Fortsett</button>
                         </tr>
                     </table>
                 </form>
             </div>
+            <div class="brukemail">
+                <form action="resetpass.php" method="post">
+                    <table class="SGbigone">
+                        <tr>
+                            <td><input type="text" class="form-control" name="email" placeholder="Din E-Mail" /></td>
+                        </tr>
+                        <tr>
+                            <td><button class="btn btn-info" type="submit">Fortsett</button></td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+
+        </div>
+                 
+            </div>
         </div>
     </div>
 </div>
-<?php include("footer.php");
-include("script.php"); ?>
+<?php
+include("script.php");
+?>
+<script>
+$(document).ready(function(){
+    $(".bruknum").hide();
+    $(".bruknumb").click(function(){
+        $(".brukemail").hide();
+        $(".brukem").removeClass("active");
+        $(".bruknum").show();
+        $(".bruknu").addClass("active");
+    });
+    $(".brukemailb").click(function(){
+        $(".brukemail").show();
+        $(".brukem").addClass("active");
+        $(".bruknum").hide();
+        $(".bruknu").removeClass("active");
+    });
+});
+</script>
+<?php
+include("footer.php"); ?>

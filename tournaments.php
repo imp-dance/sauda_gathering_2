@@ -36,32 +36,7 @@ $query = "SELECT * FROM sg_turn ORDER BY start DESC";
                 $nospacegame = strtolower($nospacegame);
                 $nospacegame = str_replace(" ", "-", $nospacegame);
                 $game = $row['game'];
-                        switch($game) {
-                        case "League of Legends":
-                            $theimageurl = "compo-bilder/game-league2.png";
-                            break;
-                        case "Counter Strike: Global Offensive":
-                            $theimageurl = "compo-bilder/game-cs.png";
-                            break;
-                        case "Rocket League":
-                            $theimageurl = "compo-bilder/game-rocket.png";
-                            break;
-                        case "Trackmania":
-                            $theimageurl = "compo-bilder/game-tm.png";
-                            break;
-                        case "Mario Kart":
-                            $theimageurl = "compo-bilder/game-mk.png";
-                            break;
-                        case "Hearthstone":
-                            $theimageurl = "compo-bilder/game-hs.png";
-                            break;
-                        case "World of Warcraft":
-                            $theimageurl = "compo-bilder/game-wow.png";
-                            break;
-                        default:
-                            $theimageurl = "compo-bilder/game-default.png";
-                            break;
-                    }
+                include('actions/gametypetoimage.php'); // Gets imageurl in $theimageurl for game types
                     ?>
                         <li>
                         <img src="images/<?php echo($theimageurl);?>" />
@@ -71,13 +46,13 @@ $query = "SELECT * FROM sg_turn ORDER BY start DESC";
                                 </a>
                                 <div class="adminlinks">
                                     <a href="edit_tournament.php?id=<?php echo($row['id']); ?>" class="redigerlink">
-                                        Rediger
+                                        <span class="glyphicon glyphicon-pencil"></span> Rediger
                                     </a>
                                     <a href="" data-toggle="modal" data-target="#myModal" class="redigerlink">
-                                        Slett turnering
+                                        <span class="glyphicon glyphicon-trash"></span> Slett turnering
                                     </a>
                                     <a href="edit_tournament.php?id=<?php echo($row['id']); ?>" class="redigerlink">
-                                        Start
+                                        <span class="glyphicon glyphicon-play"></span> Start
                                     </a>
                                 </div>
                                 <div class="brukerlinks">

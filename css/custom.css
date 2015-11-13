@@ -560,11 +560,11 @@ span.glyphicon{color:#fff;}
 }
 .adminlinks a,.brukerlinks a{
 	background:#cd3333;
-	padding:4px;
+	padding:4px 10px;
 	color:#fff;
 	border-radius:2px;
 	display:inline-block !important;
-	font-size: 16px;
+	font-size: 14px;
 }
 
 .brukerlinks{
@@ -573,7 +573,7 @@ span.glyphicon{color:#fff;}
 }
 
 .brukerlinks a:hover,.adminlinks a:hover{
-	background: #585755;
+	background: darkred;
 	text-decoration: none;
 }
 
