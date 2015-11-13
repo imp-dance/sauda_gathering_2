@@ -1,5 +1,23 @@
 <?php include("head.php");
-include("header.php"); ?>
+include("header.php");
+$query = "SELECT * FROM morten_users WHERE id = :userid";
+$query_params = array(
+':userid' => $_SESSION['user']['id']);
+try 
+    { 
+        // Execute the query 
+        $stmt = $db->prepare($query); 
+    } 
+    catch(PDOException $ex) 
+    { 
+        // Note: On a production website, you should not output $ex->getMessage(). 
+        // It may provide an attacker with helpful information about your code.  
+        die("Failed to run query: " . $ex->getMessage()); 
+    }
+
+$row = $stmt->fetch();
+$safetylevel = $row['type'];
+?>
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
@@ -18,7 +36,7 @@ include("header.php"); ?>
     <div class="super_container">
      <div class="jumbotron" style="height: 550px; border-bottom: 50px solid #222;">
       <div class="container" style="padding-bottom: 0;">
-        <h1>Velkommen til <br> Sauda Gathering</h1>
+        <h1>Velkommen til <br> Sauda Gathering <?php if (!empty($row['type'])){ echo($row['type']);}?></h1>
         <p class="inlinecenter">
         <div class="countdown styled"></div></p>
         <?php

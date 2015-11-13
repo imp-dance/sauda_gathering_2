@@ -684,6 +684,12 @@ span.glyphicon{color:#fff;}
 	max-width:200px;
 	min-height:200px;
 }
+
+
 /*
 Note to self: #ab7; e den søteste grønnfargen noensinne. Eg vil ha faqheadings i den fargen uten at det påvirke child elementså
 */
+
+.contactform {
+	color: #333;!important
+}
