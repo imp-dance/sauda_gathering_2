@@ -69,7 +69,11 @@
 <br /><br /></div>
     <div class="teams" style="display:none;">
         <div class="team"><?php if($numrows == 0){ echo("Ingen teams er meldt på enda...<br /><br />"); } ?>
-            <a href="#" class="lagteam" style="color:#fff;"><button class="btn btn-success lagteam">Lag team</buton></a>
+            <div class="btn-group" role="group" aria-label="...">
+              <button type="button" class="btn btn-default stepone"><span class="glyphicon glyphicon-arrow-left" style="color:#000;"></span> Tilbake</button>
+              <button class="btn btn-success lagteam">Lag team</buton>
+        </div>
+
         </div>
         <?php
 
@@ -114,7 +118,12 @@
                 <td><input type="text" name="teamname" placeholder="Team navn" class="form-control" /></td>
             </tr>
             <tr>
-                <td><button type="submit" class="btn btn-default"><span style="color:#000;" class="glyphicon glyphicon-plus"></span> Lag team</button></td>
+                <td>
+                    <div class="btn-group" role="group" aria-label="...">
+                      <button class="btn btn-default steptwo moveman" type="button"><span class="glyphicon glyphicon-arrow-left" style="color:#000"></span> Tilbake</button>
+                      <button type="submit" class="btn btn-default"><span style="color:#000;" class="glyphicon glyphicon-plus"></span> Lag team</button>
+                    </div>
+                </td>
             </tr>
         </table>
         </form>
@@ -133,11 +142,17 @@ $(".lagteam").click(function(){
     //$(".second").delay(200).slideDown(200);
     stepThree();
 });
+$(".steptwo").click(function(){
+    stepTwo();
+});
+$(".stepone").click(function(){
+    stepOne();
+});
 function stepOne(){
-    $(".first").slideDown(200);
     $(".second").slideUp(200);
     $(".teams").slideUp(200);
-    $(".hidethishit").delay(200).slideDown(200);
+    $(".first").delay(200).slideDown(200);
+    $(".hidethisshit").delay(200).slideDown(200);
 }
 function stepTwo(){
     $(".second").slideUp(200);
