@@ -4,7 +4,7 @@ $melding = strip_tags($melding);
 $emne = "SG-Kontakt".$_POST['emne'];
 $emne = strip_tags($emne);
 $fra = $_POST['email'];
-$til = 'sgnettcrew@gmail.com'
+$til = 'sgnettcrew@gmail.com';
 
 // In case any of our lines are larger than 70 characters, we should use wordwrap()
 $melding = wordwrap($message, 70, "\r\n");
