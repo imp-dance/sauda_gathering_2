@@ -36,7 +36,23 @@ $safetylevel = $row['type'];
     <div class="super_container">
      <div class="jumbotron" style="height: 550px; border-bottom: 50px solid #222;">
       <div class="container" style="padding-bottom: 0;">
-        <h1>Velkommen til <br> Sauda Gathering <?php if (!empty($row['type'])){ echo($row['type']);}?></h1>
+        <?php
+            if(!empty($_REQUEST['mailsent'])){
+        ?>
+          <div class="alert alert-success alert-dismissible" style="text-shadow:none !important;" role="alert">
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <?php
+          if($_REQUEST['mailsent'] == "true") {
+        ?>
+            Eposten ble sendt!  
+        <?php
+          }
+        ?>
+          </div>    
+        <?php
+          }
+        ?>
+        <h1>Velkommen til <br> Sauda Gathering</h1>
         <p class="inlinecenter">
         <div class="countdown styled"></div></p>
         <?php

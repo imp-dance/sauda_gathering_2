@@ -217,8 +217,8 @@ include("header.php"); ?>
                         if(!empty($_REQUEST['error'])){
                         ?>
                         <div class="alert alert-danger alert-dismissible" style="text-shadow:none !important;" role="alert">
-  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-  <strong>Obs!</strong> 
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <strong>Obs!</strong> 
                         <?php
                         if($_REQUEST['error'] == "email_taken") {
                         ?>

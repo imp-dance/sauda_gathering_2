@@ -6,7 +6,7 @@ include("head.php");
 //Declare shit
 $id = $_REQUEST['id'];
 if(empty($id)){
-	die('<meta http-equiv="refresh" content="0"; url="tournaments.php">');
+	die('<meta http-equiv="refresh" content="0; url=tournaments.php">');
 }
 
 $query = "

@@ -1,31 +1,14 @@
-<?php
-include("mailto.php");
-?>
 <div id="footer">
  <div class="container">
-   <footer>
-    <img src="images/copyright3.png">
-    <table style="color: #fff;" class="kontakt">
-		<tr>
-			<td>
-				<p>
-		      	<a href="" data-toggle="modal" data-target="#myModal" class="footerlink">Send en email til Sauda Gathering &raquo;</a>
-		        </p>	
-			</td>
-		</tr>
-		<tr>
-			<td>
-				<p>
-		      	<a href="#" class="footerlink">Link til Sauda Gathering vakt IRC &raquo; </a>
-		        </p>	
-			</td>
-			<td>
-				<p>
+   <footer><p>
+				<img src="images/copyright3.png"></p>
+				<div class="contact-container">
+		      	<a href="#" data-toggle="modal" data-target="#myModal" class="footerlink">Send en email til Sauda Gathering &raquo;</a>
+		      	<a href="#" class="footerlink">Sauda Gathering vakt IRC &raquo; </a>	
 					<!-- Link te Saudahallen på google maps -->
 		      	<a href="#" class="footerlink">Hvor finner du oss? &raquo; </a>
-		        </p>	
-			</td>
-		</tr>
+		      </div>
+	<table style="color: #fff;" class="kontakt">	
 		<tr class="contactform">
 			<td>
 				<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -36,7 +19,7 @@ include("mailto.php");
 				        <h4 class="modal-title" id="myModalLabel">Send en email</h4>
 				      </div>
 				      <div class="modal-body">
-				        <form class="form-horizontal" role="form" method="post" action="index.php">
+				        <form class="form-horizontal" role="form" method="post" action="mailto.php">
 						    <div class="form-group">
 						        <label for="email" class="col-sm-2 control-label">Email</label>
 						        <div class="col-sm-10">
@@ -52,7 +35,7 @@ include("mailto.php");
 						    <div class="form-group">
 						        <label for="message" class="col-sm-2 control-label">Melding</label>
 						        <div class="col-sm-10">
-						            <textarea class="form-control" rows="4" id="melding" name="melding "></textarea>
+						            <textarea class="form-control" rows="4" id="melding" name="melding"></textarea>
 						        </div>
 						    </div>
 						    <div class="form-group">
