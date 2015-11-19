@@ -79,8 +79,19 @@
 
         foreach ($rows as $row){
             $teamname = $row['teamname'];
-            $players = $row['players'];
-            $player = explode(",", $players);
+            $teamid = $row['id'];
+            $getplayers = "SELECT * FROM sg_turn_players WHERE teamid = :teamid";
+            $params = array(
+                ":teamid" => $teamid
+            );
+            try{
+                $stmt = $db->prepare($getplayers);
+                $result = $stmt->execute($params);
+            }
+            catch(PDOException $ex){
+                die("Failed to run query #2: " . $ex->getMessage());
+            }
+            $player = $stmt->fetchAll();
         ?>
             <div class="team">
             <h5><?php echo($teamname); ?></h5>
@@ -89,12 +100,26 @@
                             <?php
                             $first = 1;
                                 foreach($player as $person){
+                                $gitname = "SELECT * FROM morten_users WHERE id = :userid";
+                                $paramss = array(
+                                    ":userid" => $person['playerid']
+                                );
+                                try{
+                                    $stmtn = $db->prepare($gitname);
+                                    $resultn = $stmtn->execute($paramss);
+                                }
+                                catch(PDOException $ex){
+                                    die("Failed to run query #2: " . $ex->getMessage());
+                                }
+                                $personspecs = $stmtn->fetch();
+                                $personname = $personspecs['username'];
+
                             ?>
                             <td><?php 
                             if ($first == 1){
-                                echo("<strong>".$person."</strong>");
+                                echo("<strong><a href='profile.php?id=".$person['playerid']."' class='personlink'>".$personname."</a></strong>");
                             }else{
-                                echo($person); 
+                                echo("<a href='profile.php?id=".$person['playerid']."' class='personlink'>".$personname."</a>"); 
                             }
                             ?></td>
                             <?php
@@ -112,10 +137,10 @@
     </div> <!-- container -->
     <div class="container second" style="display:none;">
         <h3>Lag team</h3>
-        <form action="create_team.php">
+        <form action="create_team.php" method="post">
         <table class="table" style="width:100%;">
             <tr>
-                <td><input type="text" name="teamname" placeholder="Team navn" class="form-control" /></td>
+                <td><input type="text" name="teamname" placeholder="Team navn" class="form-control" /><input type="hidden" name="turnid" value="<?php echo($turn_id); ?>" /></td>
             </tr>
             <tr>
                 <td>
