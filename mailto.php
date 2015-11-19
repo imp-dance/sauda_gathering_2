@@ -1,5 +1,5 @@
 <?php
-if(isset($melding)){}
+if(isset($_POST)){
 $melding = $_POST['melding'];
 $melding = strip_tags($melding);
 $emne = "SG-Kontakt".$_POST['emne'];
@@ -15,4 +15,7 @@ $headers = 'From: $fra' . "\r\n" .
     'X-Mailer: PHP/' . phpversion();
 
 mail($til, $emne, $melding, $headers);
+}else{
+	die("faen du gjer her då????");
+}
 ?>
