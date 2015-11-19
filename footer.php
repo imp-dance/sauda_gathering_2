@@ -4,9 +4,9 @@
 				<img src="images/copyright3.png"></p>
 				<div class="contact-container">
 		      	<a href="#" data-toggle="modal" data-target="#myModal" class="footerlink">Send en email til Sauda Gathering &raquo;</a>
-		      	<a href="#" class="footerlink">Sauda Gathering vakt IRC &raquo; </a>	
+		      	<a href="vaktirc.php" class="footerlink">Sauda Gathering vakt IRC &raquo; </a>	
 					<!-- Link te Saudahallen på google maps -->
-		      	<a href="#" class="footerlink">Hvor finner du oss? &raquo; </a>
+		      	<a href="https://www.google.no/maps/place/Saudahallen/@59.6514241,6.3548458,17z/data=!3m1!4b1!4m2!3m1!1s0x463bffaf6a9b8c37:0x1dfe14db92e1a885" class="footerlink" target="_blank">Hvor finner du oss? &raquo; </a>
 		      </div>
 	<table style="color: #fff;" class="kontakt">	
 		<tr class="contactform">

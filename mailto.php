@@ -15,8 +15,12 @@ $headers = 'From:' .$fra."\r\n" .
     'X-Mailer: PHP/' . phpversion();
 
 mail($til, $emne, $melding, $headers);
-die('<meta http-equiv="refresh" content="0; url=index.php?mailsent=true">');
-} 
+}
+
+if(@mail($til, $emne, $melding, $headers)) {
+	die('<meta http-equiv="refresh" content="0; url=index.php?mailsent=true">');
+}
+
 else {
 	die("Faen du gjer her då????");
 }
