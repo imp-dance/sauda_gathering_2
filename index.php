@@ -88,7 +88,7 @@ $safetylevel = $row['type'];
       <div class="fbwrap" style="width:500px;height:670px;float:right;background:url('images/fbload.png') no-repeat top left;">
        <div class="fb-page" style="float:right" data-href="https://www.facebook.com/saudagathering" data-width="500px" data-height="650" data-small-header="false" data-adapt-container-width="false" data-hide-cover="false" data-show-facepile="false" data-show-posts="true"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/saudagathering"><a href="https://www.facebook.com/saudagathering">Sauda Gathering</a></blockquote></div></div>
       
-            <div style="display:block;color:#ddd;text-align:right;">Suldal er best</div>
+            <div style="display:block;color:#ddd;text-align:right;">Sauda er best</div>
       </div>
       </div>
 	 </div> <!-- /container -->
