@@ -124,6 +124,6 @@ if (isset($_POST)){
     {
         die("Failed to run query #4: " . $ex->getMessage()); 
     } 
-    die("Team created");
+    die('<meta http-equiv="refresh" content="0; url=tournament.php?id='.$joinid.'">');
 }	// isset post
 ?>
