@@ -8,26 +8,21 @@ include("mailto.php");
     <table style="color: #fff;" class="kontakt">
 		<tr>
 			<td>
-			 <p>Kontaktinformasjon:</p>
-			</td>
-		</tr>
-			<td>
 				<p>
-		      	E-mail: <a href="" data-toggle="modal" data-target="#myModal" class="redigerlink">Trykk her for å sende en email</a>
+		      	<a href="" data-toggle="modal" data-target="#myModal" class="footerlink">Send en email til Sauda Gathering &raquo;</a>
 		        </p>	
 			</td>
 		</tr>
 		<tr>
 			<td>
 				<p>
-		      	Telefon: 99999999
+		      	<a href="#" class="footerlink">Link til Sauda Gathering vakt IRC &raquo; </a>
 		        </p>	
 			</td>
-		</tr>
-		<tr>
 			<td>
 				<p>
-		      	Direkte IRC til vakta: <a href="#">Trykk her</a>
+					<!-- Link te Saudahallen på google maps -->
+		      	<a href="#" class="footerlink">Hvor finner du oss? &raquo; </a>
 		        </p>	
 			</td>
 		</tr>
@@ -57,7 +52,7 @@ include("mailto.php");
 						    <div class="form-group">
 						        <label for="message" class="col-sm-2 control-label">Melding</label>
 						        <div class="col-sm-10">
-						            <textarea class="form-control" rows="4" name="message"></textarea>
+						            <textarea class="form-control" rows="4" id="melding" name="melding "></textarea>
 						        </div>
 						    </div>
 						    <div class="form-group">
