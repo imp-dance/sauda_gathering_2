@@ -46,6 +46,7 @@ $query = "SELECT * FROM sg_turn ORDER BY start DESC";
                                 <a href="tournament.php?id=<?php echo($row['id']); ?>" class="gotolink">
                                     <span><?php echo($row['name']); ?></span>
                                 </a>
+                                <?php if($_SESSION['user']['type'] == "crew") { ?>
                                 <div class="adminlinks">
                                     <a href="edit_tournament.php?id=<?php echo($row['id']); ?>" class="redigerlink">
                                         <span class="glyphicon glyphicon-pencil"></span> Rediger
@@ -58,8 +59,10 @@ $query = "SELECT * FROM sg_turn ORDER BY start DESC";
                                     </a>
                                 </div>
                                 <div class="brukerlinks">
-
                                 </div>
+                                <?php
+                            }
+                                ?>
                              </div>
                              <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
                               <div class="modal-dialog" role="document">

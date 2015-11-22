@@ -28,8 +28,12 @@
           <li><a href="members.php">Brukere</a></li>
     			<li><a href="tournaments.php">Compoer</a></li>
           <!-- Gjør disse kun tilgjengelig for admin -->
+          <?php if(!empty($_SESSION['user']['type'])) if($_SESSION['user']['type'] == "crew") { ?>
           <li><a href="create_tournament.php">Lag compoer</a></li>
            <li><a href="edit_tournament.php">Endre compoer</a></li>
+           <?php
+           }
+           ?>
     		  </ul>
           <form action="profile_search.php" method="POST" autocomplete="off" class="topmenform">
             <input type="text" name="username" placeholder="Søk etter brukere her">

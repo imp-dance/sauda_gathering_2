@@ -63,8 +63,9 @@
         <h2>Denne compoen er ikke startet enda</h2>
         <h4>Compoen starter <u><?php echo($month."/".$day." kl ".$time); ?></u></h4>
         <button class="btn btn-default join"><span class="glyphicon glyphicon-chevron-right" style="color:#000;"></span> Bli med på compo <span class="label label-info"><?php echo($numrows); ?></span></button>
-        <button class="btn btn-default"><span class="glyphicon glyphicon-play" style="color:#000;"></span> Start compo</button>
-        <a href="edit_tournament.php?id=<?php echo($turn_id); ?>"><button class="btn btn-default"><span class="glyphicon glyphicon-pencil" style="color:#000;"></span> Rediger compo</button></a>
+        <?php if(!empty($_SESSION['user']['type'])) if($_SESSION['user']['type'] == "crew") { ?>
+        <button class="btn btn-default"><span class="glyphicon glyphicon-play" style="color:#000;"></span>Start compo</button>
+        <a href="edit_tournament.php?id=<?php echo($turn_id); ?>"><button class="btn btn-default"><span class="glyphicon glyphicon-pencil" style="color:#000;"></span>Rediger compo</button></a> <?php } ?>
 
 <br /><br /></div>
     <div class="teams" style="display:none;">

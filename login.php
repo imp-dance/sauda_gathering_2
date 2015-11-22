@@ -1,6 +1,9 @@
 <?php 
 include("head.php");
 include("header.php");
+if(!empty($_SESSION['user']['id'])) {
+    die('<meta http-equiv="refresh" content="0; url=index.php">');
+}
     // First we execute our common code to connection to the database and start the session 
     require("../common.php"); 
      
@@ -118,7 +121,7 @@ include("header.php");
 <div class="container" style="text-align: center">
     <div class="center" style="display: inline-block">
         <table class="logintable">
-            <form action="login.php" method="post">
+            <form action="external_login.php" method="post">
                 <tr>
                     <td>
                         <p style="margin-top: 5px"> Brukernavn: </p>
