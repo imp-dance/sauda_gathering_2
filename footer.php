@@ -3,10 +3,10 @@
    <footer><p>
 				<img src="images/copyright3.png"></p>
 				<div class="contact-container">
-		      	<a href="#" data-toggle="modal" data-target="#myModal" class="footerlink">Send en email til Sauda Gathering &raquo;</a>
-		      	<a href="vaktirc.php" class="footerlink">Sauda Gathering vakt IRC &raquo; </a>	
+		      	<a href="#" data-toggle="modal" data-target="#myModal" class="footerlink"><button class="btn btn-danger footerbutton">Send en email til Sauda Gathering &raquo;</button></a>
+		      	<a href="vaktirc.php" class="footerlink"><button class="footerbutton btn btn-danger">Sauda Gathering vakt IRC &raquo;</button></a>	
 					<!-- Link te Saudahallen på google maps -->
-		      	<a href="https://www.google.no/maps/place/Saudahallen/@59.6514241,6.3548458,17z/data=!3m1!4b1!4m2!3m1!1s0x463bffaf6a9b8c37:0x1dfe14db92e1a885" class="footerlink" target="_blank">Hvor finner du oss? &raquo; </a>
+		      	<a href="https://www.google.no/maps/place/Saudahallen/@59.6514241,6.3548458,17z/data=!3m1!4b1!4m2!3m1!1s0x463bffaf6a9b8c37:0x1dfe14db92e1a885" class="footerlink" target="_blank"><button class="btn btn-danger footerbutton">Hvor finner du oss? &raquo;</button></a>
 		      </div>
 	<table style="color: #fff;" class="kontakt">	
 		<tr class="contactform">

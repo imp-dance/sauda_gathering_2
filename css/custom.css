@@ -337,14 +337,6 @@ margin-right:0 !important;
 		padding:0;
 		display:none;
 	}
-.redi{background-color:#cd3333;}
-.redi:hover{
-	background-color:darkred;
-	border-color:#333;
-}
-.redi:active, .redi:focus{
-	background-color:darkred;
-}
 
 .faqheading:before{
 content: ;
@@ -699,20 +691,14 @@ Note to self: #ab7; e den søteste grønnfargen noensinne. Eg vil ha faqheadings
 }
 
 .footerlink,.footerlink:focus {
-	border-radius: 2px;
-	padding: 10px;
-	background-color: #cd3333;
 	color: white;
-	display: inline-block;
+
 	text-decoration: none;
-	font-size: 16px;
-	margin: 0px 5px 20px 0px;
 }
 
 .footerlink:hover,.footerlink:active {
 	color: white;
 	text-decoration: none;
-	background-color: darkred;
 }
 
 .contact-container {
@@ -726,4 +712,10 @@ Note to self: #ab7; e den søteste grønnfargen noensinne. Eg vil ha faqheadings
 .center {
 	margin: 0 auto;
 	display: inline-block;
+}
+
+.footerbutton {
+	padding: 10px;
+	display: inline-block;
+	margin: 10px 3px 20px 0px;
 }

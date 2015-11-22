@@ -59,12 +59,14 @@ $safetylevel = $row['type'];
           if (isset($_SESSION['user'])){
         ?>
         <p class="inlinecenter">
-          <a class="btn btn-danger btn-lg redi" href="tournaments.php" role="button" style="margin-top: 0px;"> Påmelding til compoer &raquo;</a>
+          <a class="btn btn-danger btn-lg" href="tournaments.php" role="button"> Påmelding til compoer &raquo;</a>
         </p>
         <?php
           }else{
         ?>
-        <p class="inlinecenter"><a class="btn btn-success btn-lg" href="register.php" role="button">Meld deg på her &raquo;</a></p>
+        <p class="inlinecenter">
+          <a class="btn btn-danger btn-lg" href="register.php" role="button">Meld deg på her &raquo;</a>
+        </p>
         <?php
           }
         ?>
