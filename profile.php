@@ -64,7 +64,6 @@ $grav_url = "http://www.gravatar.com/avatar/" . md5( strtolower( trim( $email ) 
     </div> <!-- jumbotron -->
     <div class="container">
         <div class="promote">
-            <a href="#" class="redigerlink">Endre status</a>
             <p> Heisannsveisan </p>
         </div>
     </div>
