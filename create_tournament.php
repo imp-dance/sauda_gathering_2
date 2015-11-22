@@ -1,5 +1,8 @@
 <?php include("head.php");
 include("header.php");
+if(empty($_SESSION['user']['id'])) {
+    die('<meta http-equiv="refresh" content="0; url=login.php">');
+}
 if (!empty($_POST)){
     $error;
     $code;

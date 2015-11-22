@@ -1,4 +1,7 @@
 <?php
+if(empty($_SESSION['user']['id'])) {
+    die('<meta http-equiv="refresh" content="0; url=login.php">');
+}
 include('../common.php');
 if (isset($_POST)){
 	if (empty($_SESSION['user'])){

@@ -1,5 +1,6 @@
 <?php 
-
+include("head.php");
+include("header.php");
     // First we execute our common code to connection to the database and start the session 
     require("../common.php"); 
      
@@ -91,8 +92,8 @@
             $_SESSION['user'] = $row; 
              
             // Redirect the users back to the index file
-            header("Location: index.php"); 
-            die("Redirecting to: index.php"); 
+
+        die('<meta http-equiv="refresh" content="0; url=index.php">');
         } 
         else 
         { 
@@ -106,17 +107,42 @@
             // http://en.wikipedia.org/wiki/XSS_attack 
             $submitted_username = htmlentities($_POST['username'], ENT_QUOTES, 'UTF-8'); 
         } 
-    } 
-     
+    }
 ?> 
-<h1>Login</h1> 
-<form action="login.php" method="post"> 
-    Username:<br /> 
-    <input type="text" name="username" value="<?php echo $submitted_username; ?>" /> 
-    <br /><br /> 
-    Password:<br /> 
-    <input type="password" name="password" value="" /> 
-    <br /><br /> 
-    <input type="submit" value="Login" /> 
-</form> 
-<a href="register.php">Register</a>
+<div class="super_container">
+    <div class="jumbotron">
+        <div class="container">
+            <h1>Logg inn</h1> 
+        </div>
+    </div>
+<div class="container" style="text-align: center">
+    <div class="center" style="display: inline-block">
+        <table class="logintable">
+            <form action="login.php" method="post">
+                <tr>
+                    <td>
+                        <p style="margin-top: 5px"> Brukernavn: </p>
+                        <input type="text" placeholder="Brukernavn" name="username" value="<?php echo $submitted_username; ?>" class="form-control loginform"/> 
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p style="margin-top: 5px"> Passord: </p>
+                        <input type="password" placeholder="Passord" class="form-control loginform" name="password" value="" />
+                    </td>
+                </tr> 
+                <tr>
+                    <td>
+                        <button type="submit" value="login" class="btn btn-success loginform"><span class="glyphicon glyphicon-log-in"></span> Logg inn</button>
+                        <a href="register.php"><button type="submit" value="login" class="btn btn-danger loginform"><span class="glyphicon glyphicon-edit"></span> Eller registrer deg her</button></a>
+                    </td>
+                </tr>
+            </form>
+        </table> 
+    </div>
+</div>
+</div>
+<?php include("footer.php");
+include("script.php");
+?>
+

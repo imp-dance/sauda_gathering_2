@@ -59,7 +59,7 @@ $safetylevel = $row['type'];
           if (isset($_SESSION['user'])){
         ?>
         <p class="inlinecenter">
-          <a class="btn btn-success btn-lg redi" href="tournaments.php" role="button" style="margin-top: 0px;"> Påmelding til compoer &raquo;</a>
+          <a class="btn btn-danger btn-lg redi" href="tournaments.php" role="button" style="margin-top: 0px;"> Påmelding til compoer &raquo;</a>
         </p>
         <?php
           }else{

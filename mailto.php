@@ -17,7 +17,7 @@ $headers = 'From:' .$fra."\r\n" .
 mail($til, $emne, $melding, $headers);
 }
 
-if(@mail($til, $emne, $melding, $headers)) {
+if(mail($til, $emne, $melding, $headers)) {
 	die('<meta http-equiv="refresh" content="0; url=index.php?mailsent=true">');
 }
 
