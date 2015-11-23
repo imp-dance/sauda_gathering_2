@@ -16,7 +16,7 @@ include("header.php") ?>
                   <li><a href="#forum">Forum</a></li>
                 </ol>
          		<table class="faqt">
-                    <tr valign="top" class="faqheading">
+                    <tr valign="top" class="faqheading" style="background: #d9534f;">
                         <td colspan="2" style="text-align: center;" name="pameld" id="pameld"><h2 style="font-size: 40px;">PÅMELDING</h2></td>
                     </tr>
          			<tr valign="top">
@@ -37,7 +37,7 @@ include("header.php") ?>
          				<td><strong>Hvorfor får jeg ikke e-post?</strong></td>
          				<td>Noen kan oppleve problemer med at meldingene fra registreringsprosessen blir oppfattet som søppelpost/junkmail. Dette gjelder f.eks. de som bruker Hotmail. E-posten vil da havne i junkmail mappa.</td>
          			</tr>
-                    <tr valign="top" class="faqheading">
+                    <tr valign="top" class="faqheading" style="background: #d9534f;">
                         <td name="minprof" id="minprof" colspan="2" style="text-align: center;"><h2 style="font-size: 40px;">MIN PROFIL</h2></td>
                     </tr>
                     <tr valign="top">
@@ -74,7 +74,7 @@ NB! Bildet kan maks være på 100KB og MÅ være jpg. Anbefalt størrelse er 100
 
 NB! Bildet kan maks være på 50KB og MÅ være jpg. Størrelsen MÅ være 50x50 piksler.</p></td>
                     </tr>
-                    <tr valign="top" class="faqheading">
+                    <tr valign="top" class="faqheading" style="background: #d9534f;">
                         <td name="compo" id="compo" colspan="2" style="text-align: center;"><h2 style="font-size: 40px;">COMPO</h2></td>
                     </tr>
                     <tr valign="top">
@@ -85,10 +85,10 @@ NB! Bildet kan maks være på 50KB og MÅ være jpg. Størrelsen MÅ være 50x50
                         <td><strong>Hvordan melder jeg meg på compoer?</strong></td>
                         <td>For å melde deg på en compo trykker du på "Meny" i venstre hjørne og velger kategorien "Påmelding til compoer". På denne siden kan du se hvilke compoer som blir arrangert dette året og lage/melde deg på et lag ved ulike turneringer.</p></td>
                     </tr>
-                    <tr valign="top" class="faqheading">
+                    <tr valign="top" class="faqheading" style="background: #d9534f;">
                         <td name="galleri" id="galleri" colspan="2" style="text-align: center;"><h2 style="font-size: 40px;">GALLERI</h2></td>
                     </tr>
-                    <tr valign="top" class="faqheading">
+                    <tr valign="top" class="faqheading" style="background: #d9534f;">
                         <td name="forum" id="forum" colspan="2" style="text-align: center;"><h2 style="font-size: 40px;">FORUM</h2></td>
                     </tr>
          		</table>

@@ -19,7 +19,7 @@
 				        <h4 class="modal-title" id="myModalLabel">Send en email</h4>
 				      </div>
 				      <div class="modal-body">
-				        <form class="form-horizontal" role="form" method="post" action="mailto2.php">
+				        <form class="form-horizontal" role="form" method="post" action="mailto.php">
 						    <div class="form-group">
 						        <label for="email" class="col-sm-2 control-label">Email</label>
 						        <div class="col-sm-10">
